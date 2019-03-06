@@ -1,5 +1,6 @@
 ( function( $ ) {
 	var wptdTime = moment.tz("2019-05-11 00:00:00", "Etc/UTC");
+
 	$('#countdown')
 		.countdown( wptdTime.toDate(), { elapse: true } )
 		.on( 'update.countdown', function( e ) {

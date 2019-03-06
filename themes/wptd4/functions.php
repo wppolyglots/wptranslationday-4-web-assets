@@ -51,12 +51,60 @@ add_action(
 	}
 );
 
+// Setup Custom Post Types.
+add_action(
+	'init',
+	function() {
+		register_post_type(
+			'wptd_local_event',
+			array(
+				'labels'      => array(
+					'name'          => __( 'Local Events' ),
+					'singular_name' => __( 'Local Event' ),
+				),
+				'public'      => true,
+				'has_archive' => true,
+				'rewrite'     => array( 'slug' => 'local-events' ),
+				'show_in_menu' => true,
+			)
+		);
+
+		register_post_type(
+			'wptd_speaker',
+			array(
+				'labels'      => array(
+					'name'          => __( 'Speakers' ),
+					'singular_name' => __( 'Speaker' ),
+				),
+				'public'      => true,
+				'has_archive' => true,
+				'rewrite'     => array( 'slug' => 'speakers' ),
+				'show_in_menu' => true,
+			)
+		);
+
+		register_post_type(
+			'wptd_organizer',
+			array(
+				'labels'      => array(
+					'name'          => __( 'Organizers' ),
+					'singular_name' => __( 'Organizer' ),
+				),
+				'public'       => true,
+				'has_archive'  => true,
+				'rewrite'      => array( 'slug' => 'organizers' ),
+				'show_in_menu' => true,
+			)
+		);
+	}
+);
+
 // Include TGM & Require extra plugins.
 require_once get_stylesheet_directory() . '/inc/class-tgm-plugin-activation.php';
+
 add_action(
 	'tgmpa_register',
 	function() {
-
 		$plugins = array(
 			array(
 				'name'     => 'Disable Comments',
@@ -64,23 +112,28 @@ add_action(
 				'required' => true,
 			),
 			array(
-				'name'      => 'Advanced Custom Fields',
-				'slug'      => 'advanced-custom-fields',
-				'required'  => true,
+				'name'     => 'Advanced Custom Fields',
+				'slug'     => 'advanced-custom-fields',
+				'required' => true,
+			),
+			array(
+				'name'     => 'Classic Editor',
+				'slug'     => 'classic-editor',
+				'required' => true,
 			),
 		);
 
 		$config = array(
-			'id'           => 'test',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-			'default_path' => '',                      // Default absolute path to bundled plugins.
-			'menu'         => 'tgmpa-install-plugins', // Menu slug.
-			'parent_slug'  => 'themes.php',            // Parent menu slug.
-			'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
-			'has_notices'  => true,                    // Show admin notices or not.
-			'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
-			'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-			'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-			'message'      => '',                      // Message to output right before the plugins table.
+			'id'           => 'wptd',
+			'default_path' => '',
+			'menu'         => 'tgmpa-install-plugins',
+			'parent_slug'  => 'themes.php',
+			'capability'   => 'edit_theme_options',
+			'has_notices'  => true,
+			'dismissable'  => true,
+			'dismiss_msg'  => '',
+			'is_automatic' => false,
+			'message'      => '',
 		);
 
 		tgmpa( $plugins, $config );
