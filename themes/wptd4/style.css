@@ -1,0 +1,248 @@
+ /*
+ Theme Name: WPTD4
+ Description: WPTD4 theme based on TwentySeventeen
+ Author: The WordPress Community
+ Author URI: https://wordpress.org
+ Template: twentyseventeen
+ Version: 1
+ */
+
+/* Vars */
+:root {
+	--color-red: #80446A;
+	--color-dark-red: #46152F;
+	--color-blue: #90C3D3;
+	--color-dark-blue: #194F6A;
+	--color-gray: #D1D3D4;
+	--color-pink: #eddae2;
+}
+
+/* General */
+body {
+	font-family: 'Changa', sans-serif;
+	font-size: 25px;
+}
+.wrap {
+	max-width: 1200px;
+}
+h2 {
+	font-size: 55px;
+}
+.hide-this {
+	display: none;
+}
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+/* Navigation */
+.navigation-top {
+	background: var( --color-dark-blue );
+	border: 0;
+}
+.navigation-top .wrap {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.main-navigation a,
+.navigation-top .current-menu-item > a:hover,
+.navigation-top .current_page_item > a:hover {
+	color: var( --color-gray );
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.main-navigation a:hover,
+.navigation-top .current-menu-item > a,
+.navigation-top .current_page_item > a {
+	color: var( --color-pink );
+}
+.site-header .navigation-top .menu-scroll-down {
+	display: none;
+}
+.navigation-top .menu-toggle {
+	color: var( --color-gray );
+}
+
+/* Homepage */
+.home .panel {
+	padding: 60px 0 60px 0;
+}
+.home .panel-content {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	grid-gap: 60px;
+}
+.home .panel-content .left {
+	text-align: center;
+}
+.home .panel-content .left img {
+	max-width: 150px;
+	width: 150px;
+}
+.home .panel-content .right {
+	text-align: justify;
+}
+.home .panel-heading {
+	font-weight: 600;
+}
+.home .panel-1 .panel-heading,
+.home .panel-4 .panel-heading {
+	color: var( --color-dark-blue );
+}
+.home .panel-2 .panel-heading {
+	color: var( --color-blue );
+}
+.home .panel-3 .panel-heading,
+.home .panel-5 .panel-heading {
+	color: var( --color-pink );
+}
+.home .separator {
+	height: 30px;
+}
+.home .separator.separator-1 {
+	background: var( --color-dark-blue );
+}
+.home .separator.separator-2 {
+	background: var( --color-red );
+}
+.home .separator.separator-3 {
+	background: var( --color-blue );
+}
+.home .separator.separator-4 {
+	background: var( --color-dark-red );
+}
+.home #countdown {
+	display: grid;
+	grid-template-columns: repeat( 4, 1fr );
+	align-items: center;
+	grid-column-gap: 20px;
+}
+.home #countdown div {
+	text-align: center;
+}
+.home #countdown .count {
+	display: block;
+	font-size: 90px;
+	font-weight: 600;
+}
+.home #countdown .time {
+	display: block;
+	margin-top: -40px;
+}
+
+/* Footer */
+.stay-tuned {
+	background: #2D2E2D;
+}
+.stay-tuned .inner {
+	display: grid;
+	grid-template-columns: repeat( 2, 1fr );
+	align-items: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.stay-tuned .left h2 {
+	color: var( --color-gray );
+	font-size: 70px;
+	font-weight: 800;
+	margin: 0;
+}
+.stay-tuned .right {
+	text-align: right;
+}
+.stay-tuned .right a {
+	margin-right: 10px;
+}
+.stay-tuned .right a img {
+	max-width: 60px;
+}
+.site-footer {
+	background: #2E2E2E;
+	border-top: 0;
+	margin-top: 0;
+}
+.site-footer .wrap {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.site-info {
+	padding: 10px;
+	margin: 0;
+}
+.site-info a {
+	color: var( --color-gray );
+	box-shadow: unset;
+}
+.site-info a:hover {
+	color: var( --color-pink );
+	box-shadow: unset;
+}
+.site-info span[role=separator]::before {
+	color: var( --color-gray );
+}
+.menu-footer {
+	background: #3c4444;
+	padding: 10px;
+}
+.footer-menu {
+	margin: 0;
+}
+.footer-menu li {
+	display: inline-block;
+	margin-right: 10px;
+}
+.footer-menu li a {
+	display: inline-block;
+	color: var( --color-blue );
+	font-weight: 600;
+	font-size: 18px;
+}
+
+/* Media Queries */
+@media ( max-width: 768px ) {
+	/* general */
+	body {
+		font-size: 20px;
+	}
+	h2 {
+		font-size: 40px;
+	}
+	/* navigation */
+	.main-navigation .float-right {
+		float: unset;
+	}
+	/* homepage */
+	.home .panel-content {
+		grid-template-columns: 1fr;
+	}
+	.home #countdown .count {
+		font-size: 60px;
+	}
+	.home #countdown .time {
+		margin-top: -30px;
+	}
+	/* footer */
+	.stay-tuned .inner {
+		grid-template-columns: 1fr;
+	}
+	.stay-tuned .left,
+	.stay-tuned .right {
+		text-align: center;
+	}
+}
+@media ( max-width: 425px ) {
+	h2 {
+		font-size: 35px;
+	}
+	.home #countdown .count {
+		font-size: 40px;
+	}
+	.home #countdown .time {
+		margin-top: -20px;
+		font-size: 16px;
+	}
+}
