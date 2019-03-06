@@ -11,7 +11,7 @@
 :root {
 	--color-red: #80446A;
 	--color-dark-red: #46152F;
-	--color-blue: #90C3D3;
+	--color-blue: #E2F8FF;
 	--color-dark-blue: #194F6A;
 	--color-gray: #D1D3D4;
 	--color-pink: #eddae2;
@@ -70,6 +70,8 @@ h2 {
 /* Homepage */
 .home .panel {
 	padding: 60px 0 60px 0;
+	background-size: cover;
+	background-position: center;
 }
 .home .panel-content {
 	display: grid;
@@ -90,14 +92,19 @@ h2 {
 	font-weight: 600;
 }
 .home .panel-1 .panel-heading,
-.home .panel-4 .panel-heading {
+.home .panel-1 .panel-content .right,
+.home .panel-4 .panel-heading,
+.home .panel-4 .panel-content .right {
 	color: var( --color-dark-blue );
 }
-.home .panel-2 .panel-heading {
+.home .panel-2 .panel-heading,
+.home .panel-2 .panel-content .right {
 	color: var( --color-blue );
 }
 .home .panel-3 .panel-heading,
-.home .panel-5 .panel-heading {
+.home .panel-3 .panel-content .right,
+.home .panel-5 .panel-heading,
+.home .panel-5 .panel-content .right {
 	color: var( --color-pink );
 }
 .home .separator {
