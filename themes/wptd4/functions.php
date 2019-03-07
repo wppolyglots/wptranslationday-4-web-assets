@@ -137,12 +137,20 @@ add_action(
 
 		} elseif ( 'organizer_name' === $column ) {
 			echo esc_attr( get_field( 'organizer_name', $id ) );
-			$org_user = get_field( 'organizer_username_wporg', $id );
-			echo ' (<a target="_blank" href="https://profiles.wordpress.org/' . esc_attr( $org_user ) . '">' . esc_attr( $org_user ) . '</a>)';
+			$url = ( ! empty( get_field( 'organizer_username_wporg', $id ) ) ) ? ' (<a target="_blank" href="https://profiles.wordpress.org/' . get_field( 'organizer_username_wporg', $id ) . '">' . get_field( 'organizer_username_wporg', $id ) . ')</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} elseif ( 'organizer_username_slack' === $column ) {
-			$slack_user = get_field( 'organizer_username_slack', $id );
-			echo esc_attr( $slack_user );
+			echo esc_attr( get_field( 'organizer_username_slack', $id ) );
 
 		} elseif ( 'utc_start_time' === $column ) {
 			echo esc_attr( get_field( 'utc_start_time', $id ) );
@@ -151,8 +159,17 @@ add_action(
 			echo esc_attr( get_field( 'utc_end_time', $id ) );
 
 		} elseif ( 'announcement_url' === $column ) {
-			$url = get_field( 'announcement_url', $id );
-			echo '<a target="_blank" href="' . esc_url( $url ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+			$url = ( ! empty( get_field( 'announcement_url', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'announcement_url', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} elseif ( 'interviewer' === $column ) {
 			echo esc_attr( get_field( 'interviewer', $id ) );
@@ -187,8 +204,17 @@ add_action(
 	'manage_wptd_speaker_posts_custom_column',
 	function( $column, $id ) {
 		if ( 'username_wporg' === $column ) {
-			$org_user = get_field( 'username_wporg', $id );
-			echo '<a target="_blank" href="https://profiles.wordpress.org/' . esc_attr( $org_user ) . '">' . esc_attr( $org_user ) . '</a>';
+			$url = ( ! empty( get_field( 'username_wporg', $id ) ) ) ? '<a target="_blank" href="https://profiles.wordpress.org/' . get_field( 'username_wporg', $id ) . '">' . get_field( 'username_wporg', $id ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} elseif ( 'username_slack' === $column ) {
 			echo esc_attr( get_field( 'username_slack', $id ) );
@@ -197,20 +223,156 @@ add_action(
 			echo esc_attr( get_field( 'e-mail', $id ) );
 
 		} elseif ( 'facebook' === $column ) {
-			$fb = get_field( 'facebook', $id );
-			echo '<a target="_blank" href="' . esc_url( $fb ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+			$url = ( ! empty( get_field( 'facebook', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'facebook', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} elseif ( 'twitter' === $column ) {
-			$tt = get_field( 'twitter', $id );
-			echo '<a target="_blank" href="' . esc_url( $tt ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+			$url = ( ! empty( get_field( 'twitter', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'twitter', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} elseif ( 'linkedin' === $column ) {
-			$ln = get_field( 'linkedin', $id );
-			echo '<a target="_blank" href="' . esc_url( $ln ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+			$url = ( ! empty( get_field( 'linkedin', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'linkedin', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} elseif ( 'website' === $column ) {
-			$wb = get_field( 'website', $id );
-			echo '<a target="_blank" href="' . esc_url( $wb ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+			$url = ( ! empty( get_field( 'website', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'website', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
+
+		} else {
+			echo '';
+		}
+	},
+	10,
+	2
+);
+
+// Organizers list table headers.
+add_filter(
+	'manage_edit-wptd_organizer_columns',
+	function( $columns ) {
+		unset( $columns['date'] );
+
+		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
+		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
+		$columns['e_mail']         = esc_html__( 'E-mail', 'wptd4' );
+		$columns['facebook']       = esc_html__( 'Facebook', 'wptd4' );
+		$columns['twitter']        = esc_html__( 'Twitter', 'wptd4' );
+		$columns['linkedin']       = esc_html__( 'LinkedIn', 'wptd4' );
+		$columns['website']        = esc_html__( 'Website', 'wptd4' );
+
+		return $columns;
+	}
+);
+
+add_action(
+	'manage_wptd_organizer_posts_custom_column',
+	function( $column, $id ) {
+		if ( 'username_wporg' === $column ) {
+			$url = ( ! empty( get_field( 'username_wporg', $id ) ) ) ? '<a target="_blank" href="https://profiles.wordpress.org/' . get_field( 'username_wporg', $id ) . '">' . get_field( 'username_wporg', $id ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
+
+		} elseif ( 'username_slack' === $column ) {
+			echo esc_attr( get_field( 'username_slack', $id ) );
+
+		} elseif ( 'e_mail' === $column ) {
+			echo esc_attr( get_field( 'e-mail', $id ) );
+
+		} elseif ( 'facebook' === $column ) {
+			$url = ( ! empty( get_field( 'facebook', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'facebook', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
+
+		} elseif ( 'twitter' === $column ) {
+			$url = ( ! empty( get_field( 'twitter', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'twitter', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
+
+		} elseif ( 'linkedin' === $column ) {
+			$url = ( ! empty( get_field( 'linkedin', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'linkedin', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
+
+		} elseif ( 'website' === $column ) {
+			$url = ( ! empty( get_field( 'website', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'website', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			echo wp_kses(
+				$url,
+				array(
+					'a' => array(
+						'href'  => array(),
+						'title' => array(),
+						'target' => array(),
+					),
+				)
+			);
 
 		} else {
 			echo '';
