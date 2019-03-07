@@ -112,3 +112,25 @@ $pid = get_the_ID();
 	<?php endif; ?>
 
 </article>
+
+<script>
+( function( $ ) {
+	$( 'document' ).ready( function() {
+		var wptdTime = moment.tz("<?php echo get_field( 'countdown_date', $pid ); ?> 00:00:00", "Etc/UTC");
+
+		$( '#countdown' )
+			.countdown( wptdTime.toDate(), { elapse: true } )
+			.on( 'update.countdown', function( e ) {
+				if ( e.elapsed ) {
+					$(this).html( e.strftime( "<h2><?php echo get_field( 'countdown_finished_message', $pid ); ?></h2>" ) );
+				} else {
+					$(this).html( '<div><span class="count">' + e.strftime('%D') + '</span><span class="time">days</span></div>' +
+						'<div><span class="count">' + e.strftime('%H') + '</span><span class="time">hours</span></div>' +
+						'<div><span class="count">' + e.strftime('%M') + '</span><span class="time">minutes</span></div>' +
+						'<div><span class="count">' + e.strftime('%S') + '</span><span class="time">seconds</span></div>'
+					);
+				}
+			} );
+	} );
+} ( jQuery ) );
+</script>
