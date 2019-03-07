@@ -45,7 +45,7 @@ add_action(
 	function() {
 		register_nav_menus(
 			array(
-				'footer-menu' => __( 'Footer Menu', 'wptd4' ),
+				'footer-menu' => esc_html__( 'Footer Menu', 'wptd4' ),
 			)
 		);
 	}
@@ -59,8 +59,8 @@ add_action(
 			'wptd_local_event',
 			array(
 				'labels'       => array(
-					'name'          => __( 'Local Events' ),
-					'singular_name' => __( 'Local Event' ),
+					'name'          => esc_html__( 'Local Events' ),
+					'singular_name' => esc_html__( 'Local Event' ),
 				),
 				'public'       => true,
 				'has_archive'  => true,
@@ -73,8 +73,8 @@ add_action(
 			'wptd_speaker',
 			array(
 				'labels'       => array(
-					'name'          => __( 'Speakers', 'wptd4' ),
-					'singular_name' => __( 'Speaker', 'wptd4' ),
+					'name'          => esc_html__( 'Speakers', 'wptd4' ),
+					'singular_name' => esc_html__( 'Speaker', 'wptd4' ),
 				),
 				'public'       => true,
 				'has_archive'  => true,
@@ -87,8 +87,8 @@ add_action(
 			'wptd_organizer',
 			array(
 				'labels'       => array(
-					'name'          => __( 'Organizers', 'wptd4' ),
-					'singular_name' => __( 'Organizer', 'wptd4' ),
+					'name'          => esc_html__( 'Organizers', 'wptd4' ),
+					'singular_name' => esc_html__( 'Organizer', 'wptd4' ),
 				),
 				'public'       => true,
 				'has_archive'  => true,
@@ -99,23 +99,22 @@ add_action(
 	}
 );
 
-// Change the headers of the WP List Tables for our CPTs.
-// Local Events.
+// Local Events list table headers.
 add_filter(
 	'manage_edit-wptd_local_event_columns',
 	function( $columns ) {
 		unset( $columns['date'] );
 
-		$columns['city']                     = __( 'City', 'wptd4' );
-		$columns['country']                  = __( 'Country', 'wptd4' );
-		$columns['continent']                = __( 'Continent', 'wptd4' );
-		$columns['locale']                   = __( 'Locale', 'wptd4' );
-		$columns['organizer_name']           = __( 'Organizer Name', 'wptd4' );
-		$columns['organizer_username_slack'] = __( 'Slack Username', 'wptd4' );
-		$columns['utc_start_time']           = __( 'UTC Start Time', 'wptd4' );
-		$columns['utc_end_time']             = __( 'UTC End Time', 'wptd4' );
-		$columns['announcement_url']         = __( 'Announcement URL', 'wptd4' );
-		$columns['interviewer']              = __( 'Interviewer', 'wptd4' );
+		$columns['city']                     = esc_html__( 'City', 'wptd4' );
+		$columns['country']                  = esc_html__( 'Country', 'wptd4' );
+		$columns['continent']                = esc_html__( 'Continent', 'wptd4' );
+		$columns['locale']                   = esc_html__( 'Locale', 'wptd4' );
+		$columns['organizer_name']           = esc_html__( 'Organizer Name', 'wptd4' );
+		$columns['organizer_username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
+		$columns['utc_start_time']           = esc_html__( 'UTC Start Time', 'wptd4' );
+		$columns['utc_end_time']             = esc_html__( 'UTC End Time', 'wptd4' );
+		$columns['announcement_url']         = esc_html__( 'Announcement URL', 'wptd4' );
+		$columns['interviewer']              = esc_html__( 'Interviewer', 'wptd4' );
 
 		return $columns;
 	}
@@ -124,7 +123,6 @@ add_filter(
 add_action(
 	'manage_wptd_local_event_posts_custom_column',
 	function( $column, $id ) {
-
 		if ( 'city' === $column ) {
 			echo esc_attr( get_field( 'city', $id ) );
 
@@ -154,7 +152,7 @@ add_action(
 
 		} elseif ( 'announcement_url' === $column ) {
 			$url = get_field( 'announcement_url', $id );
-			echo '<a target="_blank" href="' . esc_url( $url ) . '">' . esc_url( $url ) . '</a>';
+			echo '<a target="_blank" href="' . esc_url( $url ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
 
 		} elseif ( 'interviewer' === $column ) {
 			echo esc_attr( get_field( 'interviewer', $id ) );
@@ -167,8 +165,62 @@ add_action(
 	2
 );
 
+// Speakers list table headers.
+add_filter(
+	'manage_edit-wptd_speaker_columns',
+	function( $columns ) {
+		unset( $columns['date'] );
 
-	// Include TGM & Require extra plugins.
+		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
+		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
+		$columns['e_mail']         = esc_html__( 'E-mail', 'wptd4' );
+		$columns['facebook']       = esc_html__( 'Facebook', 'wptd4' );
+		$columns['twitter']        = esc_html__( 'Twitter', 'wptd4' );
+		$columns['linkedin']       = esc_html__( 'LinkedIn', 'wptd4' );
+		$columns['website']        = esc_html__( 'Website', 'wptd4' );
+
+		return $columns;
+	}
+);
+
+add_action(
+	'manage_wptd_speaker_posts_custom_column',
+	function( $column, $id ) {
+		if ( 'username_wporg' === $column ) {
+			$org_user = get_field( 'username_wporg', $id );
+			echo '<a target="_blank" href="https://profiles.wordpress.org/' . esc_attr( $org_user ) . '">' . esc_attr( $org_user ) . '</a>';
+
+		} elseif ( 'username_slack' === $column ) {
+			echo esc_attr( get_field( 'username_slack', $id ) );
+
+		} elseif ( 'e_mail' === $column ) {
+			echo esc_attr( get_field( 'e-mail', $id ) );
+
+		} elseif ( 'facebook' === $column ) {
+			$fb = get_field( 'facebook', $id );
+			echo '<a target="_blank" href="' . esc_url( $fb ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+
+		} elseif ( 'twitter' === $column ) {
+			$tt = get_field( 'twitter', $id );
+			echo '<a target="_blank" href="' . esc_url( $tt ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+
+		} elseif ( 'linkedin' === $column ) {
+			$ln = get_field( 'linkedin', $id );
+			echo '<a target="_blank" href="' . esc_url( $ln ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+
+		} elseif ( 'website' === $column ) {
+			$wb = get_field( 'website', $id );
+			echo '<a target="_blank" href="' . esc_url( $wb ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>';
+
+		} else {
+			echo '';
+		}
+	},
+	10,
+	2
+);
+
+// Include TGM & Require extra plugins.
 require_once get_stylesheet_directory() . '/inc/class-tgm-plugin-activation.php';
 
 add_action(
