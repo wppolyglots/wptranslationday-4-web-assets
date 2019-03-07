@@ -424,6 +424,42 @@
                 "delay": 0
             },
             {
+                "key": "field_5c80672f2f7e1",
+                "label": "Panel 4 Countdown Date",
+                "name": "countdown_date",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
+                "key": "field_5c8067702f7e2",
+                "label": "Panel 4 Countdown Finished Message",
+                "name": "countdown_finished_message",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5c800b3a2ee4b",
                 "label": "Panel 5 Active",
                 "name": "panel_5_active",
