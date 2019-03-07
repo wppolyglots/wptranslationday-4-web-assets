@@ -38,6 +38,14 @@ h2 {
 	float: right;
 }
 
+/* Header */
+.site-header {
+	background-color: #000;
+}
+.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+	object-fit: contain;
+}
+
 /* Navigation */
 .navigation-top {
 	background: var( --color-dark-blue );
@@ -61,7 +69,8 @@ h2 {
 	color: var( --color-pink );
 }
 .site-header .navigation-top .menu-scroll-down {
-	display: none;
+	top: 0;
+	color: var( --color-gray );
 }
 .navigation-top .menu-toggle {
 	color: var( --color-gray );
