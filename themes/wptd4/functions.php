@@ -15,7 +15,7 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		// Fonts.
-		wp_enqueue_style( 'changa-font', 'https://fonts.googleapis.com/css?family=Changa:400,600,700', array(), '1' );
+		wp_dequeue_style( 'twentyseventeen-fonts' );
 		wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/fontawesome/css/all.css', array(), '5.7.2' );
 
 		// Countdown Timers.
