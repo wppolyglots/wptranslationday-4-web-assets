@@ -37,6 +37,18 @@ h2 {
 .float-right {
 	float: right;
 }
+.page .panel-content .entry-title, .page-title, body.page:not(.twentyseventeen-front-page) .entry-title {
+	font-weight: 600;
+	font-size: 50px;
+	text-transform: unset;
+	letter-spacing: unset;
+}
+.page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header, .archive.page-one-column:not(.has-sidebar) .page-header {
+	margin-bottom: 0;
+}
+body:not(.twentyseventeen-front-page) .entry-header {
+	padding: 0;
+}
 
 /* Header */
 .site-header {
@@ -226,6 +238,14 @@ h2 {
 	color: var( --color-blue );
 	font-weight: 600;
 	font-size: 18px;
+}
+
+/* The Team Page */
+body.page-the-team .site-content {
+	background: var( --color-blue );
+}
+body.page-the-team .entry-title {
+	color: var( --color-dark-blue ) !important;
 }
 
 /* Media Queries */
