@@ -47,6 +47,9 @@ h2 {
 }
 
 /* Navigation */
+.main-navigation ul {
+	background: var( --color-dark-blue );
+}
 .navigation-top {
 	background: var( --color-dark-blue );
 	border: 0;
@@ -260,5 +263,17 @@ h2 {
 	.home #countdown .time {
 		margin-top: -20px;
 		font-size: 16px;
+	}
+}
+
+@media ( max-width: 48em ) {
+	.custom-header {
+		height: unset !important;
+	}
+	.custom-header-media {
+		position: relative;
+	}
+	.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-video .custom-header-media iframe {
+		position: relative;
 	}
 }
