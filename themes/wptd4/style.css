@@ -47,9 +47,6 @@ h2 {
 }
 
 /* Navigation */
-.main-navigation ul {
-	background: var( --color-dark-blue );
-}
 .navigation-top {
 	background: var( --color-dark-blue );
 	border: 0;
@@ -78,10 +75,20 @@ h2 {
 .navigation-top .menu-toggle {
 	color: var( --color-gray );
 }
+.main-navigation ul,
+.main-navigation ul ul {
+	background: var( --color-dark-blue );
+}
+.main-navigation ul ul {
+	border: 0;
+}
+.main-navigation ul ul a {
+	text-transform: uppercase;
+}
 
 /* Homepage */
 .home .panel {
-	padding: 60px 0 60px 0;
+	padding: 100px 0;
 	background-size: cover;
 	background-position: center;
 }
