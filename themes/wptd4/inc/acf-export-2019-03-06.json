@@ -756,7 +756,7 @@
                 "key": "field_5c805a2abc242",
                 "label": "UTC Start Time",
                 "name": "utc_start_time",
-                "type": "text",
+                "type": "time_picker",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -765,17 +765,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "display_format": "H:i",
+                "return_format": "H:i"
             },
             {
                 "key": "field_5c805a3bbc243",
                 "label": "UTC End Time",
                 "name": "utc_end_time",
-                "type": "text",
+                "type": "time_picker",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -784,17 +781,14 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "display_format": "H:i",
+                "return_format": "H:i"
             },
             {
                 "key": "field_5c805a44bc244",
                 "label": "Announcement URL",
                 "name": "announcement_url",
-                "type": "text",
+                "type": "url",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -804,16 +798,13 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "placeholder": ""
             },
             {
-                "key": "field_5c805a4cbc245",
-                "label": "Latitude",
-                "name": "latitude",
-                "type": "text",
+                "key": "field_5c80d001ce86a",
+                "label": "Address\/City or GPS coordinates",
+                "name": "coordinates",
+                "type": "leaflet_map_field",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -822,30 +813,10 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
-                "key": "field_5c805a56bc246",
-                "label": "Longitude",
-                "name": "longtitude",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "lat": 0,
+                "lng": 0,
+                "zoom": 14,
+                "height": 320
             },
             {
                 "key": "field_5c805a60bc247",
