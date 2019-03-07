@@ -44,16 +44,16 @@ get_header(); ?>
 							?>
 
 							<div class="team-member">
-								<?php echo get_avatar( esc_attr( get_field( 'e-mail' ) ) ); ?> <br>
+								<?php echo get_avatar( esc_attr( get_field( 'e-mail' ) ), 150 ); ?> <br>
 								<?php the_title(); ?> <br>
 								<?php echo esc_attr( get_field( 'role' ) ); ?> <br>
+								<?php echo ( ! empty( $wb ) ) ? '<a href="' . esc_attr( $wb ) . '" target="_blank" title="Website"><i class="fas fa-link"></i></a>' : ''; ?>
+								<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
+								<?php echo ( ! empty( $slack ) ) ? '<a href="https://wordpress.slack.com/team/' . esc_attr( $slack ) . '" target="_blank" title="Slack Profile"><i class="fab fa-slack"></i></a>' : ''; ?>
+								<?php echo ( ! empty( $fb ) ) ? '<a href="' . esc_attr( $fb ) . '" target="_blank" title="Facebook Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
+								<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
+								<?php echo ( ! empty( $ln ) ) ? '<a href="' . esc_attr( $ln ) . '" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>' : ''; ?>
 								<?php echo wp_kses_post( get_field( 'bio' ) ); ?> <br>
-								<?php echo esc_attr( $wporg ); ?> <br>
-								<?php echo esc_attr( $slack ); ?> <br>
-								<?php echo esc_url( $fb ); ?> <br>
-								<?php echo esc_url( $tt ); ?> <br>
-								<?php echo esc_url( $ln ); ?> <br>
-								<?php echo esc_url( $wb ); ?> <br>
 							</div>
 
 						<?php endwhile; ?>

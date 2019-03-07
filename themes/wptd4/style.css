@@ -49,6 +49,9 @@ h2 {
 body:not(.twentyseventeen-front-page) .entry-header {
 	padding: 0;
 }
+.single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
+	max-width: unset;
+}
 
 /* Header */
 .site-header {
