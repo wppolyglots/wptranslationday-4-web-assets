@@ -33,7 +33,7 @@ add_action(
 	'template_redirect',
 	function() {
 		if ( ! is_user_logged_in() ) {
-			return wp_die( esc_attr( 'Under Maintenance' ) );
+			return wp_die( esc_attr( 'Under Maintenance', 'wptd4' ) );
 		}
 	},
 	15
@@ -45,7 +45,7 @@ add_action(
 	function() {
 		register_nav_menus(
 			array(
-				'footer-menu' => __( 'Footer Menu', 'twentyseventeen' ),
+				'footer-menu' => __( 'Footer Menu', 'wptd4' ),
 			)
 		);
 	}
@@ -58,13 +58,13 @@ add_action(
 		register_post_type(
 			'wptd_local_event',
 			array(
-				'labels'      => array(
+				'labels'       => array(
 					'name'          => __( 'Local Events' ),
 					'singular_name' => __( 'Local Event' ),
 				),
-				'public'      => true,
-				'has_archive' => true,
-				'rewrite'     => array( 'slug' => 'local-events' ),
+				'public'       => true,
+				'has_archive'  => true,
+				'rewrite'      => array( 'slug' => 'local-events' ),
 				'show_in_menu' => true,
 			)
 		);
@@ -72,13 +72,13 @@ add_action(
 		register_post_type(
 			'wptd_speaker',
 			array(
-				'labels'      => array(
-					'name'          => __( 'Speakers' ),
-					'singular_name' => __( 'Speaker' ),
+				'labels'       => array(
+					'name'          => __( 'Speakers', 'wptd4' ),
+					'singular_name' => __( 'Speaker', 'wptd4' ),
 				),
-				'public'      => true,
-				'has_archive' => true,
-				'rewrite'     => array( 'slug' => 'speakers' ),
+				'public'       => true,
+				'has_archive'  => true,
+				'rewrite'      => array( 'slug' => 'speakers' ),
 				'show_in_menu' => true,
 			)
 		);
@@ -86,9 +86,9 @@ add_action(
 		register_post_type(
 			'wptd_organizer',
 			array(
-				'labels'      => array(
-					'name'          => __( 'Organizers' ),
-					'singular_name' => __( 'Organizer' ),
+				'labels'       => array(
+					'name'          => __( 'Organizers', 'wptd4' ),
+					'singular_name' => __( 'Organizer', 'wptd4' ),
 				),
 				'public'       => true,
 				'has_archive'  => true,
@@ -99,7 +99,76 @@ add_action(
 	}
 );
 
-// Include TGM & Require extra plugins.
+// Change the headers of the WP List Tables for our CPTs.
+// Local Events.
+add_filter(
+	'manage_edit-wptd_local_event_columns',
+	function( $columns ) {
+		unset( $columns['date'] );
+
+		$columns['city']                     = __( 'City', 'wptd4' );
+		$columns['country']                  = __( 'Country', 'wptd4' );
+		$columns['continent']                = __( 'Continent', 'wptd4' );
+		$columns['locale']                   = __( 'Locale', 'wptd4' );
+		$columns['organizer_name']           = __( 'Organizer Name', 'wptd4' );
+		$columns['organizer_username_slack'] = __( 'Slack Username', 'wptd4' );
+		$columns['utc_start_time']           = __( 'UTC Start Time', 'wptd4' );
+		$columns['utc_end_time']             = __( 'UTC End Time', 'wptd4' );
+		$columns['announcement_url']         = __( 'Announcement URL', 'wptd4' );
+		$columns['interviewer']              = __( 'Interviewer', 'wptd4' );
+
+		return $columns;
+	}
+);
+
+add_action(
+	'manage_wptd_local_event_posts_custom_column',
+	function( $column, $id ) {
+
+		if ( 'city' === $column ) {
+			echo esc_attr( get_field( 'city', $id ) );
+
+		} elseif ( 'country' === $column ) {
+			echo esc_attr( get_field( 'country', $id ) );
+
+		} elseif ( 'continent' === $column ) {
+			echo esc_attr( get_field( 'continent', $id ) );
+
+		} elseif ( 'locale' === $column ) {
+			echo esc_attr( get_field( 'locale', $id ) );
+
+		} elseif ( 'organizer_name' === $column ) {
+			echo esc_attr( get_field( 'organizer_name', $id ) );
+			$org_user = get_field( 'organizer_username_wporg', $id );
+			echo ' (<a target="_blank" href="https://profiles.wordpress.org/' . esc_attr( $org_user ) . '">' . esc_attr( $org_user ) . '</a>)';
+
+		} elseif ( 'organizer_username_slack' === $column ) {
+			$slack_user = get_field( 'organizer_username_slack', $id );
+			echo esc_attr( $slack_user );
+
+		} elseif ( 'utc_start_time' === $column ) {
+			echo esc_attr( get_field( 'utc_start_time', $id ) );
+
+		} elseif ( 'utc_end_time' === $column ) {
+			echo esc_attr( get_field( 'utc_end_time', $id ) );
+
+		} elseif ( 'announcement_url' === $column ) {
+			$url = get_field( 'announcement_url', $id );
+			echo '<a target="_blank" href="' . esc_url( $url ) . '">' . esc_url( $url ) . '</a>';
+
+		} elseif ( 'interviewer' === $column ) {
+			echo esc_attr( get_field( 'interviewer', $id ) );
+
+		} else {
+			echo '';
+		}
+	},
+	10,
+	2
+);
+
+
+	// Include TGM & Require extra plugins.
 require_once get_stylesheet_directory() . '/inc/class-tgm-plugin-activation.php';
 
 add_action(
