@@ -16,4 +16,13 @@ The theme provides 3 Custom Post Types for Organizers, Speakers and Local Events
 
 __Front Page__
 
-The Front Page is divided into 5 _Panels_. It's template file is located at `themes/wptd4/template-parts/page/content-front-page.php`. When editing the Front Page you will see the custom fields that change each aspect of every panel those include: Enabled ( on/off ), Panel Image ( the icon on the left side ), Panel Background, Panel Heading ( the title ), Panel Text ( the main text at the right side ). The 4th panel also has a Countdown Date and a Countdown Finished Message so you can easily change the timer of the Front Page.
+The Front Page is divided into 5 _Panels_. It's template file is located at `themes/wptd4/template-parts/page/content-front-page.php`. When editing the Front Page you will see the custom fields that change each aspect of every panel those include:
+
+- Enabled (on/off)
+- Panel Anchor ID (to be used for menu # reference)
+- Panel Image (the icon on the left side)
+- Panel Background (the background image)
+- Panel Heading (the title)
+- Panel Text (the main text at the right side)
+
+__Note:__ The 4th panel also has a Countdown Date and a Countdown Finished Message so you can easily change the timer of the Front Page.

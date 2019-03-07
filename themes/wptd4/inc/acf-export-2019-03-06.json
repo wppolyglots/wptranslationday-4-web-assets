@@ -23,6 +23,25 @@
                 "ui_off_text": ""
             },
             {
+                "key": "field_5c8189c1d0eb1",
+                "label": "Panel 1 Anchor ID",
+                "name": "panel_1_anchor_id",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5c7ef1e728114",
                 "label": "Panel 1 Image",
                 "name": "panel_1_image",
@@ -126,6 +145,25 @@
                 "ui": 0,
                 "ui_on_text": "",
                 "ui_off_text": ""
+            },
+            {
+                "key": "field_5c8189d444192",
+                "label": "Panel 2 Anchor ID",
+                "name": "panel_2_anchor_id",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_5c7ef20128115",
@@ -257,6 +295,25 @@
                 "mime_types": ""
             },
             {
+                "key": "field_5c8189dc44193",
+                "label": "Panel 3 Anchor ID",
+                "name": "panel_3_anchor_id",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5c804f8a34abb",
                 "label": "Panel 3 Background",
                 "name": "panel_3_background",
@@ -336,6 +393,25 @@
                 "ui": 0,
                 "ui_on_text": "",
                 "ui_off_text": ""
+            },
+            {
+                "key": "field_5c8189e544194",
+                "label": "Panel 4 Anchor ID",
+                "name": "panel_4_anchor_id",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_5c7ef21028117",
@@ -477,6 +553,25 @@
                 "ui": 0,
                 "ui_on_text": "",
                 "ui_off_text": ""
+            },
+            {
+                "key": "field_5c8189ee44195",
+                "label": "Panel 5 Anchor ID",
+                "name": "panel_5_anchor_id",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_5c7ef21828118",
@@ -994,6 +1089,25 @@
                 "placeholder": ""
             },
             {
+                "key": "field_5c8199d4bc26e",
+                "label": "Role",
+                "name": "role",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5c8060f102434",
                 "label": "Bio",
                 "name": "bio",
@@ -1011,6 +1125,27 @@
                 "toolbar": "full",
                 "media_upload": 1,
                 "delay": 0
+            },
+            {
+                "key": "field_5c819bef2d50c",
+                "label": "Order",
+                "name": "order",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "min": "",
+                "max": "",
+                "step": ""
             }
         ],
         "location": [
