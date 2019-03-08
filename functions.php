@@ -167,7 +167,7 @@ add_action(
 add_action(
 	'acf/save_post',
 	function( $post_id ) {
-		if ( empty( $_POST['acf'] ) ) {
+		if ( 'wptd_local_event' !== $_POST['post_type'] || empty( $_POST['acf'] ) ) {
 			return;
 		}
 

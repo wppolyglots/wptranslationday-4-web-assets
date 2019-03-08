@@ -294,10 +294,12 @@ a:hover {
 }
 
 /* The Team Page */
+body.page-schedule .site-content,
 body.page-local-events .site-content,
 body.page-the-team .site-content {
 	background: var( --color-blue );
 }
+body.page-schedule .entry-title,
 body.page-local-events .entry-title,
 body.page-the-team .entry-title {
 	color: var( --color-dark-blue ) !important;

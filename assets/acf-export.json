@@ -4,6 +4,23 @@
         "title": "Frontpage Fields",
         "fields": [
             {
+                "key": "field_5c82e7abdafbb",
+                "label": "Event Date",
+                "name": "event_date",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y",
+                "return_format": "Y-m-d",
+                "first_day": 1
+            },
+            {
                 "key": "field_5c800ada2ee47",
                 "label": "Panel 1 Active",
                 "name": "panel_1_active",
@@ -1410,8 +1427,8 @@
         "fields": [
             {
                 "key": "field_5c82b9e8620aa",
-                "label": "Information",
-                "name": "information",
+                "label": "Description",
+                "name": "description",
                 "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
