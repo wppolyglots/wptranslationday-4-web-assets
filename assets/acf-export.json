@@ -1410,8 +1410,8 @@
         "fields": [
             {
                 "key": "field_5c82b9e8620aa",
-                "label": "Information",
-                "name": "information",
+                "label": "Description",
+                "name": "description",
                 "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
