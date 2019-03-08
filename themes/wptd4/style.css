@@ -152,7 +152,7 @@ a:hover {
 /* Homepage */
 .home .panel {
 	padding: 100px 0;
-	background-size: cover;
+	background-size: 100% 100%;
 	background-position: center;
 }
 .home .panel-content {
@@ -311,6 +311,8 @@ body.page-the-team .entry-title {
 }
 .cards .card .card-image img {
 	border-radius: 90px;
+	max-width: 150px;
+	max-height: 150px;
 }
 .cards .card .card-name {
 	font-weight: 600;
