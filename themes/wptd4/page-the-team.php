@@ -31,33 +31,44 @@ get_header(); ?>
 
 				if ( $query->have_posts() ) : //phpcs:ignore ?>
 					<div class="entry-content">
-						<?php
-						while ( $query->have_posts() ) :
-							$query->the_post();
+						<div class="cards">
+							<?php
+							while ( $query->have_posts() ) :
+								$query->the_post();
 
-							$wporg = get_field( 'username_wporg' );
-							$slack = get_field( 'username_slack' );
-							$fb    = get_field( 'facebook' );
-							$tt    = get_field( 'twitter' );
-							$ln    = get_field( 'linkedin' );
-							$wb    = get_field( 'website' );
-							?>
+								$wporg = get_field( 'username_wporg' );
+								$slack = get_field( 'username_slack' );
+								$fb    = get_field( 'facebook' );
+								$tt    = get_field( 'twitter' );
+								$ln    = get_field( 'linkedin' );
+								$wb    = get_field( 'website' );
+								?>
 
-							<div class="team-member">
-								<?php echo get_avatar( esc_attr( get_field( 'e-mail' ) ), 150 ); ?> <br>
-								<?php the_title(); ?> <br>
-								<?php echo esc_attr( get_field( 'role' ) ); ?> <br>
-								<?php echo ( ! empty( $wb ) ) ? '<a href="' . esc_attr( $wb ) . '" target="_blank" title="Website"><i class="fas fa-link"></i></a>' : ''; ?>
-								<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
-								<?php echo ( ! empty( $slack ) ) ? '<a href="https://wordpress.slack.com/team/' . esc_attr( $slack ) . '" target="_blank" title="Slack Profile"><i class="fab fa-slack"></i></a>' : ''; ?>
-								<?php echo ( ! empty( $fb ) ) ? '<a href="' . esc_attr( $fb ) . '" target="_blank" title="Facebook Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
-								<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
-								<?php echo ( ! empty( $ln ) ) ? '<a href="' . esc_attr( $ln ) . '" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>' : ''; ?>
-								<?php echo wp_kses_post( get_field( 'bio' ) ); ?> <br>
-							</div>
+								<div class="team-member card">
+									<div class="card-image">
+										<?php echo wp_get_attachment_image( get_field( 'image' ), 'full' ); ?>
+									</div>
+									<div class="card-name">
+										<?php the_title(); ?>
+									</div>
+									<div class="card-role">
+										<?php echo esc_attr( get_field( 'role' ) ); ?> <br>
+									</div>
+									<div class="card-bio">
+										<?php echo wp_kses_post( get_field( 'bio' ) ); ?>
+									</div>
+									<div class="card-social">
+										<?php echo ( ! empty( $wb ) ) ? '<a href="' . esc_attr( $wb ) . '" target="_blank" title="Website"><i class="fas fa-link"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $slack ) ) ? '<a href="https://wordpress.slack.com/team/' . esc_attr( $slack ) . '" target="_blank" title="Slack Profile"><i class="fab fa-slack"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $fb ) ) ? '<a href="' . esc_attr( $fb ) . '" target="_blank" title="Facebook Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $ln ) ) ? '<a href="' . esc_attr( $ln ) . '" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>' : ''; ?>
+									</div>
+								</div>
 
-						<?php endwhile; ?>
-
+							<?php endwhile; ?>
+						</div> <!-- .cards -->
 					</div><!-- .entry-content -->
 				<?php endif; ?>
 

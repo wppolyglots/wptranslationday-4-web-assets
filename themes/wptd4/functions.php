@@ -203,7 +203,6 @@ add_filter(
 
 		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
 		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
-		$columns['e_mail']         = esc_html__( 'E-mail', 'wptd4' );
 		$columns['facebook']       = esc_html__( 'Facebook', 'wptd4' );
 		$columns['twitter']        = esc_html__( 'Twitter', 'wptd4' );
 		$columns['linkedin']       = esc_html__( 'LinkedIn', 'wptd4' );
@@ -231,9 +230,6 @@ add_action(
 
 		} elseif ( 'username_slack' === $column ) {
 			echo esc_attr( get_field( 'username_slack', $id ) );
-
-		} elseif ( 'e_mail' === $column ) {
-			echo esc_attr( get_field( 'e-mail', $id ) );
 
 		} elseif ( 'facebook' === $column ) {
 			$url = ( ! empty( get_field( 'facebook', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'facebook', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
@@ -303,7 +299,6 @@ add_filter(
 
 		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
 		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
-		$columns['e_mail']         = esc_html__( 'E-mail', 'wptd4' );
 		$columns['role']           = esc_html__( 'Role', 'wptd4' );
 		$columns['order']           = esc_html__( 'Role', 'wptd4' );
 
@@ -329,9 +324,6 @@ add_action(
 
 		} elseif ( 'username_slack' === $column ) {
 			echo esc_attr( get_field( 'username_slack', $id ) );
-
-		} elseif ( 'e_mail' === $column ) {
-			echo esc_attr( get_field( 'e-mail', $id ) );
 
 		} elseif ( 'role' === $column ) {
 			echo esc_attr( get_field( 'role', $id ) );
