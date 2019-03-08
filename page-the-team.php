@@ -62,7 +62,7 @@ get_header(); ?>
 										<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
 										<?php echo ( ! empty( $slack ) ) ? '<a href="https://wordpress.slack.com/team/' . esc_attr( $slack ) . '" target="_blank" title="Slack Profile"><i class="fab fa-slack"></i></a>' : ''; ?>
 										<?php echo ( ! empty( $fb ) ) ? '<a href="' . esc_attr( $fb ) . '" target="_blank" title="Facebook Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
-										<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-twitter"></i></a>' : ''; ?>
 										<?php echo ( ! empty( $ln ) ) ? '<a href="' . esc_attr( $ln ) . '" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>' : ''; ?>
 									</div>
 								</div>
