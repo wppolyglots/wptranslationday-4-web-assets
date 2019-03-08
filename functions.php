@@ -175,9 +175,7 @@ add_filter(
 	function( $columns ) {
 		unset( $columns['date'] );
 
-		$columns['city']                     = esc_html__( 'City', 'wptd4' );
-		$columns['country']                  = esc_html__( 'Country', 'wptd4' );
-		$columns['continent']                = esc_html__( 'Continent', 'wptd4' );
+		$columns['continent_country_city']   = esc_html__( 'Location', 'wptd4' );
 		$columns['locale']                   = esc_html__( 'Locale', 'wptd4' );
 		$columns['organizer_name']           = esc_html__( 'Organizer Name', 'wptd4' );
 		$columns['organizer_username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
@@ -190,17 +188,72 @@ add_filter(
 	}
 );
 
+add_filter(
+	'manage_edit-wptd_local_event_sortable_columns',
+	function( $columns ) {
+		$columns['continent_country_city']   = 'continent_country_city';
+		$columns['locale']                   = 'locale';
+		$columns['organizer_name']           = 'organizer_name';
+		$columns['organizer_username_slack'] = 'organizer_username_slack';
+		$columns['utc_start_time']           = 'utc_start_time';
+		$columns['utc_end_time']             = 'utc_end_time';
+		$columns['interviewer']              = 'interviewer';
+
+		return $columns;
+	}
+);
+
+add_action(
+	'pre_get_posts',
+	function ( $query ) {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		$orderby = $query->get( 'orderby' );
+
+		if ( 'continent_country_city' === $orderby ) {
+			$query->set( 'meta_key', 'continent_country_city' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'locale' === $orderby ) {
+			$query->set( 'meta_key', 'locale' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'organizer_name' === $orderby ) {
+			$query->set( 'meta_key', 'organizer_name' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'organizer_username_slack' === $orderby ) {
+			$query->set( 'meta_key', 'organizer_username_slack' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'utc_start_time' === $orderby ) {
+			$query->set( 'meta_key', 'utc_start_time' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+
+		if ( 'utc_end_time' === $orderby ) {
+			$query->set( 'meta_key', 'utc_end_time' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+
+		if ( 'interviewer' === $orderby ) {
+			$query->set( 'meta_key', 'interviewer' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+	}
+);
+
 add_action(
 	'manage_wptd_local_event_posts_custom_column',
 	function( $column, $id ) {
-		if ( 'city' === $column ) {
-			echo esc_attr( get_field( 'city', $id ) );
-
-		} elseif ( 'country' === $column ) {
-			echo esc_attr( get_field( 'country', $id ) );
-
-		} elseif ( 'continent' === $column ) {
-			echo esc_attr( get_field( 'continent', $id ) );
+		if ( 'continent_country_city' === $column ) {
+			echo esc_attr( get_field( 'continent_country_city', $id ) );
 
 		} elseif ( 'locale' === $column ) {
 			echo esc_attr( get_field( 'locale', $id ) );
@@ -263,6 +316,37 @@ add_filter(
 		$columns['talk_subject']   = esc_html__( 'Talk subject', 'wptd4' );
 
 		return $columns;
+	}
+);
+
+add_filter(
+	'manage_edit-wptd_speaker_sortable_columns',
+	function( $columns ) {
+		$columns['username_wporg'] = 'username_wporg';
+		$columns['username_slack'] = 'username_slack';
+
+		return $columns;
+	}
+);
+
+add_action(
+	'pre_get_posts',
+	function ( $query ) {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		$orderby = $query->get( 'orderby' );
+
+		if ( 'username_wporg' === $orderby ) {
+			$query->set( 'meta_key', 'username_wporg' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'username_slack' === $orderby ) {
+			$query->set( 'meta_key', 'username_slack' );
+			$query->set( 'orderby', 'meta_value' );
+		}
 	}
 );
 
@@ -353,7 +437,6 @@ add_action(
 		}
 	}
 );
-
 
 add_action(
 	'manage_wptd_organizer_posts_custom_column',
