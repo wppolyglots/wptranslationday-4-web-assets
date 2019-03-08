@@ -494,7 +494,6 @@ add_filter(
 		$columns['speaker']             = esc_html__( 'Speaker', 'wptd' );
 		$columns['utc_start_time']      = esc_html__( 'UTC Start Time', 'wptd' );
 		$columns['duration']            = esc_html__( 'Duration', 'wptd' );
-		$columns['type']                = esc_html__( 'Type', 'wptd' );
 		$columns['live_or_prerecorded'] = esc_html__( 'Duration', 'wptd' );
 		$columns['target_audience']     = esc_html__( 'Target Audience', 'wptd' );
 		$columns['target_language']     = esc_html__( 'Target Language', 'wptd' );
@@ -508,7 +507,6 @@ add_filter(
 	function( $columns ) {
 		$columns['utc_start_time']      = 'utc_start_time';
 		$columns['duration']            = 'duration';
-		$columns['type']                = 'type';
 		$columns['live_or_prerecorded'] = 'live_or_prerecorded';
 		$columns['target_audience']     = 'target_audience';
 		$columns['target_language']     = 'target_language';
@@ -533,11 +531,6 @@ add_action(
 
 		if ( 'duration' === $orderby ) {
 			$query->set( 'meta_key', 'duration' );
-			$query->set( 'orderby', 'meta_value' );
-		}
-
-		if ( 'type' === $orderby ) {
-			$query->set( 'meta_key', 'type' );
 			$query->set( 'orderby', 'meta_value' );
 		}
 
@@ -569,9 +562,6 @@ add_action(
 
 		} elseif ( 'duration' === $column ) {
 			echo esc_attr( get_field( 'duration', $id ) );
-
-		} elseif ( 'type' === $column ) {
-			echo esc_attr( get_field( 'type', $id ) );
 
 		} elseif ( 'live_or_prerecorded' === $column ) {
 			echo esc_attr( get_field( 'live_or_prerecorded', $id ) );
