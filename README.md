@@ -10,13 +10,13 @@ Our theme is a child-theme of [TwentySeventeen](https://wordpress.org/themes/twe
 
 ## Custom Post Types
 
-The theme provides 3 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `themes/wptd4/inc` folder that you can import into ACF.
+The theme provides 3 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `/inc` folder that you can import into ACF.
 
 ## General Documentation
 
 __Front Page__
 
-The Front Page is divided into 5 _Panels_. It's template file is located at `themes/wptd4/template-parts/page/content-front-page.php`. When editing the Front Page you will see the custom fields that change each aspect of every panel those include:
+The Front Page is divided into 5 _Panels_. It's template file is located at `/template-parts/page/content-front-page.php`. When editing the Front Page you will see the custom fields that change each aspect of every panel those include:
 
 - Enabled (on/off)
 - Panel Anchor ID (to be used for menu # reference)
