@@ -50,7 +50,7 @@ get_header(); ?>
 										<?php the_title(); ?>
 									</div>
 									<div class="card-role">
-										<?php echo '<a href="' . esc_url( site_url( '/schedule/', 'https' ) ) . '">' . esc_attr( get_field( 'talk_subject' ) ) . '</a>'; ?> <br>
+										<?php echo '<a href="' . esc_url( site_url( '/schedule/', 'https' ) ) . '">' . esc_attr( get_field( 'talk_subject' ) ) . '</a>'; ?>
 									</div>
 									<div class="card-bio">
 										<?php echo wp_kses_post( get_field( 'bio' ) ); ?>

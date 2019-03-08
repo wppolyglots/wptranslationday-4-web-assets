@@ -1,6 +1,9 @@
 <?php // phpcs:ignore
 
-get_header(); ?>
+get_header();
+
+$frontpage_id = get_option( 'page_on_front' );
+?>
 
 <div class="wrap">
 	<div id="primary" class="content-area">
@@ -9,27 +12,31 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); // phpcs:ignore ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					<?php twentyseventeen_edit_link( get_the_ID() ); ?>
 				</header><!-- .entry-header -->
+
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->
+
+				<div class="current-talk">
+				</div><!-- .current-talk -->
+
 				<?php
 				$args = array(
-					'post_type'      => array( 'wptd_local_event' ),
+					'post_type'      => array( 'wptd_talk' ),
 					'post_status'    => array( 'publish' ),
 					'nopaging'       => true,
 					'posts_per_page' => -1,
-					'orderby'        => 'meta_value',
-					'meta_key'       => 'continent_country_city',
+					'orderby'        => 'meta_value_num',
+					'meta_key'       => 'utc_start_time',
 					'order'          => 'ASC',
 				);
 
 				$query = new WP_Query( $args );
-
-				$previous_continent = 'Empty';
 
 				if ( $query->have_posts() ) : //phpcs:ignore ?>
 					<div class="entry-content">
@@ -37,31 +44,38 @@ get_header(); ?>
 						while ( $query->have_posts() ) :
 							$query->the_post();
 
-							$continent = get_field( 'continent' );
-							if ( $previous_continent !== $continent ) {
-								$previous_continent = $continent;
-								echo '<h2>' . esc_attr( $continent ) . '</h2>';
+							$speakers      = get_field( 'speaker' );
+							$speaker_names = array();
+							foreach ( $speakers as $speaker ) {
+								array_push( $speaker_names, get_the_title( $speaker ) );
 							}
-
-							$wporg    = get_field( 'organizer_username_wporg' );
-							$slack    = get_field( 'organizer_username_slack' );
-							$evenlink = get_field( 'announcement_url' );
 							?>
 
-							<div class="local-event">
-								<div class="area">
-									<?php echo esc_attr( get_field( 'country' ) ) . ' - ' . esc_attr( get_field( 'city' ) ) . ' (' . esc_attr( get_field( 'locale' ) ) . ')'; ?>
+							<div class="talk">
+								<div class="left">
+									<div class="time"
+										data-duration="<?php echo esc_attr( str_replace( ' minutes', '', get_field( 'duration' ) ) ); ?>"
+										data-when="now"
+										data-time="<?php echo esc_attr( get_field( 'event_date', $frontpage_id ) ) . ' ' . esc_attr( get_field( 'utc_start_time' ) ) . ':00'; ?>">
+										<?php echo esc_attr( get_field( 'utc_start_time' ) ); ?> <br>
+									</div>
+									<div class="local-time">
+										<?php echo esc_attr( get_field( 'utc_start_time' ) ); ?> <br>
+									</div>
 								</div>
-								<div class="time">
-									<?php echo esc_html__( 'Event Time:', 'wptd4' ) . ' ' . esc_attr( get_field( 'utc_start_time' ) ) . ' - ' . esc_attr( get_field( 'utc_end_time' ) ) . ' ' . esc_html__( 'UTC', 'wptd4' ); ?><br>
-								</div>
-								<div class="organizer">
-									<?php echo esc_html__( 'Organizer:', 'wptf4' ) . ' ' . esc_attr( get_field( 'organizer_name' ) ); ?>
-									<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
-									<?php echo ( ! empty( $slack ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $slack ) . '" target="_blank" title="Slack  Profile"><i class="fab fa-slack"></i></a>' : ''; ?><br>
-								</div>
-								<div class="link">
-									<?php echo ( ! empty( $evenlink ) ) ? '<a href="' . esc_attr( $evenlink ) . '" target="_blank" title="Announcement URL">' . esc_html__( 'Check it out!', 'wptd4' ) . '</a>' : ''; ?>
+								<div class="right">
+									<div class="title">
+										<?php the_title(); ?>
+									</div>
+									<div class="speaker">
+										<?php echo '<a href="' . esc_url( site_url( '/the-speakers/', 'https' ) ) . '">' . esc_attr( implode( ', ', $speaker_names ) ) . '</a>'; ?>
+									</div>
+									<div class="description">
+										<?php echo wp_kses_post( get_field( 'description' ) ); ?>
+									</div>
+									<div class="info">
+										<?php echo esc_attr( get_field( 'live_or_prerecorded' ) ) . ' | ' . esc_attr( get_field( 'duration' ) ) . ' | ' . esc_attr( get_field( 'target_language' ) ) .  ' | ' . esc_attr( get_field( 'target_audience' ) ); ?>
+									</div>
 								</div>
 							</div>
 
@@ -78,6 +92,58 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
+
+<script>
+	( function( $ ) {
+		function fixTalkList() {
+			$( '.time' ).each( function () {
+				var talkTimeUTC = $( this ).attr( 'data-time' ),
+					timeLocal = moment.utc( $( this ).attr( 'data-time' ) ).toDate(),
+					currTimeUTC = moment().utc().format( 'YYYY-MM-DD HH:mm:ss' ),
+					durTimeUTC = $( this ).attr( 'data-duration' ),
+					durTime = moment( talkTimeUTC ).add( durTimeUTC, 'm' ),
+					endTime = durTime.format( 'YYYY-MM-DD HH:mm:ss' );
+
+				$( '.current-talk' ).html('');
+
+				if ( currTimeUTC > talkTimeUTC ) {
+					$( this ).attr( 'data-when', 'past' );
+				} else {
+					$( this ).attr( 'data-when', 'future' );
+				}
+
+				if ( currTimeUTC < endTime && currTimeUTC > talkTimeUTC ) {
+					$( this ).data( 'when', 'now' );
+				}
+
+				timeLocal = moment( timeLocal ).format( 'HH:mm' );
+				$( this ).siblings( '.local-time' ).html( timeLocal );
+			} );
+
+			$( 'div[data-when="past"]' ).each( function () {
+				$( this ).css( 'opacity', '.4' );
+			} );
+
+			var currTalk = $( 'div[data-when="now"]' ).clone();
+			$( '.current-talk .talk-holder' ).html( currTalk );
+		}
+
+		$( 'document' ).ready( function() {
+			var theLiveDay = '<?php echo esc_attr( get_field( 'event_date', $frontpage_id ) ); ?>',
+				currDay = moment().utc().format( 'YYYY-MM-DD' );
+
+			if ( theLiveDay != currDay ) {
+				$('.current-talk').css('display', 'none');
+			}
+
+			fixTalkList();
+
+			setInterval( function () {
+				fixTalkList();
+			}, 60000 );
+		})
+	})( jQuery );
+</script>
 
 <?php
 get_footer();
