@@ -1333,6 +1333,25 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
+            },
+            {
+                "key": "field_5c82373688e6b",
+                "label": "Bio",
+                "name": "bio",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             }
         ],
         "location": [

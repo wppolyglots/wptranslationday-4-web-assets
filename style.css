@@ -300,6 +300,12 @@ body.page-the-team .site-content {
 body.page-the-team .entry-title {
 	color: var( --color-dark-blue ) !important;
 }
+body.page-the-speakers .site-content {
+	background: var( --color-pink );
+}
+body.page-the-speakers .entry-title {
+	color: var( --color-dark-red ) !important;
+}
 
 /* Cards */
 .cards {
