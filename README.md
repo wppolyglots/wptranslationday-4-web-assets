@@ -23,13 +23,15 @@ The Front Page is divided into 5 _Panels_. It's template file is located at `/te
 - Panel Heading (the title)
 - Panel Text (the main text at the right side)
 
-__Note:__ The 4th panel also has a Countdown Date and a Countdown Finished Message so you can easily change the timer of the Front Page.
+__Note 1:__ The 4th panel also has a Countdown Date and a Countdown Finished Message so you can easily change the timer of the Front Page.
+
+__Note 2:__ You will also find the `Event Date` custom field, this is used to calculate the automation on the Schedule page to show the current live Talk. Set it to the Events Date!
 
 ## Custom Post Types
 
 The theme provides 4 Custom Post Types for Organizers, Speakers and Local Events. You will find a `acf-export.json` file with all the fields needed for these CPTs inside the `/assets/` folder that you can import into ACF.
 
-It will also check if the necessary pages exist and if not they will be automatically created as `The Team` for the Organizers, `The Speakers` for the Speakers, `Schedules` for the talks and `Local Events` for the Local Events CPTs.
+It will also check if the necessary pages exist and if not they will be automatically created as `The Team` for the Organizers, `The Speakers` for the Speakers, `Schedule` for the talks and `Local Events` for the Local Events CPTs.
 
 __Organizers__
 
@@ -78,4 +80,18 @@ This CPT is bound to the `local-events` slug and it will be automatically loaded
 - UTC End Time
 - Announcement URL
 - Interviewer
-- Continent - Country/State - City [ this field is used for sorting purposes do not edit it, it will be automatically populated ]
+- Continent - Country/State - City __(this field is used for sorting purposes do not edit it, it will be automatically populated)__
+
+__Talks__
+
+This CPT is bound to the `schedule` slug and it will be automatically loaded in the `page-schedule.php` that is included with the theme. The information that we use is this:
+
+- Title ( Post Title )
+- Description
+- Speaker ( in relation to Speakers )
+- UTC Start Time
+- Live or Pre-recorded
+- Duration
+- Target Audience
+- Target Language
+- Video URL
