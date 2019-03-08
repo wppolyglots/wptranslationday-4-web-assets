@@ -4,6 +4,25 @@
         "title": "Frontpage Fields",
         "fields": [
             {
+                "key": "field_5c82ebf9236f0",
+                "label": "Maintenance Mode",
+                "name": "maintenance_mode",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
                 "key": "field_5c82e7abdafbb",
                 "label": "Event Date",
                 "name": "event_date",

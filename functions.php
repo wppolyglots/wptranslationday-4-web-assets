@@ -33,7 +33,9 @@ add_action(
 add_action(
 	'template_redirect',
 	function() {
-		if ( ! is_user_logged_in() ) {
+		$frontpage_id = get_option( 'page_on_front' );
+		$maintenance  = get_field( 'maintenance_mode', $frontpage_id );
+		if ( $maintenance && ! is_user_logged_in() ) {
 			return wp_die( esc_attr( 'Under Maintenance', 'wptd' ) );
 		}
 	},
