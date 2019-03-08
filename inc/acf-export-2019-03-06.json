@@ -1314,6 +1314,25 @@
                 },
                 "default_value": "",
                 "placeholder": ""
+            },
+            {
+                "key": "field_5c822ff132177",
+                "label": "Talk Subject",
+                "name": "talk_subject",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [
