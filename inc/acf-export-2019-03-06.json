@@ -1409,6 +1409,25 @@
         "title": "Talks Fields",
         "fields": [
             {
+                "key": "field_5c82b9e8620aa",
+                "label": "Information",
+                "name": "information",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
                 "key": "field_5c82b56734732",
                 "label": "Speaker",
                 "name": "speaker",
@@ -1425,11 +1444,7 @@
                     "wptd_speaker"
                 ],
                 "taxonomy": "",
-                "filters": [
-                    "search",
-                    "post_type",
-                    "taxonomy"
-                ],
+                "filters": "",
                 "elements": "",
                 "min": "",
                 "max": "",
@@ -1452,50 +1467,6 @@
                 "return_format": "H:i"
             },
             {
-                "key": "field_5c82b6dacda7c",
-                "label": "Duration",
-                "name": "duration",
-                "type": "select",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "choices": {
-                    "30 minutes": "30 minutes",
-                    "60 minutes": "60 minutes"
-                },
-                "default_value": [],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "return_format": "value",
-                "ajax": 0,
-                "placeholder": ""
-            },
-            {
-                "key": "field_5c82b5cc5370b",
-                "label": "Type",
-                "name": "type",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_5c82b5e25370c",
                 "label": "Live or Pre-recorded?",
                 "name": "live_or_prerecorded",
@@ -1511,6 +1482,31 @@
                 "choices": {
                     "Live": "Live",
                     "Pre-recorded": "Pre-recorded"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c82b6dacda7c",
+                "label": "Duration",
+                "name": "duration",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "30 minutes": "30 minutes",
+                    "60 minutes": "60 minutes"
                 },
                 "default_value": [],
                 "allow_null": 0,
@@ -1580,7 +1576,20 @@
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
-        "hide_on_screen": "",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "discussion",
+            "comments",
+            "revisions",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
         "active": true,
         "description": ""
     }
