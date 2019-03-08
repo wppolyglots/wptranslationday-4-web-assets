@@ -1403,5 +1403,185 @@
         ],
         "active": true,
         "description": ""
+    },
+    {
+        "key": "group_5c82b54d7bc44",
+        "title": "Talks Fields",
+        "fields": [
+            {
+                "key": "field_5c82b56734732",
+                "label": "Speaker",
+                "name": "speaker",
+                "type": "relationship",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "wptd_speaker"
+                ],
+                "taxonomy": "",
+                "filters": [
+                    "search",
+                    "post_type",
+                    "taxonomy"
+                ],
+                "elements": "",
+                "min": "",
+                "max": "",
+                "return_format": "object"
+            },
+            {
+                "key": "field_5c82b59934733",
+                "label": "UTC Start Time",
+                "name": "utc_start_time",
+                "type": "time_picker",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "H:i",
+                "return_format": "H:i"
+            },
+            {
+                "key": "field_5c82b6dacda7c",
+                "label": "Duration",
+                "name": "duration",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "30 minutes": "30 minutes",
+                    "60 minutes": "60 minutes"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c82b5cc5370b",
+                "label": "Type",
+                "name": "type",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c82b5e25370c",
+                "label": "Live or Pre-recorded?",
+                "name": "live_or_prerecorded",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Live": "Live",
+                    "Pre-recorded": "Pre-recorded"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c82b6635370d",
+                "label": "Target Audience",
+                "name": "target_audience",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "General": "General",
+                    "Translators": "Translators",
+                    "Developers": "Developers"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c82b6b1cda7b",
+                "label": "Target Language",
+                "name": "target_language",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wptd_talks"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
     }
 ]
