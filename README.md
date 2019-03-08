@@ -27,6 +27,8 @@ __Note 1:__ The 4th panel also has a Countdown Date and a Countdown Finished Mes
 
 __Note 2:__ You will also find the `Event Date` custom field, this is used to calculate the automation on the Schedule page to show the current live Talk. Set it to the Events Date!
 
+__Note 3:__ You will also find the `Maintenance Mode` custom field, this is used to easily put the website under maintenance for non logged in users.
+
 ## Custom Post Types
 
 The theme provides 4 Custom Post Types for Organizers, Speakers and Local Events. You will find a `acf-export.json` file with all the fields needed for these CPTs inside the `/assets/` folder that you can import into ACF.
