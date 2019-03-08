@@ -64,6 +64,42 @@ add_filter(
 	}
 );
 
+// Create necessary pages if they don't exist.
+add_action(
+	'admin_menu',
+	function() {
+		$pages = array(
+			'the-team'     => esc_html__( 'The Team', 'wptd4' ),
+			'the-speakers' => esc_html__( 'The Speakers', 'wptd4' ),
+			'schedule'     => esc_html__( 'Schedule', 'wptd4' ),
+		);
+
+		foreach ( $pages as $page_slug => $page_title ) {
+
+			$args = array(
+				'post_type'      => 'page',
+				'pagename'       => $page_slug,
+				'posts_per_page' => 1,
+			);
+
+			$query = new WP_Query( $args );
+
+			if ( ! $query->have_posts() ) {
+				wp_insert_post(
+					array(
+						'post_author'  => '1',
+						'post_name'    => $page_slug,
+						'post_title'   => $page_title,
+						'post_content' => '',
+						'post_type'    => 'page',
+						'post_status'  => 'publish',
+					)
+				);
+			}
+		}
+	}
+);
+
 // Setup Custom Post Types.
 add_action(
 	'init',
@@ -203,10 +239,7 @@ add_filter(
 
 		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
 		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
-		$columns['facebook']       = esc_html__( 'Facebook', 'wptd4' );
-		$columns['twitter']        = esc_html__( 'Twitter', 'wptd4' );
-		$columns['linkedin']       = esc_html__( 'LinkedIn', 'wptd4' );
-		$columns['website']        = esc_html__( 'Website', 'wptd4' );
+		$columns['talk_subject']   = esc_html__( 'Talk subject', 'wptd4' );
 
 		return $columns;
 	}
@@ -231,57 +264,8 @@ add_action(
 		} elseif ( 'username_slack' === $column ) {
 			echo esc_attr( get_field( 'username_slack', $id ) );
 
-		} elseif ( 'facebook' === $column ) {
-			$url = ( ! empty( get_field( 'facebook', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'facebook', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
-			echo wp_kses(
-				$url,
-				array(
-					'a' => array(
-						'href'  => array(),
-						'title' => array(),
-						'target' => array(),
-					),
-				)
-			);
-
-		} elseif ( 'twitter' === $column ) {
-			$url = ( ! empty( get_field( 'twitter', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'twitter', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
-			echo wp_kses(
-				$url,
-				array(
-					'a' => array(
-						'href'  => array(),
-						'title' => array(),
-						'target' => array(),
-					),
-				)
-			);
-
-		} elseif ( 'linkedin' === $column ) {
-			$url = ( ! empty( get_field( 'linkedin', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'linkedin', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
-			echo wp_kses(
-				$url,
-				array(
-					'a' => array(
-						'href'  => array(),
-						'title' => array(),
-						'target' => array(),
-					),
-				)
-			);
-
-		} elseif ( 'website' === $column ) {
-			$url = ( ! empty( get_field( 'website', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'website', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
-			echo wp_kses(
-				$url,
-				array(
-					'a' => array(
-						'href'  => array(),
-						'title' => array(),
-						'target' => array(),
-					),
-				)
-			);
+		} elseif ( 'talk_subject' === $column ) {
+			echo esc_attr( get_field( 'talk_subject', $id ) );
 
 		} else {
 			echo '';
