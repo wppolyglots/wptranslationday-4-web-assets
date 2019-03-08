@@ -165,7 +165,9 @@ a:hover {
 }
 .home .panel-content .left img {
 	max-width: 150px;
-	width: 150px;
+	max-height: 150px;
+	width: unset;
+	height: unset;
 }
 .home .panel-content .right {
 	text-align: justify;
@@ -324,6 +326,7 @@ body.page-the-team .entry-title {
 .cards .card .card-bio {
 	font-size: 16px;
 }
+
 /* Media Queries */
 @media ( max-width: 768px ) {
 	/* general */
@@ -355,6 +358,9 @@ body.page-the-team .entry-title {
 	.stay-tuned .right {
 		text-align: center;
 	}
+	.cards {
+		grid-template-columns: repeat( 2, 1fr );
+	}
 }
 @media ( max-width: 425px ) {
 	h2 {
@@ -366,6 +372,9 @@ body.page-the-team .entry-title {
 	.home #countdown .time {
 		margin-top: -20px;
 		font-size: 16px;
+	}
+	.cards {
+		grid-template-columns: 1fr;
 	}
 }
 
