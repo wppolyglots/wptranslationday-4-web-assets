@@ -64,7 +64,7 @@ This CPT is bound to the `the-speakers` slug and it will be automatically loaded
 
 __Local Events__
 
-This CPT is bound to the `local-events` slug and it will be automatically loaded in the `page-local-evemts.php` that is included with the theme. The information that we use is this:
+This CPT is bound to the `local-events` slug and it will be automatically loaded in the `page-local-events.php` that is included with the theme. The information that we use is this:
 
 - City
 - Country / State
