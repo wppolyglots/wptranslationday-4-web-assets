@@ -8,11 +8,9 @@ Please use the `develop` branch if you want to make any PRs. The `master` branch
 
 Our theme is a child-theme of [TwentySeventeen](https://wordpress.org/themes/twentyseventeen/). We're also making use of [TGM Plugin Activation](https://github.com/TGMPA/TGM-Plugin-Activation) to require necessary plugns needed for the website to run smoothly. These are [Classic Editor](https://wordpress.org/plugins/classic-editor/), [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/), [Disable Comments](https://wordpress.org/plugins/disable-comments/).
 
-## Custom Post Types
+# General Documentation
 
-The theme provides 3 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `/inc` folder that you can import into ACF.
-
-## General Documentation
+## General Pages
 
 __Front Page__
 
@@ -26,3 +24,23 @@ The Front Page is divided into 5 _Panels_. It's template file is located at `/te
 - Panel Text (the main text at the right side)
 
 __Note:__ The 4th panel also has a Countdown Date and a Countdown Finished Message so you can easily change the timer of the Front Page.
+
+## Custom Post Types
+
+The theme provides 3 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `/inc` folder that you can import into ACF.
+
+__Organizers__
+
+For the Organizers you'll need to create an empty page with the `the-team` slug. This will automatically load the `page-the-team.php` that is included with the theme. The information that we use is this:
+
+- Organizer Name ( Post Title )
+- Image ( upload a custom avatar )
+- Username wp.org
+- Username slack
+- Facebook Profile URL
+- Twitter Profile URL
+- LinkedIn Profile URL
+- Website URL
+- Role
+- Bio
+- Order (this is used if custom ordering is needed on the front-end and the template file has to be adjusted as well)
