@@ -27,11 +27,13 @@ __Note:__ The 4th panel also has a Countdown Date and a Countdown Finished Messa
 
 ## Custom Post Types
 
-The theme provides 3 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `/inc` folder that you can import into ACF.
+The theme provides 4 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `/inc` folder that you can import into ACF.
+
+It will also check if the necessary pages exist and if not they will be automatically created as `The Team` for the Organizers, `The Speakers` for the Speakers, `Schedules` for the talks and `Local Events` for the Local Events CPTs.
 
 __Organizers__
 
-For the Organizers you'll need to create an empty page with the `the-team` slug. This will automatically load the `page-the-team.php` that is included with the theme. The information that we use is this:
+This CPT is bound to the `the-team` slug and it will be automatically loaded in the `page-the-team.php` that is included with the theme. The information that we use is this:
 
 - Organizer Name ( Post Title )
 - Image ( upload a custom avatar )
@@ -44,3 +46,36 @@ For the Organizers you'll need to create an empty page with the `the-team` slug.
 - Role
 - Bio
 - Order (this is used if custom ordering is needed on the front-end and the template file has to be adjusted as well)
+
+__Speakers__
+
+This CPT is bound to the `the-speakers` slug and it will be automatically loaded in the `page-the-speakers.php` that is included with the theme. The information that we use is this:
+
+- Speaker Name ( Post Title )
+- Image ( upload a custom avatar )
+- Username wp.org
+- Username slack
+- Facebook Profile URL
+- Twitter Profile URL
+- LinkedIn Profile URL
+- Website URL
+- Talk Subject
+- Bio
+
+__Local Events__
+
+This CPT is bound to the `local-events` slug and it will be automatically loaded in the `page-local-evemts.php` that is included with the theme. The information that we use is this:
+
+- City
+- Country / State
+- Continent
+- Locale
+- Organizer Name
+- Organizer Username wp.org
+- Organizer Username slack
+- Co-organizers
+- UTC Start Time
+- UTC End Time
+- Announcement URL
+- Interviewer
+- Continent - Country/State - City [ this field is used for sorting purposes do not edit it, it will be automatically populated ]
