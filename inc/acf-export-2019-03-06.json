@@ -1571,7 +1571,7 @@
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "wptd_talks"
+                    "value": "wptd_talk"
                 }
             ]
         ],
