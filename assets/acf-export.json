@@ -4,6 +4,23 @@
         "title": "Frontpage Fields",
         "fields": [
             {
+                "key": "field_5c82ee671219e",
+                "label": "General",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
+            },
+            {
                 "key": "field_5c82ebf9236f0",
                 "label": "Maintenance Mode",
                 "name": "maintenance_mode",
@@ -38,6 +55,23 @@
                 "display_format": "F j, Y",
                 "return_format": "Y-m-d",
                 "first_day": 1
+            },
+            {
+                "key": "field_5c82eeb198966",
+                "label": "Panel 1",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
             },
             {
                 "key": "field_5c800ada2ee47",
@@ -164,6 +198,23 @@
                 "delay": 0
             },
             {
+                "key": "field_5c82eed7301c9",
+                "label": "Panel 2",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
+            },
+            {
                 "key": "field_5c800b072ee48",
                 "label": "Panel 2 Active",
                 "name": "panel_2_active",
@@ -288,6 +339,23 @@
                 "delay": 0
             },
             {
+                "key": "field_5c82eee5301ca",
+                "label": "Panel 3",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
+            },
+            {
                 "key": "field_5c800b152ee49",
                 "label": "Panel 3 Active",
                 "name": "panel_3_active",
@@ -410,6 +478,23 @@
                 "toolbar": "full",
                 "media_upload": 1,
                 "delay": 0
+            },
+            {
+                "key": "field_5c82eef0301cb",
+                "label": "Panel 4",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
             },
             {
                 "key": "field_5c800b272ee4a",
@@ -570,6 +655,23 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
+            },
+            {
+                "key": "field_5c82eefe301cc",
+                "label": "Panel 5",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
             },
             {
                 "key": "field_5c800b3a2ee4b",
@@ -935,7 +1037,7 @@
                 "key": "field_5c80d001ce86a",
                 "label": "Address\/City or GPS coordinates",
                 "name": "coordinates",
-                "type": "leaflet_map_field",
+                "type": "text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -944,10 +1046,11 @@
                     "class": "",
                     "id": ""
                 },
-                "lat": 0,
-                "lng": 0,
-                "zoom": 14,
-                "height": 320
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             {
                 "key": "field_5c805a60bc247",
