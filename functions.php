@@ -72,6 +72,7 @@ add_action(
 			'the-team'     => esc_html__( 'The Team', 'wptd4' ),
 			'the-speakers' => esc_html__( 'The Speakers', 'wptd4' ),
 			'schedule'     => esc_html__( 'Schedule', 'wptd4' ),
+			'local-events' => esc_html__( 'Local Events', 'wptd4' ),
 		);
 
 		foreach ( $pages as $page_slug => $page_title ) {
