@@ -586,7 +586,7 @@ add_action(
 );
 
 // Include TGM & Require extra plugins.
-require_once get_stylesheet_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_stylesheet_directory() . '/assets/class-tgm-plugin-activation.php';
 
 add_action(
 	'tgmpa_register',

@@ -27,7 +27,7 @@ __Note:__ The 4th panel also has a Countdown Date and a Countdown Finished Messa
 
 ## Custom Post Types
 
-The theme provides 4 Custom Post Types for Organizers, Speakers and Local Events. You will find a `.json` file with all the fields needed for these CPTs inside the `/inc` folder that you can import into ACF.
+The theme provides 4 Custom Post Types for Organizers, Speakers and Local Events. You will find a `acf-export.json` file with all the fields needed for these CPTs inside the `/assets/` folder that you can import into ACF.
 
 It will also check if the necessary pages exist and if not they will be automatically created as `The Team` for the Organizers, `The Speakers` for the Speakers, `Schedules` for the talks and `Local Events` for the Local Events CPTs.
 
