@@ -306,6 +306,50 @@ add_filter(
 	}
 );
 
+add_filter(
+	'manage_edit-wptd_organizer_sortable_columns',
+	function( $columns ) {
+		$columns['username_wporg'] = 'username_wporg';
+		$columns['username_slack'] = 'username_slack';
+		$columns['role']           = 'role';
+		$columns['order']          = 'order';
+
+		return $columns;
+	}
+);
+
+add_action(
+	'pre_get_posts',
+	function ( $query ) {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		$orderby = $query->get( 'orderby' );
+
+		if ( 'username_wporg' === $orderby ) {
+			$query->set( 'meta_key', 'username_wporg' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'username_slack' === $orderby ) {
+			$query->set( 'meta_key', 'username_slack' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'role' === $orderby ) {
+			$query->set( 'meta_key', 'role' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'order' === $orderby ) {
+			$query->set( 'meta_key', 'order' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+	}
+);
+
+
 add_action(
 	'manage_wptd_organizer_posts_custom_column',
 	function( $column, $id ) {
