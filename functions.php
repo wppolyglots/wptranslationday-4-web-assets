@@ -34,7 +34,7 @@ add_action(
 	'template_redirect',
 	function() {
 		if ( ! is_user_logged_in() ) {
-			return wp_die( esc_attr( 'Under Maintenance', 'wptd4' ) );
+			return wp_die( esc_attr( 'Under Maintenance', 'wptd' ) );
 		}
 	},
 	15
@@ -46,7 +46,7 @@ add_action(
 	function() {
 		register_nav_menus(
 			array(
-				'footer-menu' => esc_html__( 'Footer Menu', 'wptd4' ),
+				'footer-menu' => esc_html__( 'Footer Menu', 'wptd' ),
 			)
 		);
 	}
@@ -69,10 +69,10 @@ add_action(
 	'admin_menu',
 	function() {
 		$pages = array(
-			'the-team'     => esc_html__( 'The Team', 'wptd4' ),
-			'the-speakers' => esc_html__( 'The Speakers', 'wptd4' ),
-			'schedule'     => esc_html__( 'Schedule', 'wptd4' ),
-			'local-events' => esc_html__( 'Local Events', 'wptd4' ),
+			'the-team'     => esc_html__( 'The Team', 'wptd' ),
+			'the-speakers' => esc_html__( 'The Speakers', 'wptd' ),
+			'schedule'     => esc_html__( 'Schedule', 'wptd' ),
+			'local-events' => esc_html__( 'Local Events', 'wptd' ),
 		);
 
 		foreach ( $pages as $page_slug => $page_title ) {
@@ -123,8 +123,8 @@ add_action(
 			'wptd_speaker',
 			array(
 				'labels'       => array(
-					'name'          => esc_html__( 'Speakers', 'wptd4' ),
-					'singular_name' => esc_html__( 'Speaker', 'wptd4' ),
+					'name'          => esc_html__( 'Speakers', 'wptd' ),
+					'singular_name' => esc_html__( 'Speaker', 'wptd' ),
 				),
 				'public'       => true,
 				'has_archive'  => true,
@@ -137,12 +137,26 @@ add_action(
 			'wptd_organizer',
 			array(
 				'labels'       => array(
-					'name'          => esc_html__( 'Organizers', 'wptd4' ),
-					'singular_name' => esc_html__( 'Organizer', 'wptd4' ),
+					'name'          => esc_html__( 'Organizers', 'wptd' ),
+					'singular_name' => esc_html__( 'Organizer', 'wptd' ),
 				),
 				'public'       => true,
 				'has_archive'  => true,
 				'rewrite'      => array( 'slug' => 'organizers' ),
+				'show_in_menu' => true,
+			)
+		);
+
+		register_post_type(
+			'wptd_talk',
+			array(
+				'labels'       => array(
+					'name'          => esc_html__( 'Talks', 'wptd' ),
+					'singular_name' => esc_html__( 'Talk', 'wptd' ),
+				),
+				'public'       => true,
+				'has_archive'  => true,
+				'rewrite'      => array( 'slug' => 'talks' ),
 				'show_in_menu' => true,
 			)
 		);
@@ -175,14 +189,14 @@ add_filter(
 	function( $columns ) {
 		unset( $columns['date'] );
 
-		$columns['continent_country_city']   = esc_html__( 'Location', 'wptd4' );
-		$columns['locale']                   = esc_html__( 'Locale', 'wptd4' );
-		$columns['organizer_name']           = esc_html__( 'Organizer Name', 'wptd4' );
-		$columns['organizer_username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
-		$columns['utc_start_time']           = esc_html__( 'UTC Start Time', 'wptd4' );
-		$columns['utc_end_time']             = esc_html__( 'UTC End Time', 'wptd4' );
-		$columns['announcement_url']         = esc_html__( 'Announcement URL', 'wptd4' );
-		$columns['interviewer']              = esc_html__( 'Interviewer', 'wptd4' );
+		$columns['continent_country_city']   = esc_html__( 'Location', 'wptd' );
+		$columns['locale']                   = esc_html__( 'Locale', 'wptd' );
+		$columns['organizer_name']           = esc_html__( 'Organizer Name', 'wptd' );
+		$columns['organizer_username_slack'] = esc_html__( 'Slack Username', 'wptd' );
+		$columns['utc_start_time']           = esc_html__( 'UTC Start Time', 'wptd' );
+		$columns['utc_end_time']             = esc_html__( 'UTC End Time', 'wptd' );
+		$columns['announcement_url']         = esc_html__( 'Announcement URL', 'wptd' );
+		$columns['interviewer']              = esc_html__( 'Interviewer', 'wptd' );
 
 		return $columns;
 	}
@@ -282,7 +296,7 @@ add_action(
 			echo esc_attr( get_field( 'utc_end_time', $id ) );
 
 		} elseif ( 'announcement_url' === $column ) {
-			$url = ( ! empty( get_field( 'announcement_url', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'announcement_url', $id ) . '">' . esc_html__( 'Open', 'wptd4' ) . '</a>' : '';
+			$url = ( ! empty( get_field( 'announcement_url', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'announcement_url', $id ) . '">' . esc_html__( 'Open', 'wptd' ) . '</a>' : '';
 			echo wp_kses(
 				$url,
 				array(
@@ -311,9 +325,9 @@ add_filter(
 	function( $columns ) {
 		unset( $columns['date'] );
 
-		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
-		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
-		$columns['talk_subject']   = esc_html__( 'Talk subject', 'wptd4' );
+		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd' );
+		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd' );
+		$columns['talk_subject']   = esc_html__( 'Talk subject', 'wptd' );
 
 		return $columns;
 	}
@@ -386,10 +400,10 @@ add_filter(
 	function( $columns ) {
 		unset( $columns['date'] );
 
-		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
-		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
-		$columns['role']           = esc_html__( 'Role', 'wptd4' );
-		$columns['order']          = esc_html__( 'Order', 'wptd4' );
+		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd' );
+		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd' );
+		$columns['role']           = esc_html__( 'Role', 'wptd' );
+		$columns['order']          = esc_html__( 'Order', 'wptd' );
 
 		return $columns;
 	}
@@ -462,6 +476,111 @@ add_action(
 
 		} elseif ( 'order' === $column ) {
 			echo esc_attr( get_field( 'order', $id ) );
+
+		} else {
+			echo '';
+		}
+	},
+	10,
+	2
+);
+
+// Talks list table headers.
+add_filter(
+	'manage_edit-wptd_talk_columns',
+	function( $columns ) {
+		unset( $columns['date'] );
+
+		$columns['speaker']             = esc_html__( 'Speaker', 'wptd' );
+		$columns['utc_start_time']      = esc_html__( 'UTC Start Time', 'wptd' );
+		$columns['duration']            = esc_html__( 'Duration', 'wptd' );
+		$columns['type']                = esc_html__( 'Type', 'wptd' );
+		$columns['live_or_prerecorded'] = esc_html__( 'Duration', 'wptd' );
+		$columns['target_audience']     = esc_html__( 'Target Audience', 'wptd' );
+		$columns['target_language']     = esc_html__( 'Target Language', 'wptd' );
+
+		return $columns;
+	}
+);
+
+add_filter(
+	'manage_edit-wptd_talk_sortable_columns',
+	function( $columns ) {
+		$columns['utc_start_time']      = 'utc_start_time';
+		$columns['duration']            = 'duration';
+		$columns['type']                = 'type';
+		$columns['live_or_prerecorded'] = 'live_or_prerecorded';
+		$columns['target_audience']     = 'target_audience';
+		$columns['target_language']     = 'target_language';
+
+		return $columns;
+	}
+);
+
+add_action(
+	'pre_get_posts',
+	function ( $query ) {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		$orderby = $query->get( 'orderby' );
+
+		if ( 'utc_start_time' === $orderby ) {
+			$query->set( 'meta_key', 'utc_start_time' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'duration' === $orderby ) {
+			$query->set( 'meta_key', 'duration' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'type' === $orderby ) {
+			$query->set( 'meta_key', 'type' );
+			$query->set( 'orderby', 'meta_value' );
+		}
+
+		if ( 'live_or_prerecorded' === $orderby ) {
+			$query->set( 'meta_key', 'live_or_prerecorded' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+
+		if ( 'target_audience' === $orderby ) {
+			$query->set( 'meta_key', 'target_audience' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+
+		if ( 'target_language' === $orderby ) {
+			$query->set( 'meta_key', 'target_language' );
+			$query->set( 'orderby', 'meta_value_num' );
+		}
+	}
+);
+
+add_action(
+	'manage_wptd_talk_posts_custom_column',
+	function( $column, $id ) {
+		if ( 'speaker' === $column ) {
+			// silence
+
+		} elseif ( 'utc_start_time' === $column ) {
+			echo esc_attr( get_field( 'utc_start_time', $id ) );
+
+		} elseif ( 'duration' === $column ) {
+			echo esc_attr( get_field( 'duration', $id ) );
+
+		} elseif ( 'type' === $column ) {
+			echo esc_attr( get_field( 'type', $id ) );
+
+		} elseif ( 'live_or_prerecorded' === $column ) {
+			echo esc_attr( get_field( 'live_or_prerecorded', $id ) );
+
+		} elseif ( 'target_audience' === $column ) {
+			echo esc_attr( get_field( 'target_audience', $id ) );
+
+		} elseif ( 'target_language' === $column ) {
+			echo esc_attr( get_field( 'target_language', $id ) );
 
 		} else {
 			echo '';
