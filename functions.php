@@ -149,6 +149,26 @@ add_action(
 	}
 );
 
+// Popuplate local event sorting field.
+add_action(
+	'acf/save_post',
+	function( $post_id ) {
+		if ( empty( $_POST['acf'] ) ) {
+			return;
+		}
+
+		$continent = sanitize_text_field( $_POST['acf']['field_5c8059b3bc23c'] );
+		$country   = sanitize_text_field( $_POST['acf']['field_5c8059a8bc23b'] );
+		$city      = sanitize_text_field( $_POST['acf']['field_5c80599cbc23a'] );
+
+		$continent_country_city = $continent . ' ' . $country . ' ' . $city;
+
+		update_field( 'field_5c82a4c7529c9', $continent_country_city, $post_id );
+
+	},
+	20
+);
+
 // Local Events list table headers.
 add_filter(
 	'manage_edit-wptd_local_event_columns',
