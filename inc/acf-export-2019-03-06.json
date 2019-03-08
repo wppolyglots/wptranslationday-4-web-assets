@@ -1448,7 +1448,7 @@
                 "elements": "",
                 "min": "",
                 "max": "",
-                "return_format": "object"
+                "return_format": "id"
             },
             {
                 "key": "field_5c82b59934733",
