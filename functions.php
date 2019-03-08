@@ -258,7 +258,7 @@ add_action(
 
 		if ( 'interviewer' === $orderby ) {
 			$query->set( 'meta_key', 'interviewer' );
-			$query->set( 'orderby', 'meta_value_num' );
+			$query->set( 'orderby', 'meta_value' );
 		}
 	}
 );
@@ -494,7 +494,7 @@ add_filter(
 		$columns['speaker']             = esc_html__( 'Speaker', 'wptd' );
 		$columns['utc_start_time']      = esc_html__( 'UTC Start Time', 'wptd' );
 		$columns['duration']            = esc_html__( 'Duration', 'wptd' );
-		$columns['live_or_prerecorded'] = esc_html__( 'Duration', 'wptd' );
+		$columns['live_or_prerecorded'] = esc_html__( 'Live or Prerecorded', 'wptd' );
 		$columns['target_audience']     = esc_html__( 'Target Audience', 'wptd' );
 		$columns['target_language']     = esc_html__( 'Target Language', 'wptd' );
 
@@ -526,7 +526,7 @@ add_action(
 
 		if ( 'utc_start_time' === $orderby ) {
 			$query->set( 'meta_key', 'utc_start_time' );
-			$query->set( 'orderby', 'meta_value' );
+			$query->set( 'orderby', 'meta_value_num' );
 		}
 
 		if ( 'duration' === $orderby ) {
@@ -536,17 +536,17 @@ add_action(
 
 		if ( 'live_or_prerecorded' === $orderby ) {
 			$query->set( 'meta_key', 'live_or_prerecorded' );
-			$query->set( 'orderby', 'meta_value_num' );
+			$query->set( 'orderby', 'meta_value' );
 		}
 
 		if ( 'target_audience' === $orderby ) {
 			$query->set( 'meta_key', 'target_audience' );
-			$query->set( 'orderby', 'meta_value_num' );
+			$query->set( 'orderby', 'meta_value' );
 		}
 
 		if ( 'target_language' === $orderby ) {
 			$query->set( 'meta_key', 'target_language' );
-			$query->set( 'orderby', 'meta_value_num' );
+			$query->set( 'orderby', 'meta_value' );
 		}
 	}
 );
@@ -555,7 +555,12 @@ add_action(
 	'manage_wptd_talk_posts_custom_column',
 	function( $column, $id ) {
 		if ( 'speaker' === $column ) {
-			// silence
+			$speakers      = get_field( 'speaker', $id );
+			$speaker_names = array();
+			foreach ( $speakers as $speaker ) {
+				array_push( $speaker_names, get_the_title( $speaker ) );
+			}
+			echo esc_attr( implode( ', ', $speaker_names ) );
 
 		} elseif ( 'utc_start_time' === $column ) {
 			echo esc_attr( get_field( 'utc_start_time', $id ) );
