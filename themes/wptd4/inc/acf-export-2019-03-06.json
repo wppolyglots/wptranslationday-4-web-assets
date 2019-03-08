@@ -1031,24 +1031,6 @@
                 "maxlength": ""
             },
             {
-                "key": "field_5c8060e3e79ac",
-                "label": "E-mail",
-                "name": "e-mail",
-                "type": "email",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
-            },
-            {
                 "key": "field_5c8060e3e7a1b",
                 "label": "Facebook",
                 "name": "facebook",
@@ -1268,24 +1250,6 @@
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
-            },
-            {
-                "key": "field_5c805f4202527",
-                "label": "E-mail",
-                "name": "e-mail",
-                "type": "email",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": ""
             },
             {
                 "key": "field_5c805f4d02528",
