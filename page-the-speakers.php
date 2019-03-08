@@ -50,7 +50,7 @@ get_header(); ?>
 										<?php the_title(); ?>
 									</div>
 									<div class="card-role">
-										<?php echo esc_attr( get_field( 'talk_subject' ) ); ?> <br>
+										<?php echo '<a href="' . esc_url( site_url( '/schedule/', 'https' ) ) . '">' . esc_attr( get_field( 'talk_subject' ) ) . '</a>'; ?> <br>
 									</div>
 									<div class="card-bio">
 										<?php echo wp_kses_post( get_field( 'bio' ) ); ?>
@@ -60,7 +60,7 @@ get_header(); ?>
 										<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
 										<?php echo ( ! empty( $slack ) ) ? '<a href="https://wordpress.slack.com/team/' . esc_attr( $slack ) . '" target="_blank" title="Slack Profile"><i class="fab fa-slack"></i></a>' : ''; ?>
 										<?php echo ( ! empty( $fb ) ) ? '<a href="' . esc_attr( $fb ) . '" target="_blank" title="Facebook Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
-										<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-facebook"></i></a>' : ''; ?>
+										<?php echo ( ! empty( $tt ) ) ? '<a href="' . esc_attr( $tt ) . '" target="_blank" title="Twitter Profile"><i class="fab fa-twitter"></i></a>' : ''; ?>
 										<?php echo ( ! empty( $ln ) ) ? '<a href="' . esc_attr( $ln ) . '" target="_blank" title="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>' : ''; ?>
 									</div>
 								</div>

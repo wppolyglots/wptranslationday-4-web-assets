@@ -716,7 +716,7 @@
             },
             {
                 "key": "field_5c8059a8bc23b",
-                "label": "Country",
+                "label": "Country - State",
                 "name": "country",
                 "type": "text",
                 "instructions": "",
@@ -919,6 +919,25 @@
                 "name": "interviewer",
                 "type": "text",
                 "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c82a4c7529c9",
+                "label": "[ DO NOT EDIT ] Cont - Country - City",
+                "name": "continent_country_city",
+                "type": "text",
+                "instructions": "Do not edit this field, it is automatically populated for sorting purposes.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

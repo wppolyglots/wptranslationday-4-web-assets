@@ -294,9 +294,11 @@ a:hover {
 }
 
 /* The Team Page */
+body.page-local-events .site-content,
 body.page-the-team .site-content {
 	background: var( --color-blue );
 }
+body.page-local-events .entry-title,
 body.page-the-team .entry-title {
 	color: var( --color-dark-blue ) !important;
 }
@@ -305,6 +307,16 @@ body.page-the-speakers .site-content {
 }
 body.page-the-speakers .entry-title {
 	color: var( --color-dark-red ) !important;
+}
+
+/* Local Events Page */
+.page-local-events h2 {
+	color: var( --color-dark-blue );
+	font-size: 36px;
+	font-weight: 600;
+}
+.local-event {
+	margin-bottom: 60px;
 }
 
 /* Cards */
