@@ -93,7 +93,14 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .single-post:not(.has-sidebar) #primary, .page.page-one-column:not(.twentyseventeen-front-page) #primary, .archive.page-one-column:not(.has-sidebar) .page-header, .archive.page-one-column:not(.has-sidebar) #primary {
 	max-width: unset;
 }
-
+a,
+a:visited,
+a:active {
+	box-shadow: unset !important;
+}
+a:hover {
+	box-shadow: unset !important;
+}
 /* Header */
 .site-header {
 	background-color: #000;
@@ -292,6 +299,29 @@ body.page-the-team .entry-title {
 	color: var( --color-dark-blue ) !important;
 }
 
+/* Cards */
+.cards {
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	grid-gap: 20px;
+}
+.cards .card {
+	text-align: center;
+	padding: 20px;
+}
+.cards .card .card-image img {
+	border-radius: 90px;
+}
+.cards .card .card-name {
+	font-weight: 600;
+}
+.cards .card .card-role {
+	font-weight: 600;
+	font-size: 20px;
+}
+.cards .card .card-bio {
+	font-size: 16px;
+}
 /* Media Queries */
 @media ( max-width: 768px ) {
 	/* general */
