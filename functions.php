@@ -300,7 +300,7 @@ add_filter(
 		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd4' );
 		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd4' );
 		$columns['role']           = esc_html__( 'Role', 'wptd4' );
-		$columns['order']           = esc_html__( 'Role', 'wptd4' );
+		$columns['order']          = esc_html__( 'Order', 'wptd4' );
 
 		return $columns;
 	}
