@@ -934,7 +934,7 @@
             },
             {
                 "key": "field_5c82a4c7529c9",
-                "label": "[ DO NOT EDIT ] Cont - Country - City",
+                "label": "[ DO NOT EDIT ] Continent - Country\/State - City",
                 "name": "continent_country_city",
                 "type": "text",
                 "instructions": "Do not edit this field, it is automatically populated for sorting purposes.",
