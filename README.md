@@ -6,7 +6,7 @@ Please use the `develop` branch if you want to make any PRs. The `master` branch
 
 ## About the theme
 
-Our theme is a child-theme of [TwentySeventeen](https://wordpress.org/themes/twentyseventeen/). We're also making use of [TGM Plugin Activation](https://github.com/TGMPA/TGM-Plugin-Activation) to require necessary plugns needed for the website to run smoothly. These are [Classic Editor](https://wordpress.org/plugins/classic-editor/), [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/), [Disable Comments](https://wordpress.org/plugins/disable-comments/).
+Our theme is a child-theme of [TwentySeventeen](https://wordpress.org/themes/twentyseventeen/). We're also making use of [TGM Plugin Activation](https://github.com/TGMPA/TGM-Plugin-Activation) to require necessary plugns needed for the website to run smoothly. These are [Classic Editor](https://wordpress.org/plugins/classic-editor/), [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/), [Disable Comments](https://wordpress.org/plugins/disable-comments/), [Forminator](https://wordpress.org/plugins/forminator/).
 
 # General Documentation
 
@@ -97,3 +97,9 @@ This CPT is bound to the `schedule` slug and it will be automatically loaded in 
 - Target Audience
 - Target Language
 - Video URL
+
+## Forms
+
+Forminator has an export / import feature for every form. You will find the necessary file for importing each form in `/assets/` folder named after `forminator-FORM.txt`. If you make any updates on the form please re-export so we can keep these files updated as well with the latest settings.
+
+The form submissions will be kept within the database for easier handling as well.
