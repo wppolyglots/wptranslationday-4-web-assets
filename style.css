@@ -101,6 +101,10 @@ a:active {
 a:hover {
 	box-shadow: unset !important;
 }
+.site-navigation-fixed.navigation-top {
+	z-index: 100;
+}
+
 /* Header */
 .site-header {
 	background-color: #000;
