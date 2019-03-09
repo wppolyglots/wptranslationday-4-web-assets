@@ -614,6 +614,11 @@ add_action(
 				'slug'     => 'forminator',
 				'required' => true,
 			),
+			array(
+				'name'     => 'Tagregator',
+				'slug'     => 'tagregator',
+				'required' => true,
+			),
 		);
 
 		$config = array(
