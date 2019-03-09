@@ -71,10 +71,10 @@ add_action(
 	'admin_menu',
 	function() {
 		$pages = array(
-			'the-team'     => esc_html__( 'The Team', 'wptd' ),
-			'the-speakers' => esc_html__( 'The Speakers', 'wptd' ),
-			'schedule'     => esc_html__( 'Schedule', 'wptd' ),
-			'local-events' => esc_html__( 'Local Events', 'wptd' ),
+			'the-team'         => esc_html__( 'The Team', 'wptd' ),
+			'the-speakers'     => esc_html__( 'The Speakers', 'wptd' ),
+			'the-schedule'     => esc_html__( 'Schedule', 'wptd' ),
+			'the-local-events' => esc_html__( 'Local Events', 'wptd' ),
 		);
 
 		foreach ( $pages as $page_slug => $page_title ) {
@@ -612,6 +612,11 @@ add_action(
 			array(
 				'name'     => 'Forminator',
 				'slug'     => 'forminator',
+				'required' => true,
+			),
+			array(
+				'name'     => 'Tagregator',
+				'slug'     => 'tagregator',
 				'required' => true,
 			),
 		);

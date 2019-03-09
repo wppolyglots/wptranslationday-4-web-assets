@@ -20,12 +20,14 @@ $pid = get_the_ID();
 				</h2>
 				<div class="panel-content">
 					<div class="left">
-						<?php echo wp_get_attachment_image( get_field( 'panel_1_image', $pid ), 'full' ); ?>
 					</div>
 					<div class="right">
 						<?php echo wp_kses_post( get_field( 'panel_1_text', $pid ) ); ?>
 					</div>
 				</div>
+			</div>
+			<div class="drop-image">
+				<?php echo wp_get_attachment_image( get_field( 'panel_1_image', $pid ), 'full' ); ?>
 			</div>
 		</div>
 	<?php endif; ?>
@@ -40,12 +42,14 @@ $pid = get_the_ID();
 				</h2>
 				<div class="panel-content">
 					<div class="left">
-						<?php echo wp_get_attachment_image( get_field( 'panel_2_image', $pid ), 'full' ); ?>
 					</div>
 					<div class="right">
 						<?php echo wp_kses_post( get_field( 'panel_2_text', $pid ) ); ?>
 					</div>
 				</div>
+			</div>
+			<div class="drop-image">
+				<?php echo wp_get_attachment_image( get_field( 'panel_2_image', $pid ), 'full' ); ?>
 			</div>
 		</div>
 	<?php endif; ?>
@@ -60,12 +64,14 @@ $pid = get_the_ID();
 			</h2>
 			<div class="panel-content">
 				<div class="left">
-					<?php echo wp_get_attachment_image( get_field( 'panel_3_image', $pid ), 'full' ); ?>
 				</div>
 				<div class="right">
 					<?php echo wp_kses_post( get_field( 'panel_3_text', $pid ) ); ?>
 				</div>
 			</div>
+		</div>
+		<div class="drop-image">
+			<?php echo wp_get_attachment_image( get_field( 'panel_3_image', $pid ), 'full' ); ?>
 		</div>
 	</div>
 	<?php endif; ?>
@@ -80,13 +86,15 @@ $pid = get_the_ID();
 			</h2>
 			<div class="panel-content">
 				<div class="left">
-					<?php echo wp_get_attachment_image( get_field( 'panel_4_image', $pid ), 'full' ); ?>
 				</div>
 				<div class="right">
 					<?php echo wp_kses_post( get_field( 'panel_4_text', $pid ) ); ?>
 					<div id="countdown"></div>
 				</div>
 			</div>
+		</div>
+		<div class="drop-image">
+			<?php echo wp_get_attachment_image( get_field( 'panel_4_image', $pid ), 'full' ); ?>
 		</div>
 	</div>
 
@@ -123,12 +131,14 @@ $pid = get_the_ID();
 			</h2>
 			<div class="panel-content">
 				<div class="left">
-					<?php echo wp_get_attachment_image( get_field( 'panel_5_image', $pid ), 'full' ); ?>
 				</div>
 				<div class="right">
 					<?php echo wp_kses_post( get_field( 'panel_5_text', $pid ) ); ?>
 				</div>
 			</div>
+		</div>
+		<div class="drop-image">
+			<?php echo wp_get_attachment_image( get_field( 'panel_5_image', $pid ), 'full' ); ?>
 		</div>
 	</div>
 	<?php endif; ?>

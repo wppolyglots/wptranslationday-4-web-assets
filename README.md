@@ -6,7 +6,14 @@ Please use the `develop` branch if you want to make any PRs. The `master` branch
 
 ## About the theme
 
-Our theme is a child-theme of [TwentySeventeen](https://wordpress.org/themes/twentyseventeen/). We're also making use of [TGM Plugin Activation](https://github.com/TGMPA/TGM-Plugin-Activation) to require necessary plugns needed for the website to run smoothly. These are [Classic Editor](https://wordpress.org/plugins/classic-editor/), [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/), [Disable Comments](https://wordpress.org/plugins/disable-comments/), [Forminator](https://wordpress.org/plugins/forminator/).
+Our theme is a child-theme of [TwentySeventeen](https://wordpress.org/themes/twentyseventeen/). We're also making use of [TGM Plugin Activation](https://github.com/TGMPA/TGM-Plugin-Activation) to require necessary plugns needed for the website to run smoothly. These are:
+
+- [Classic Editor](https://wordpress.org/plugins/classic-editor/)
+- [Tagregator](https://wordpress.org/plugins/tagregator/)
+- [Forminator](https://wordpress.org/plugins/forminator/)
+- [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
+- [Disable Comments](https://wordpress.org/plugins/disable-comments/)
+
 
 # General Documentation
 
@@ -68,7 +75,7 @@ This CPT is bound to the `the-speakers` slug and it will be automatically loaded
 
 __Local Events__
 
-This CPT is bound to the `local-events` slug and it will be automatically loaded in the `page-local-events.php` that is included with the theme. The information that we use is this:
+This CPT is bound to the `the-local-events` slug and it will be automatically loaded in the `page-the-local-events.php` that is included with the theme. The information that we use is this:
 
 - City
 - Country / State
@@ -86,7 +93,7 @@ This CPT is bound to the `local-events` slug and it will be automatically loaded
 
 __Talks__
 
-This CPT is bound to the `schedule` slug and it will be automatically loaded in the `page-schedule.php` that is included with the theme. The information that we use is this:
+This CPT is bound to the `the-schedule` slug and it will be automatically loaded in the `page-the-schedule.php` that is included with the theme. The information that we use is this:
 
 - Title ( Post Title )
 - Description
