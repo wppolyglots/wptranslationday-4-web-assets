@@ -101,9 +101,6 @@ a:active {
 a:hover {
 	box-shadow: unset !important;
 }
-.site-navigation-fixed.navigation-top {
-	z-index: 100;
-}
 
 /* Header */
 .site-header {
@@ -114,9 +111,11 @@ a:hover {
 }
 
 /* Navigation */
+.site-navigation-fixed.navigation-top,
 .navigation-top {
 	background: var( --color-dark-blue );
 	border: 0;
+	z-index: 100;
 }
 .navigation-top .wrap {
 	padding-top: 0;
