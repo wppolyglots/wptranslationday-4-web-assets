@@ -609,6 +609,11 @@ add_action(
 				'slug'     => 'classic-editor',
 				'required' => true,
 			),
+			array(
+				'name'     => 'Forminator',
+				'slug'     => 'forminator',
+				'required' => true,
+			),
 		);
 
 		$config = array(

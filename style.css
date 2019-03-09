@@ -293,12 +293,14 @@ a:hover {
 	font-size: 18px;
 }
 
-/* The Team Page */
+/* General Styles for Pages */
+body.page-call-for-speakers .site-content,
 body.page-schedule .site-content,
 body.page-local-events .site-content,
 body.page-the-team .site-content {
 	background: var( --color-blue );
 }
+body.page-call-for-speakers .entry-title,
 body.page-schedule .entry-title,
 body.page-local-events .entry-title,
 body.page-the-team .entry-title {
@@ -310,9 +312,8 @@ body.page-the-speakers .site-content {
 body.page-the-speakers .entry-title {
 	color: var( --color-dark-red ) !important;
 }
-
-/* Local Events Page */
-.page-local-events h2 {
+body.page-local-events h2,
+body.page-call-for-speakers h2 {
 	color: var( --color-dark-blue );
 	font-size: 36px;
 	font-weight: 600;
@@ -320,8 +321,6 @@ body.page-the-speakers .entry-title {
 .local-event {
 	margin-bottom: 60px;
 }
-
-/* Cards */
 .cards {
 	display: grid;
 	grid-template-columns: repeat( 3, 1fr );
@@ -345,6 +344,17 @@ body.page-the-speakers .entry-title {
 }
 .cards .card .card-bio {
 	font-size: 16px;
+}
+
+/* Forms */
+.forminator-label,
+.forminator-label--helper {
+	font-size: 15px !important;
+	font-weight: 400 !important;
+}
+#forminator-submit {
+	font-size: 20px !important;
+	text-transform: uppercase !important;
 }
 
 /* Media Queries */
