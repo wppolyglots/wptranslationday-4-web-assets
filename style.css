@@ -150,10 +150,22 @@ a:hover {
 }
 
 /* Homepage */
+.drop-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.home .panel .wrap {
+	position: relative;
+	z-index: 10;
+}
 .home .panel {
 	padding: 100px 0;
 	background-size: 100% 100%;
 	background-position: center;
+	position: relative;
+	overflow: hidden;
 }
 .home .panel-content {
 	display: grid;
@@ -412,7 +424,7 @@ body.page-call-for-local-events h2 {
 }
 
 @media ( max-width: 48em ) {
-	.custom-header {
+	/* .custom-header {
 		height: unset !important;
 	}
 	.custom-header-media {
@@ -420,5 +432,5 @@ body.page-call-for-local-events h2 {
 	}
 	.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-video .custom-header-media iframe {
 		position: relative;
-	}
+	} */
 }
