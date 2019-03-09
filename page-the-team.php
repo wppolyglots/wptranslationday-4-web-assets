@@ -46,7 +46,15 @@ get_header(); ?>
 
 								<div class="team-member card">
 									<div class="card-image">
-										<?php echo wp_get_attachment_image( get_field( 'image' ), 'full' ); ?>
+										<?php
+										$image = wp_get_attachment_image( get_field( 'image' ), 'full' );
+
+										if ( $image ) {
+											echo wp_kses_post( $image );
+										} else {
+											echo get_avatar( get_field( 'e_mail' ), 150 );
+										}
+										?>
 									</div>
 									<div class="card-name">
 										<?php the_title(); ?>

@@ -1167,8 +1167,8 @@
             {
                 "key": "field_5c83dfd3ef7d7",
                 "label": "E-mail",
-                "name": "e-mail",
-                "type": "text",
+                "name": "e_mail",
+                "type": "email",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1180,8 +1180,7 @@
                 "default_value": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
             },
             {
                 "key": "field_5c8213e0d85b7",
@@ -1407,8 +1406,8 @@
             {
                 "key": "field_5c83dfb2a6153",
                 "label": "E-mail",
-                "name": "e-mail",
-                "type": "text",
+                "name": "e_mail",
+                "type": "email",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1420,8 +1419,7 @@
                 "default_value": "",
                 "placeholder": "",
                 "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "append": ""
             },
             {
                 "key": "field_5c8213bf83fc8",
