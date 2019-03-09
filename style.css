@@ -295,13 +295,13 @@ a:hover {
 
 /* General Styles for Pages */
 body.page-call-for-speakers .site-content,
-body.page-schedule .site-content,
+body.page-the-schedule .site-content,
 body.page-the-local-events .site-content,
 body.page-the-team .site-content {
 	background: var( --color-blue );
 }
 body.page-call-for-speakers .entry-title,
-body.page-schedule .entry-title,
+body.page-the-schedule .entry-title,
 body.page-the-local-events .entry-title,
 body.page-the-team .entry-title {
 	color: var( --color-dark-blue ) !important;
