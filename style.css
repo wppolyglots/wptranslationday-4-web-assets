@@ -7,16 +7,6 @@
  Version: 1
  */
 
-/* Vars */
-:root {
-	--color-red: #80446A;
-	--color-dark-red: #46152F;
-	--color-blue: #E2F8FF;
-	--color-dark-blue: #194F6A;
-	--color-gray: #D1D3D4;
-	--color-pink: #eddae2;
-}
-
 /* Localized Fonts */
 /* changa-regular - latin */
 @font-face {
@@ -113,7 +103,7 @@ a:hover {
 /* Navigation */
 .site-navigation-fixed.navigation-top,
 .navigation-top {
-	background: var( --color-dark-blue );
+	background: #194F6A;
 	border: 0;
 	z-index: 100;
 }
@@ -124,7 +114,7 @@ a:hover {
 .main-navigation a,
 .navigation-top .current-menu-item > a:hover,
 .navigation-top .current_page_item > a:hover {
-	color: var( --color-gray );
+	color: #D1D3D4;
 	font-weight: 600;
 	font-size: 18px;
 	text-transform: uppercase;
@@ -132,18 +122,18 @@ a:hover {
 .main-navigation a:hover,
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
-	color: var( --color-pink );
+	color: #eddae2;
 }
 .site-header .navigation-top .menu-scroll-down {
 	top: 0;
-	color: var( --color-gray );
+	color: #D1D3D4;
 }
 .navigation-top .menu-toggle {
-	color: var( --color-gray );
+	color: #D1D3D4;
 }
 .main-navigation ul,
 .main-navigation ul ul {
-	background: var( --color-dark-blue );
+	background: #194F6A;
 }
 .main-navigation ul ul {
 	border: 0;
@@ -190,36 +180,8 @@ a:hover {
 .home .panel-heading {
 	font-weight: 600;
 }
-.home .panel-1 .panel-heading,
-.home .panel-1 .panel-content .right,
-.home .panel-4 .panel-heading,
-.home .panel-4 .panel-content .right {
-	color: var( --color-dark-blue );
-}
-.home .panel-2 .panel-heading,
-.home .panel-2 .panel-content .right {
-	color: var( --color-blue );
-}
-.home .panel-3 .panel-heading,
-.home .panel-3 .panel-content .right,
-.home .panel-5 .panel-heading,
-.home .panel-5 .panel-content .right {
-	color: var( --color-pink );
-}
 .home .separator {
 	height: 30px;
-}
-.home .separator.separator-1 {
-	background: var( --color-dark-blue );
-}
-.home .separator.separator-2 {
-	background: var( --color-red );
-}
-.home .separator.separator-3 {
-	background: var( --color-blue );
-}
-.home .separator.separator-4 {
-	background: var( --color-dark-red );
 }
 .home #countdown {
 	display: grid;
@@ -252,7 +214,7 @@ a:hover {
 	padding-bottom: 60px;
 }
 .stay-tuned .left h2 {
-	color: var( --color-gray );
+	color: #D1D3D4;
 	font-size: 70px;
 	font-weight: 800;
 	margin: 0;
@@ -280,15 +242,15 @@ a:hover {
 	margin: 0;
 }
 .site-info a {
-	color: var( --color-gray );
+	color: #D1D3D4;
 	box-shadow: unset;
 }
 .site-info a:hover {
-	color: var( --color-pink );
+	color: #eddae2;
 	box-shadow: unset;
 }
 .site-info span[role=separator]::before {
-	color: var( --color-gray );
+	color: #D1D3D4;
 }
 .menu-footer {
 	background: #3c4444;
@@ -303,36 +265,20 @@ a:hover {
 }
 .footer-menu li a {
 	display: inline-block;
-	color: var( --color-blue );
+	color: #258196;
 	font-weight: 600;
 	font-size: 18px;
 }
 
 /* General Styles for Pages */
-body.page-call-for-speakers .site-content,
-body.page-call-for-local-events .site-content,
-body.page-the-schedule .site-content,
-body.page-the-local-events .site-content,
-body.page-the-team .site-content {
-	background: var( --color-blue );
-}
-body.page-call-for-speakers .entry-title,
-body.page-call-for-local-events .entry-title,
-body.page-the-schedule .entry-title,
-body.page-the-local-events .entry-title,
-body.page-the-team .entry-title {
-	color: var( --color-dark-blue ) !important;
-}
-body.page-the-speakers .site-content {
-	background: var( --color-pink );
-}
-body.page-the-speakers .entry-title {
-	color: var( --color-dark-red ) !important;
+body.page:not(.twentyseventeen-front-page) .site-content {
+	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/internal-pages-background.png');
+	background-size: 100%;
+	background-repeat: repeat-y;
 }
 body.page-the-local-events h2,
 body.page-call-for-speakers h2,
 body.page-call-for-local-events h2 {
-	color: var( --color-dark-blue );
 	font-size: 36px;
 	font-weight: 600;
 }
@@ -362,6 +308,11 @@ body.page-call-for-local-events h2 {
 }
 .cards .card .card-bio {
 	font-size: 16px;
+}
+body.page-the-team .cards .card {
+	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/team-card-bg.jpg');
+	background-size: 100% 100%;
+	background-position: center;
 }
 
 /* Forms */
@@ -424,16 +375,4 @@ body.page-call-for-local-events h2 {
 	.cards {
 		grid-template-columns: 1fr;
 	}
-}
-
-@media ( max-width: 48em ) {
-	/* .custom-header {
-		height: unset !important;
-	}
-	.custom-header-media {
-		position: relative;
-	}
-	.has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-video .custom-header-media iframe {
-		position: relative;
-	} */
 }
