@@ -345,11 +345,9 @@ body.page-call-for-local-events h2 {
 	grid-gap: 20px;
 }
 .cards .card {
-	text-align: center;
 	padding: 20px;
 }
 .cards .card .card-image img {
-	border-radius: 90px;
 	max-width: 150px;
 	max-height: 150px;
 }
