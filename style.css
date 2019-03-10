@@ -363,10 +363,24 @@ body.page-the-team .cards .card {
 	background-size: 100% 100%;
 	background-position: center;
 }
+body.page-the-team .entry-title,
+body.page-the-team .entry-content {
+	color: var( --color-light-rose-text ) !important;
+}
+body.page-the-team .cards .card {
+	color: var( --color-dark-bluegreen );
+}
 body.page-the-speakers .cards .card {
 	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/speakers-card-bg.jpg');
 	background-size: 100% 100%;
 	background-position: center;
+}
+body.page-the-speakers .entry-title,
+body.page-the-speakers .entry-content {
+	color: var( --color-light-blue-text ) !important;
+}
+body.page-the-speakers .cards .card {
+	color: var( --color-light-rose-text );
 }
 
 /* Forms */
