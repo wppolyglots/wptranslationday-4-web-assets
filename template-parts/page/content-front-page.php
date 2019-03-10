@@ -141,6 +141,7 @@ $pid = get_the_ID();
 			<?php echo wp_get_attachment_image( get_field( 'panel_5_image', $pid ), 'full' ); ?>
 		</div>
 	</div>
+	<div class="separator separator-5"></div>
 	<?php endif; ?>
 
 </article>
