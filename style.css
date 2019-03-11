@@ -68,6 +68,10 @@ src: local('Changa Bold'), local('Changa-Bold'),
 body {
 	font-family: 'Changa', sans-serif;
 	font-size: 25px;
+	color: var( --color-light-rose-text );
+}
+body, button, input, select, textarea {
+	line-height: 1 !important;
 }
 .wrap {
 	max-width: 1200px;
@@ -89,6 +93,10 @@ h2 {
 	font-size: 50px;
 	text-transform: unset;
 	letter-spacing: unset;
+}
+body.page:not(.twentyseventeen-front-page) .entry-content h2,
+body.page:not(.twentyseventeen-front-page) .entry-title {
+	color: var( --color-light-rose-text );
 }
 .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header, .archive.page-one-column:not(.has-sidebar) .page-header {
 	margin-bottom: 0;
@@ -143,9 +151,11 @@ a:hover {
 .site-header .navigation-top .menu-scroll-down {
 	top: 0;
 	color: var( --color-menu-text-normal );
+	border: 0;
 }
 .site-header .navigation-top .menu-scroll-down:hover {
 	color: var( --color-menu-text-hover );
+	border: 0;
 }
 .navigation-top .menu-toggle {
 	color: var( --color-menu-text-normal );
@@ -193,9 +203,6 @@ a:hover {
 	width: unset;
 	height: unset;
 }
-.home .panel-content .right {
-	text-align: justify;
-}
 .home .panel-heading {
 	font-weight: 600;
 }
@@ -223,6 +230,18 @@ a:hover {
 .home .panel-1,
 .home .panel-1 h2 {
 	color: var( --color-dark-bluegreen );
+}
+.home .panel-1 a {
+	color: var( --color-dark-bluegreen );
+	padding: 5px;
+	border: 2px var( --color-dark-bluegreen ) solid;
+	border-radius: 3px;
+	display: inline-block;
+	margin-top: 10px;
+}
+.home .panel-1 a:hover {
+	background-color: var( --color-dark-bluegreen );
+	color: var( --color-menu-text-normal );
 }
 .home .separator-1 {
 	background-color: var( --color-dark-bluegreen );

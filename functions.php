@@ -75,6 +75,7 @@ add_action(
 			'the-speakers'     => esc_html__( 'The Speakers', 'wptd' ),
 			'the-schedule'     => esc_html__( 'Schedule', 'wptd' ),
 			'the-local-events' => esc_html__( 'Local Events', 'wptd' ),
+			'social-mentions'  => esc_html__( 'Social Mentions', 'wptd' ),
 		);
 
 		foreach ( $pages as $page_slug => $page_title ) {
