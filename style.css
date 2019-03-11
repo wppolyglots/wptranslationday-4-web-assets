@@ -111,6 +111,8 @@ a,
 a:visited,
 a:active {
 	box-shadow: unset !important;
+	text-decoration:underline;
+	color: inherit;
 }
 a:hover {
 	box-shadow: unset !important;
@@ -225,7 +227,6 @@ a:hover {
 }
 .home #countdown .time {
 	display: block;
-	margin-top: -40px;
 }
 .home .panel-1,
 .home .panel-1 h2 {
@@ -435,9 +436,6 @@ body.page-the-speakers .cards .card {
 	}
 	.home #countdown .count {
 		font-size: 60px;
-	}
-	.home #countdown .time {
-		margin-top: -30px;
 	}
 	/* footer */
 	.stay-tuned .inner {
