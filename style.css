@@ -234,8 +234,14 @@ a:hover {
 .home .panel-1 a {
 	color: var( --color-dark-bluegreen );
 	padding: 5px;
-	border: 1px var( --color-dark-bluegreen ) solid;
+	border: 2px var( --color-dark-bluegreen ) solid;
 	border-radius: 3px;
+	display: inline-block;
+	margin-top: 10px;
+}
+.home .panel-1 a:hover {
+	background-color: var( --color-dark-bluegreen );
+	color: var( --color-menu-text-normal );
 }
 .home .separator-1 {
 	background-color: var( --color-dark-bluegreen );
