@@ -148,9 +148,11 @@ a:hover {
 .site-header .navigation-top .menu-scroll-down {
 	top: 0;
 	color: var( --color-menu-text-normal );
+	border: 0;
 }
 .site-header .navigation-top .menu-scroll-down:hover {
 	color: var( --color-menu-text-hover );
+	border: 0;
 }
 .navigation-top .menu-toggle {
 	color: var( --color-menu-text-normal );
@@ -228,6 +230,12 @@ a:hover {
 .home .panel-1,
 .home .panel-1 h2 {
 	color: var( --color-dark-bluegreen );
+}
+.home .panel-1, a {
+	color: var( --color-dark-bluegreen );
+	padding: 5px;
+	border: 1px var( --color-dark-bluegreen ) solid;
+	border-radius: 3px;
 }
 .home .separator-1 {
 	background-color: var( --color-dark-bluegreen );
