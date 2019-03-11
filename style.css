@@ -68,6 +68,7 @@ src: local('Changa Bold'), local('Changa-Bold'),
 body {
 	font-family: 'Changa', sans-serif;
 	font-size: 25px;
+	color: var( --color-light-rose-text );
 }
 .wrap {
 	max-width: 1200px;
@@ -89,6 +90,10 @@ h2 {
 	font-size: 50px;
 	text-transform: unset;
 	letter-spacing: unset;
+}
+body.page:not(.twentyseventeen-front-page) .entry-content h2,
+body.page:not(.twentyseventeen-front-page) .entry-title {
+	color: var( --color-light-rose-text );
 }
 .page.page-one-column .entry-header, .twentyseventeen-front-page.page-one-column .entry-header, .archive.page-one-column:not(.has-sidebar) .page-header {
 	margin-bottom: 0;
