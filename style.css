@@ -231,7 +231,7 @@ a:hover {
 .home .panel-1 h2 {
 	color: var( --color-dark-bluegreen );
 }
-.home .panel-1, a {
+.home .panel-1 a {
 	color: var( --color-dark-bluegreen );
 	padding: 5px;
 	border: 1px var( --color-dark-bluegreen ) solid;
