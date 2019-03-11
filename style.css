@@ -70,6 +70,9 @@ body {
 	font-size: 25px;
 	color: var( --color-light-rose-text );
 }
+body, button, input, select, textarea {
+	line-height: 1 !important;
+}
 .wrap {
 	max-width: 1200px;
 }
