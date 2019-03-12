@@ -320,6 +320,7 @@ body.page:not(.twentyseventeen-front-page) .custom-header {
 }
 .stay-tuned .right a {
 	margin-right: 10px;
+	text-decoration: unset;
 }
 .stay-tuned .right a img {
 	max-width: 60px;
@@ -362,8 +363,9 @@ body.page:not(.twentyseventeen-front-page) .custom-header {
 .footer-menu li a {
 	display: inline-block;
 	color: #258196;
-	font-weight: 300;
+	font-weight: 600;
 	font-size: 18px;
+	text-decoration: unset;
 }
 
 /* General Styles for Pages */
