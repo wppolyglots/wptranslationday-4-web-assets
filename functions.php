@@ -25,6 +25,13 @@ add_action(
 
 		// Custom scripts.
 		wp_enqueue_script( 'child-script', get_stylesheet_directory_uri() . '/assets/js/script.js', array( 'moment-js' ), '1', true );
+
+		// Local Events Map
+		if ( is_page( 'the-local-events' ) ) {
+			wp_enqueue_script( 'wptd4-map-vendor', get_stylesheet_directory_uri() . '/assets/js/ammap.js', array( 'jquery' ), '1', true );
+			wp_enqueue_script( 'wptd4-map-worldhigh', get_stylesheet_directory_uri() . '/assets/js/worldHigh.js', array( 'jquery' ), '1', true );
+			wp_enqueue_script( 'wptd4-map-init', get_stylesheet_directory_uri() . '/assets/js/map-init.js', array( 'jquery' ), '1', true );
+		}
 	},
 	15
 );

@@ -2,6 +2,98 @@
 
 get_header(); ?>
 
+<style>
+#local-events-map {
+  width: 100%;
+  height: 700px;
+}
+
+.map-marker {
+    /* adjusting for the marker dimensions
+    so that it is centered on coordinates */
+    margin-left: -8px;
+    margin-top: -8px;
+}
+.map-marker.map-clickable {
+    cursor: pointer;
+}
+.pulse {
+    width: 10px;
+    height: 10px;
+    border: 5px solid #f7f14c;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #716f42;
+    z-index: 10;
+    position: absolute;
+  }
+.map-marker .dot {
+    border: 10px solid #fff601;
+    background: transparent;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    height: 50px;
+    width: 50px;
+    -webkit-animation: pulse 3s ease-out;
+    -moz-animation: pulse 3s ease-out;
+    animation: pulse 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    opacity: 0;
+  }
+  @-moz-keyframes pulse {
+   0% {
+      -moz-transform: scale(0);
+      opacity: 0.0;
+   }
+   25% {
+      -moz-transform: scale(0);
+      opacity: 0.1;
+   }
+   50% {
+      -moz-transform: scale(0.1);
+      opacity: 0.3;
+   }
+   75% {
+      -moz-transform: scale(0.5);
+      opacity: 0.5;
+   }
+   100% {
+      -moz-transform: scale(1);
+      opacity: 0.0;
+   }
+  }
+  @-webkit-keyframes "pulse" {
+   0% {
+      -webkit-transform: scale(0);
+      opacity: 0.0;
+   }
+   25% {
+      -webkit-transform: scale(0);
+      opacity: 0.1;
+   }
+   50% {
+      -webkit-transform: scale(0.1);
+      opacity: 0.3;
+   }
+   75% {
+      -webkit-transform: scale(0.5);
+      opacity: 0.5;
+   }
+   100% {
+      -webkit-transform: scale(1);
+      opacity: 0.0;
+   }
+  }
+</style>
+
 <div class="wrap">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -16,6 +108,7 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->
+				<div id="local-events-map"></div>
 				<?php
 				$args = array(
 					'post_type'      => array( 'wptd_local_event' ),
@@ -29,6 +122,7 @@ get_header(); ?>
 
 				$query = new WP_Query( $args );
 
+				$markers = array();
 				$previous_continent = 'Empty';
 
 				if ( $query->have_posts() ) : //phpcs:ignore ?>
@@ -46,6 +140,21 @@ get_header(); ?>
 							$wporg    = get_field( 'organizer_username_wporg' );
 							$slack    = get_field( 'organizer_username_slack' );
 							$evenlink = get_field( 'announcement_url' );
+							
+							if ( get_field( 'latitude' ) && get_field( 'longitude' ) ) {
+								$markers = array(
+									'id'             => get_the_id(),
+									'title'          => get_the_title(),
+									'latitude'       => esc_attr( get_field( 'latitude' ) ),
+									'longitude'      => esc_attr( get_field( 'longitude' ) ),
+									'country'        => esc_attr( get_field( 'country' ) ),
+									'city'           => esc_attr( get_field( 'city' ) ),
+									'locale'         => esc_attr( get_field( 'locale' ) ),
+									'utc_start_time' => esc_attr( get_field( 'utc_start_time' ) ),
+									'utc_end_time'   => esc_attr( get_field( 'utc_end_time' ) ),
+									'event_link'     => esc_attr( $evenlink ),
+								);
+							}
 							?>
 
 							<div class="local-event">
@@ -67,6 +176,7 @@ get_header(); ?>
 
 						<?php endwhile; ?>
 					</div><!-- .entry-content -->
+					<script>var markers = <?php echo json_encode( $markers ); ?>;</script>
 				<?php endif; ?>
 
 				<?php wp_reset_postdata(); ?>
