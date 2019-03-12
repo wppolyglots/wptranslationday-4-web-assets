@@ -54,9 +54,37 @@
 				?>
 			</div>
 		</div>
-		<div class="sponsors-footer">
+		<div class="footer-sponsors">
 			<div class="wrap">
+				<h2><?php esc_html_e( 'Meet our Sponsors!', 'wptd4' ); ?></h2>
 				<div class="inner">
+				<?php
+				$args = array(
+					'post_type'      => array( 'wptd_sponsor' ),
+					'post_status'    => array( 'publish' ),
+					'nopaging'       => true,
+					'posts_per_page' => -1,
+					'orderby'        => 'rand',
+				);
+
+				$query = new WP_Query( $args );
+
+				if ( $query->have_posts() ) : //phpcs:ignore ?>
+					<div class="sponsor">
+						<?php
+						while ( $query->have_posts() ) :
+							$query->the_post();
+
+							$url = get_field( 'link' );
+							?>
+							<div class="image">
+								<a target="_blank" href="<?php echo esc_url( $url ); ?>"><?php echo wp_get_attachment_image( get_field( 'image' ), 'full' ); ?></a>
+							</div>
+						<?php endwhile; ?>
+					</div> <!-- .sponsor -->
+				<?php endif; ?>
+
+				<?php wp_reset_postdata(); ?>
 				</div>
 			</div>
 		</div>
