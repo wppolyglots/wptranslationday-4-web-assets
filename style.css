@@ -142,6 +142,9 @@ b, strong {
 .has-header-image .custom-header-media img, .has-header-video .custom-header-media video, .has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
 	object-fit: contain;
 }
+body.page:not(.twentyseventeen-front-page) .custom-header {
+	height: 200px;
+}
 
 /* Navigation */
 .site-navigation-fixed.navigation-top,
@@ -429,7 +432,7 @@ body.page-the-speakers .cards .card {
 .forminator-label,
 .forminator-label--helper {
 	font-size: 15px !important;
-	font-weight: 300 !important;
+	font-weight: 600 !important;
 }
 #forminator-submit {
 	font-size: 20px !important;
