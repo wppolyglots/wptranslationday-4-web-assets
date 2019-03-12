@@ -320,6 +320,7 @@ body.page:not(.twentyseventeen-front-page) .custom-header {
 }
 .stay-tuned .right a {
 	margin-right: 10px;
+	text-decoration: unset;
 }
 .stay-tuned .right a img {
 	max-width: 60px;
@@ -362,10 +363,26 @@ body.page:not(.twentyseventeen-front-page) .custom-header {
 .footer-menu li a {
 	display: inline-block;
 	color: #258196;
-	font-weight: 300;
+	font-weight: 600;
 	font-size: 18px;
+	text-decoration: unset;
 }
-
+.footer-sponsors {
+	background: var( --color-stay-tuned-bg );
+	padding-top: 60px;
+}
+.footer-sponsors h2 {
+	text-align: center;
+	font-size: 50px;
+	color: #fff;
+}
+.footer-sponsors .inner {
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	align-items: center;
+	grid-gap: 30px;
+	padding-bottom: 60px;
+}
 /* General Styles for Pages */
 body.page:not(.twentyseventeen-front-page) .site-content {
 	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/internal-pages-background.png');

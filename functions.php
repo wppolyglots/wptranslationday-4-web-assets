@@ -163,6 +163,20 @@ add_action(
 				'show_in_menu' => true,
 			)
 		);
+
+		register_post_type(
+			'wptd_sponsor',
+			array(
+				'labels'       => array(
+					'name'          => esc_html__( 'Sponsors', 'wptd' ),
+					'singular_name' => esc_html__( 'Sponsor', 'wptd' ),
+				),
+				'public'       => true,
+				'has_archive'  => true,
+				'rewrite'      => array( 'slug' => 'sponsors' ),
+				'show_in_menu' => true,
+			)
+		);
 	}
 );
 
