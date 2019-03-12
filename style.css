@@ -24,6 +24,19 @@
  }
 
 /* Localized Fonts */
+/* changa-300 - latin */
+@font-face {
+	font-family: 'Changa';
+	font-style: normal;
+	font-weight: 300;
+	src: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.eot'); /* IE9 Compat Modes */
+	src: local('Changa Light'), local('Changa-Light'),
+		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.woff') format('woff'), /* Modern Browsers */
+		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.svg#Changa') format('svg'); /* Legacy iOS */
+  }
 /* changa-regular - latin */
 @font-face {
 	font-family: 'Changa';
