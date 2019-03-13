@@ -57,13 +57,13 @@ get_header(); ?>
 									<div class="card-name">
 										<?php the_title(); ?>
 									</div>
+									<div class="card-locale">
+										<?php echo esc_attr( get_field( 'city' ) ); ?>, <?php echo esc_attr( get_field( 'country' ) ); ?>
+									</div>
 									<div class="card-role">
 										<?php echo esc_attr( get_field( 'team' ) ); ?> <br>
 									</div>
 									<div class="card-bio">
-                    <p>
-                      <strong><?php echo esc_attr( get_field( 'city' ) ) ?>, <?php echo esc_attr( get_field( 'country' ) ) ?></strong>
-                    </p>
 										<?php echo wp_kses_post( get_field( 'bio' ) ); ?>
 									</div>
 									<div class="card-social">
