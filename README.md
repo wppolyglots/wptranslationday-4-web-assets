@@ -2,7 +2,7 @@
 
 This repository holds all the necessary files for the Theme & Plugins used at wptranslationday.org for our 4th event!
 
-Please use the `develop` branch if you want to make any PRs. The `master` branch will be used for production only.
+Please use the `master` branch if you want to make any PRs. A website lead has to be contacted for the master to be synced to the site.
 
 ## About the theme
 
