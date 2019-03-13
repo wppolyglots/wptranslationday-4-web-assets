@@ -416,6 +416,7 @@ body.page-call-for-local-events h2 {
 .cards .card .card-role {
 	font-weight: 600;
 	font-size: 20px;
+	padding: 10px 0;
 }
 .cards .card .card-bio {
 	font-size: 16px;
