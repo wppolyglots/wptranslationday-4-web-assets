@@ -29,52 +29,52 @@
 	font-family: 'Changa';
 	font-style: normal;
 	font-weight: 300;
-	src: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.eot'); /* IE9 Compat Modes */
+	src: url('assets/fonts/changa-v6-latin-300.eot'); /* IE9 Compat Modes */
 	src: local('Changa Light'), local('Changa-Light'),
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.woff') format('woff'), /* Modern Browsers */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-300.svg#Changa') format('svg'); /* Legacy iOS */
+		 url('assets/fonts/changa-v6-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('assets/fonts/changa-v6-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('assets/fonts/changa-v6-latin-300.woff') format('woff'), /* Modern Browsers */
+		 url('assets/fonts/changa-v6-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('assets/fonts/changa-v6-latin-300.svg#Changa') format('svg'); /* Legacy iOS */
   }
 /* changa-regular - latin */
 @font-face {
 	font-family: 'Changa';
 	font-style: normal;
 	font-weight: 400;
-	src: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-regular.eot'); /* IE9 Compat Modes */
+	src: url('assets/fonts/changa-v6-latin-regular.eot'); /* IE9 Compat Modes */
 	src: local('Changa'), local('Changa-Regular'),
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-		 url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-regular.svg#Changa') format('svg'); /* Legacy iOS */
+		 url('assets/fonts/changa-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('assets/fonts/changa-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		 url('assets/fonts/changa-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
+		 url('assets/fonts/changa-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		 url('assets/fonts/changa-v6-latin-regular.svg#Changa') format('svg'); /* Legacy iOS */
 }
 /* changa-600 - latin */
 @font-face {
 font-family: 'Changa';
 font-style: normal;
 font-weight: 600;
-src: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-600.eot'); /* IE9 Compat Modes */
+src: url('assets/fonts/changa-v6-latin-600.eot'); /* IE9 Compat Modes */
 src: local('Changa SemiBold'), local('Changa-SemiBold'),
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-600.woff') format('woff'), /* Modern Browsers */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-600.svg#Changa') format('svg'); /* Legacy iOS */
+		url('assets/fonts/changa-v6-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('assets/fonts/changa-v6-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+		url('assets/fonts/changa-v6-latin-600.woff') format('woff'), /* Modern Browsers */
+		url('assets/fonts/changa-v6-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('assets/fonts/changa-v6-latin-600.svg#Changa') format('svg'); /* Legacy iOS */
 }
 /* changa-700 - latin */
 @font-face {
 font-family: 'Changa';
 font-style: normal;
 font-weight: 700;
-src: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-700.eot'); /* IE9 Compat Modes */
+src: url('assets/fonts/changa-v6-latin-700.eot'); /* IE9 Compat Modes */
 src: local('Changa Bold'), local('Changa-Bold'),
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-700.woff') format('woff'), /* Modern Browsers */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/fonts/changa-v6-latin-700.svg#Changa') format('svg'); /* Legacy iOS */
+		url('assets/fonts/changa-v6-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('assets/fonts/changa-v6-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+		url('assets/fonts/changa-v6-latin-700.woff') format('woff'), /* Modern Browsers */
+		url('assets/fonts/changa-v6-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('assets/fonts/changa-v6-latin-700.svg#Changa') format('svg'); /* Legacy iOS */
 }
 
 /* General */
@@ -385,7 +385,7 @@ body.page:not(.twentyseventeen-front-page) .custom-header {
 }
 /* General Styles for Pages */
 body.page:not(.twentyseventeen-front-page) .site-content {
-	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/internal-pages-background.png');
+	background-image: url('assets/images/internal-pages-background.png');
 	background-size: 100%;
 	background-repeat: repeat-y;
 }
@@ -421,7 +421,7 @@ body.page-call-for-local-events h2 {
 	font-size: 16px;
 }
 body.page-the-team .cards .card {
-	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/team-card-bg.jpg');
+	background-image: url('assets/images/team-card-bg.jpg');
 	background-size: 100% 100%;
 	background-position: center;
 }
@@ -433,7 +433,7 @@ body.page-the-team .cards .card {
 	color: var( --color-dark-bluegreen );
 }
 body.page-the-speakers .cards .card {
-	background-image: url('https://staging.wptranslationday.org/wp-content/themes/wptd4/assets/images/speakers-card-bg.jpg');
+	background-image: url('assets/images/speakers-card-bg.jpg');
 	background-size: 100% 100%;
 	background-position: center;
 }
