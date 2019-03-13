@@ -1132,7 +1132,7 @@
                 "name": "username_wporg",
                 "type": "text",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -1149,6 +1149,91 @@
                 "key": "field_5c80614e4b610",
                 "label": "Username Slack",
                 "name": "username_slack",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c88b942b9f38",
+                "label": "Team",
+                "name": "team",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "global": "Global Lead",
+                    "communication-marketing-design": "Communication (Marketing) \/ Design",
+                    "live-streaming-and-content": "Live Streaming \/ Content",
+                    "local-event-and-outreach": "Local Events Mentors \/ Outreach",
+                    "website-admin": "Website \/ Admin"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "label",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c88bb8af3e51",
+                "label": "Team lead",
+                "name": "is_lead",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Lead",
+                "ui_off_text": "No"
+            },
+            {
+                "key": "field_5c88b81d81236",
+                "label": "City",
+                "name": "city",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c88b84081237",
+                "label": "Country",
+                "name": "country",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -1271,25 +1356,6 @@
                 "placeholder": ""
             },
             {
-                "key": "field_5c8199d4bc26e",
-                "label": "Role",
-                "name": "role",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_5c8060f102434",
                 "label": "Bio",
                 "name": "bio",
@@ -1307,6 +1373,25 @@
                 "toolbar": "full",
                 "media_upload": 1,
                 "delay": 0
+            },
+            {
+                "key": "field_5c8199d4bc26e",
+                "label": "Role",
+                "name": "role",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
         ],
         "location": [
