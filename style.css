@@ -412,13 +412,20 @@ body.page-call-for-local-events h2 {
 }
 .cards .card .card-name {
 	font-weight: 600;
+	margin-top: 10px;
 }
 .cards .card .card-role {
 	font-weight: 600;
 	font-size: 20px;
+	margin-top: 10px;
+}
+.cards .card .card-locale {
+	font-size: 16px;
+	font-weight: 600;
 }
 .cards .card .card-bio {
 	font-size: 16px;
+	margin-top: 10px;
 }
 body.page-the-team .cards .card {
 	background-image: url('assets/images/team-card-bg.jpg');
