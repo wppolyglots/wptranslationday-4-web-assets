@@ -419,7 +419,7 @@ add_filter(
 
 		$columns['username_wporg'] = esc_html__( 'wp.org Username', 'wptd' );
 		$columns['username_slack'] = esc_html__( 'Slack Username', 'wptd' );
-		$columns['role']           = esc_html__( 'Role', 'wptd' );
+		$columns['team']           = esc_html__( 'Team', 'wptd' );
 
 		return $columns;
 	}
@@ -430,7 +430,7 @@ add_filter(
 	function( $columns ) {
 		$columns['username_wporg'] = 'username_wporg';
 		$columns['username_slack'] = 'username_slack';
-		$columns['role']           = 'role';
+		$columns['team']           = 'team';
 
 		return $columns;
 	}
@@ -455,8 +455,8 @@ add_action(
 			$query->set( 'orderby', 'meta_value' );
 		}
 
-		if ( 'role' === $orderby ) {
-			$query->set( 'meta_key', 'role' );
+		if ( 'team' === $orderby ) {
+			$query->set( 'meta_key', 'team' );
 			$query->set( 'orderby', 'meta_value' );
 		}
 	}
@@ -481,8 +481,8 @@ add_action(
 		} elseif ( 'username_slack' === $column ) {
 			echo esc_attr( get_field( 'username_slack', $id ) );
 
-		} elseif ( 'role' === $column ) {
-			echo esc_attr( get_field( 'role', $id ) );
+		} elseif ( 'team' === $column ) {
+			echo esc_attr( get_field( 'team', $id ) );
 
 		} else {
 			echo '';
