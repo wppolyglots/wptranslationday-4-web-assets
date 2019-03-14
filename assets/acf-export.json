@@ -1132,7 +1132,7 @@
                 "name": "username_wporg",
                 "type": "text",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -1149,6 +1149,91 @@
                 "key": "field_5c80614e4b610",
                 "label": "Username Slack",
                 "name": "username_slack",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c88b942b9f38",
+                "label": "Team",
+                "name": "team",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "global": "Global Lead",
+                    "communication-marketing-design": "Communication (Marketing) \/ Design",
+                    "live-streaming-and-content": "Live Streaming \/ Content",
+                    "local-event-and-outreach": "Local Events Mentors \/ Outreach",
+                    "website-admin": "Website \/ Admin"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "label",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c88bb8af3e51",
+                "label": "Team lead",
+                "name": "is_lead",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "Lead",
+                "ui_off_text": "No"
+            },
+            {
+                "key": "field_5c88b81d81236",
+                "label": "City",
+                "name": "city",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c88b84081237",
+                "label": "Country",
+                "name": "country",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -1271,25 +1356,6 @@
                 "placeholder": ""
             },
             {
-                "key": "field_5c8199d4bc26e",
-                "label": "Role",
-                "name": "role",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_5c8060f102434",
                 "label": "Bio",
                 "name": "bio",
@@ -1309,10 +1375,10 @@
                 "delay": 0
             },
             {
-                "key": "field_5c819bef2d50c",
-                "label": "Order",
-                "name": "order",
-                "type": "number",
+                "key": "field_5c8199d4bc26e",
+                "label": "Role",
+                "name": "role",
+                "type": "text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1325,9 +1391,7 @@
                 "placeholder": "",
                 "prepend": "",
                 "append": "",
-                "min": "",
-                "max": "",
-                "step": ""
+                "maxlength": ""
             }
         ],
         "location": [
@@ -1568,6 +1632,101 @@
             "discussion",
             "comments",
             "slug",
+            "author",
+            "format",
+            "page_attributes",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5c88251e4d2d0",
+        "title": "Sponsors Fields",
+        "fields": [
+            {
+                "key": "field_5c882526f9887",
+                "label": "Image",
+                "name": "image",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5c882533f9888",
+                "label": "Link",
+                "name": "link",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c882545f9889",
+                "label": "Info",
+                "name": "info",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "wptd_sponsor"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "discussion",
+            "comments",
+            "revisions",
             "author",
             "format",
             "page_attributes",
