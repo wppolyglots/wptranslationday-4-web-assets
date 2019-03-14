@@ -1037,7 +1037,7 @@
                 "key": "field_5c80d001ce86a",
                 "label": "Address\/City or GPS coordinates",
                 "name": "coordinates",
-                "type": "text",
+                "type": "leaflet_map_field",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1046,11 +1046,10 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "lat": 0,
+                "lng": 0,
+                "zoom": 14,
+                "height": 320
             },
             {
                 "key": "field_5c805a60bc247",
