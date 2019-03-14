@@ -617,6 +617,11 @@ add_action(
 				'required' => true,
 			),
 			array(
+				'name'     => 'Advanced Custom Fields - Leaflet Map',
+				'slug'     => 'acf-leaflet-map-field',
+				'required' => true,
+			),
+			array(
 				'name'     => 'Classic Editor',
 				'slug'     => 'classic-editor',
 				'required' => true,
