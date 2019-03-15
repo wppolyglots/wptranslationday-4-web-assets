@@ -83,6 +83,7 @@ add_action(
 			'the-schedule'     => esc_html__( 'Schedule', 'wptd' ),
 			'the-local-events' => esc_html__( 'Local Events', 'wptd' ),
 			'social-mentions'  => esc_html__( 'Social Mentions', 'wptd' ),
+			'media-kit'        => esc_html__( 'Media Kit', 'wptd' ),
 		);
 
 		foreach ( $pages as $page_slug => $page_title ) {

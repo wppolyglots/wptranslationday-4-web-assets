@@ -13,6 +13,8 @@ $pid = get_the_ID();
 <article id="post-<?php the_ID(); ?>">
 
 	<?php if ( get_field( 'panel_1_active', $pid ) ) : ?>
+		<div class="separator separator-0"></div>
+
 		<div id="<?php echo esc_attr( get_field( 'panel_1_anchor_id', $pid ) ); ?>" class="panel panel-1" style="background-image:url('<?php echo esc_url( get_field( 'panel_1_background', $pid ) ); ?>');">
 			<div class="wrap">
 				<h2 class="panel-heading">
