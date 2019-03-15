@@ -22,7 +22,7 @@ get_header(); ?>
 					'post_status'    => array( 'publish' ),
 					'nopaging'       => true,
 					'posts_per_page' => -1,
-					'orderby'        => 'rand',
+					'order'          => 'ASC',
 				);
 
 				$query = new WP_Query( $args );
