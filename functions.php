@@ -637,6 +637,11 @@ add_action(
 				'slug'     => 'tagregator',
 				'required' => true,
 			),
+			array(
+				'name'     => 'Post Types Order',
+				'slug'     => 'post-types-order',
+				'required' => true,
+			),
 		);
 
 		$config = array(
