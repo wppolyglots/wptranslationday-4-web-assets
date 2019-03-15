@@ -27,20 +27,19 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wptd-header-image">
-			<a href="<?php echo get_site_url(); ?>">
-				<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image' ), 'full' ) ); ?>
-			</a>
+		<div class="navigation-top">
+			<div class="wrap">
+				<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+			</div><!-- .wrap -->
+		</div><!-- .navigation-top -->
+
+		<div class="wptd-header-image desktop">
+			<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image' ), 'full' ) ); ?>
 		</div>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
-
+		<div class="wptd-header-image mobile">
+			<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image_mobile' ), 'full' ) ); ?>
+		</div>
 	</header><!-- #masthead -->
 
 	<?php
