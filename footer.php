@@ -22,28 +22,28 @@
 						<h2>Stay Tuned!</h2>
 					</div>
 					<div class="right">
-						<a title="Stay tuned on Twitter!" href="https://twitter.com/translatewp?lang=en">
+						<a target="_blank" title="Stay tuned on Twitter!" href="https://twitter.com/translatewp?lang=en">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/twitter.png" alt="Twitter">
 						</a>
-						<a title="Stay tuned on Facebook!" href="https://twitter.com/translatewp?lang=en">
+						<a target="_blank" title="Stay tuned on Facebook!" href="https://www.facebook.com/WPTranslationDay/">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/facebook.png" alt="Twitter">
 						</a>
-						<a title="Stay tuned on Instagram!" href="https://twitter.com/translatewp?lang=en">
+						<a target="_blank" title="Stay tuned on Instagram!" href="https://www.instagram.com/wptranslationday/">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/instagram.png" alt="Twitter">
 						</a>
-						<a title="Stay tuned on LinkedIn!" href="https://twitter.com/translatewp?lang=en">
+						<a target="_blank" title="Stay tuned on LinkedIn!" href="https://www.linkedin.com/company/35627812/">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/linkedin.png" alt="Twitter">
 						</a>
-						<a title="Stay tuned on Slack!" href="https://wordpress.slack.com/messages/polyglots">
+						<a target="_blank" title="Stay tuned on Slack!" href="https://wordpress.slack.com/messages/polyglots">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/slack.png" alt="Slack">
 						</a>
-						<a title="Stay tuned on Translating WordPress!" href="https://make.wordpress.org/polyglots/">
+						<a target="_blank" title="Stay tuned on Translating WordPress!" href="https://make.wordpress.org/polyglots/">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/wordpress.png" alt="WordPress">
 						</a>
-						<a title="Start Translating!" href="https://translate.wordpress.org/">
+						<a target="_blank" title="Start Translating!" href="https://translate.wordpress.org/">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/polyglots.png" alt="Translate WordPress">
 						</a>
-						<a title="Find the Team for your Language!" href="https://make.wordpress.org/polyglots/teams/">
+						<a target="_blank" title="Find the Team for your Language!" href="https://make.wordpress.org/polyglots/teams/">
 							<img src="https://staging.wptranslationday.org/wp-content/uploads/2019/03/make.png" alt="Polyglots">
 						</a>
 					</div>
