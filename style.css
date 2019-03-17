@@ -574,7 +574,7 @@ body.page-media-kit .entry-content {
 }
 @media ( max-width: 425px ) {
 	h2 {
-		font-size: 35px;
+		font-size: 30px;
 	}
 	.home #countdown .count {
 		font-size: 40px;
