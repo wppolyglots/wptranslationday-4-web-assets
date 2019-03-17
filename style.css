@@ -522,6 +522,7 @@ body.page-media-kit .entry-content {
 @media ( min-width: 1024px ) {
 	.home #countdown .count {
 		font-size: 120px;
+	}
 }
 @media ( max-width: 1024px ) {
 	.stay-tuned .inner {
