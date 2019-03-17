@@ -516,6 +516,10 @@ body.page-media-kit .entry-content {
 }
 
 /* Media Queries */
+@media ( min-width: 1024px ) {
+	.home #countdown .count {
+		font-size: 120px;
+}
 @media ( max-width: 1024px ) {
 	.stay-tuned .inner {
 		grid-template-columns: 1fr;
@@ -571,7 +575,6 @@ body.page-media-kit .entry-content {
 		font-size: 40px;
 	}
 	.home #countdown .time {
-		margin-top: -20px;
 		font-size: 16px;
 	}
 	.cards {
