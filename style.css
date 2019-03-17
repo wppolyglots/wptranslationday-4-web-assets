@@ -497,7 +497,7 @@ body.page-media-kit .entry-content {
 .forminator-label--helper {
 	font-size: 15px !important;
 	font-weight: 600 !important;
-	font-family: 'Changa', sans-serif;
+	font-family: 'Changa', sans-serif !important;
 }
 #forminator-submit {
 	font-size: 20px !important;
