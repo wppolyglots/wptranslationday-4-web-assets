@@ -402,6 +402,9 @@ body.page:not(.twentyseventeen-front-page) .wptd-header-image {
 	font-size: 18px;
 	text-decoration: unset;
 }
+.footer-menu li a:hover {
+	color: #fff;
+}
 .footer-sponsors {
 	background: var( --color-stay-tuned-bg );
 	padding-top: 60px;
