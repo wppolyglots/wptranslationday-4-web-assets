@@ -557,16 +557,16 @@ body.page-media-kit .entry-content {
 	.cards {
 		grid-template-columns: repeat( 2, 1fr );
 	}
-}
-@media ( max-width: 767px ) {
-	.site-header .site-navigation-fixed .menu-scroll-down {
-		display: none !important;
-	}
 	.home .panel {
 		padding: 50px 0;
 	}
 	.home .panel-content .left {
 		display: none;
+	}
+}
+@media ( max-width: 767px ) {
+	.site-header .site-navigation-fixed .menu-scroll-down {
+		display: none !important;
 	}
 	.wptd-header-image {
 		margin-top: 0;
