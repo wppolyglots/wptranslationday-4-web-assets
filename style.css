@@ -546,6 +546,7 @@ body.page-media-kit .entry-content {
 		float: unset;
 	}
 	/* homepage */
+	.footer-sponsors .inner,
 	.home .panel-content {
 		grid-template-columns: 1fr;
 	}
