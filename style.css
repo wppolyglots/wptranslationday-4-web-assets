@@ -492,10 +492,12 @@ body.page-media-kit .entry-content {
 
 /* Forms */
 .forminator-input,
+.forminator-input::placeholder,
 .forminator-label,
 .forminator-label--helper {
 	font-size: 15px !important;
 	font-weight: 600 !important;
+	font-family: 'Changa', sans-serif;
 }
 #forminator-submit {
 	font-size: 20px !important;
