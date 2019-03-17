@@ -73,6 +73,25 @@ add_filter(
 	}
 );
 
+// Add GA tag.
+add_action(
+	'wp_head',
+	function() {
+		?>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136408846-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-136408846-1');
+		</script>
+		<?php
+	},
+	999
+);
+
 // Create necessary pages if they don't exist.
 add_action(
 	'admin_menu',
