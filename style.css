@@ -503,6 +503,9 @@ body.page-media-kit .entry-content {
 	font-size: 20px !important;
 	text-transform: uppercase !important;
 }
+.forminator-checkbox p {
+	color: var( --color-light-rose-text ) !important;
+}
 
 /* Media Queries */
 @media ( max-width: 1024px ) {
