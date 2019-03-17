@@ -550,6 +550,9 @@ body.page-media-kit .entry-content {
 	.home .panel-content {
 		grid-template-columns: 1fr;
 	}
+	.home .panel-content .left {
+		display: none;
+	}
 	.home #countdown .count {
 		font-size: 60px;
 	}
