@@ -132,6 +132,10 @@ a:active {
 a:hover {
 	box-shadow: unset !important;
 }
+.site-content a:hover {
+	background-color: #17506a;
+	color: inherit;
+}
 b, strong {
 	font-weight: 600;
 }
