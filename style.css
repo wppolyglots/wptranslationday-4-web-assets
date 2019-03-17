@@ -550,9 +550,6 @@ body.page-media-kit .entry-content {
 	.home .panel-content {
 		grid-template-columns: 1fr;
 	}
-	.home .panel-content .left {
-		display: none;
-	}
 	.home #countdown .count {
 		font-size: 60px;
 	}
@@ -564,6 +561,12 @@ body.page-media-kit .entry-content {
 @media ( max-width: 767px ) {
 	.site-header .site-navigation-fixed .menu-scroll-down {
 		display: none !important;
+	}
+	.home .panel {
+		padding: 50px 0;
+	}
+	.home .panel-content .left {
+		display: none;
 	}
 	.wptd-header-image {
 		margin-top: 0;
