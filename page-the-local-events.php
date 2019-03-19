@@ -141,12 +141,13 @@ get_header(); ?>
 							$slack    = get_field( 'organizer_username_slack' );
 							$evenlink = get_field( 'announcement_url' );
 							
-							if ( get_field( 'latitude' ) && get_field( 'longitude' ) ) {
-								$markers = array(
+							$coordinates = get_field( 'coordinates' );
+							if ( ! empty( $coordinates['lat'] ) && ! empty( $coordinates['lng'] ) ) {
+								$markers[] = array(
 									'id'             => get_the_id(),
 									'title'          => get_the_title(),
-									'latitude'       => esc_attr( get_field( 'latitude' ) ),
-									'longitude'      => esc_attr( get_field( 'longitude' ) ),
+									'latitude'       => $coordinates['lat'],
+									'longitude'      => $coordinates['lng'],
 									'country'        => esc_attr( get_field( 'country' ) ),
 									'city'           => esc_attr( get_field( 'city' ) ),
 									'locale'         => esc_attr( get_field( 'locale' ) ),
