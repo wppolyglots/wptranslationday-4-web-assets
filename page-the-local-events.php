@@ -3,9 +3,17 @@
 get_header(); ?>
 
 <style>
+#local-events-map-wrapper > .local-events-map-header {
+	position: absolute;
+	top: 1.5em;
+	left: 1.5em;
+}
 #local-events-map {
   width: 100%;
   height: 700px;
+}
+.local-events-infobox {
+	display: none;	
 }
 @media screen and (min-width: 48em) {
 	.site-content {
@@ -96,8 +104,30 @@ get_header(); ?>
   }
 </style>
 
-<div id="local-events-map"></div>
-
+<div id="local-events-map-wrapper">
+	<div class="local-events-map-header">
+		<div class="wrap">
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
+		</div>
+	</div>
+	<div id="local-events-map"></div>
+	<div class="local-events-infobox">
+		<button class="local-events-infobox-close">Close</button>
+		<div class="area">Country, City, Locale</div>
+		<div class="time"><?php echo esc_html__( 'Event Time:', 'wptd' ); ?> Time</div>
+		<div class="organizer">
+			<?php echo esc_html__( 'Organizer:', 'wptf4' ); ?>
+			<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>
+		</div>
+		<div class="link">
+			<a href="' . esc_attr( $evenlink ) . '" target="_blank" title="Announcement URL">
+				<?php esc_html_e( 'Check it out!', 'wptd' ); ?>
+			</a>
+		</div>
+	</div>
+</div>
 <div class="wrap">
 	<div id="primary" class="content-area">
 
@@ -106,10 +136,6 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); // phpcs:ignore ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					<?php twentyseventeen_edit_link( get_the_ID() ); ?>
-				</header><!-- .entry-header -->
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->
@@ -186,7 +212,6 @@ get_header(); ?>
 						<?php endwhile; ?>
 					</div><!-- .entry-content -->
 					<script>var markers = <?php echo json_encode( $markers ); ?>;</script>
-					<?php var_export($markers); ?>
 				<?php endif; ?>
 
 				<?php wp_reset_postdata(); ?>
