@@ -7,10 +7,12 @@ get_header(); ?>
   width: 100%;
   height: 700px;
 }
-
+@media screen and (min-width: 48em) {
+	.site-content {
+		padding-top: 0;
+	}	
+}
 .map-marker {
-    /* adjusting for the marker dimensions
-    so that it is centered on coordinates */
     margin-left: -8px;
     margin-top: -8px;
 }
@@ -94,8 +96,11 @@ get_header(); ?>
   }
 </style>
 
+<div id="local-events-map"></div>
+
 <div class="wrap">
 	<div id="primary" class="content-area">
+
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); // phpcs:ignore ?>
@@ -108,7 +113,6 @@ get_header(); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div><!-- .entry-content -->
-				<div id="local-events-map"></div>
 				<?php
 				$args = array(
 					'post_type'      => array( 'wptd_local_event' ),
@@ -146,8 +150,12 @@ get_header(); ?>
 								$markers[] = array(
 									'id'             => get_the_id(),
 									'title'          => get_the_title(),
-									'latitude'       => $coordinates['lat'],
-									'longitude'      => $coordinates['lng'],
+									'scale'          => 0.5,
+									'selectable'     => true,
+									'zoomLevel'      => 5,
+									'scale'          => 2,
+									'latitude'       => floatval( $coordinates['lat'] ),
+									'longitude'      => floatval( $coordinates['lng'] ),
 									'country'        => esc_attr( get_field( 'country' ) ),
 									'city'           => esc_attr( get_field( 'city' ) ),
 									'locale'         => esc_attr( get_field( 'locale' ) ),
@@ -178,6 +186,7 @@ get_header(); ?>
 						<?php endwhile; ?>
 					</div><!-- .entry-content -->
 					<script>var markers = <?php echo json_encode( $markers ); ?>;</script>
+					<?php var_export($markers); ?>
 				<?php endif; ?>
 
 				<?php wp_reset_postdata(); ?>
