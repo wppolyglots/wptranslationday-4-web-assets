@@ -16,11 +16,9 @@
 	  				'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
 	  				'width': 4,
 	  				'height': 4,
-	  				'rollOverColor': undefined,
 	  			}
 	  			}, {
 	  				'id': 'asia',
-	  				'title': 'Asia',
 	  				'pattern': {
 	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
 	  					'width': 4,
@@ -28,7 +26,6 @@
 	  				}
 	  			}, {
 	  				'id': 'australia',
-	  				'title': 'Australia',
 	  				'pattern': {
 	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
 	  					'width': 4,
@@ -36,7 +33,6 @@
 	  				}
 	  			}, {
 	  				'id': 'europe',
-	  				'title': 'Europe',
 	  				'pattern': {
 	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
 	  					'width': 4,
@@ -44,7 +40,6 @@
 	  				}
 	  			}, {
 	  				'id': 'north_america',
-	  				'title': 'North America',
 	  				'pattern': {
 	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
 	  					'width': 4,
@@ -52,7 +47,6 @@
 	  				}
 	  			}, {
 	  				'id': 'south_america',
-	  				'title': 'South America',
 	  				'pattern': {
 	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
 	  					'width': 4,
@@ -79,7 +73,7 @@
 			'rollOverColor': undefined,
 			'balloonText': '',
 			'alpha': 1,
-			'mouseEnabled': false,
+//			'mouseEnabled': false,
 			'outlineAlpha': 0
 		},
   		'zoomControl': {
@@ -93,9 +87,12 @@
   			'homeButtonEnabled': false,
   		}
 	});
-	$('a[href="http://www.amcharts.com/javascript-maps/"]').css({'opacity': 0.2});
+	$('a[href="http://www.amcharts.com/javascript-maps/"]').hide();
 
-console.log(map.dataProvider.images);
+	map.addListener("clickMapObject", function(event) {
+		console.log('test!');
+	});
+
 
 map.addListener( "positionChanged", updateCustomMarkers );
 
