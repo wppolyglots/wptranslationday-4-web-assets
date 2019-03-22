@@ -95,7 +95,7 @@ h2 {
 	font-size: 55px;
 }
 .hide-this {
-	display: none;
+	display: none !important;
 }
 .float-left {
 	float: left;
@@ -499,6 +499,100 @@ body.page-media-kit .site-content {
 body.page-media-kit .entry-title,
 body.page-media-kit .entry-content {
 	color: var( --color-light-rose-text ) !important;
+}
+body.category .site-content {
+	padding: 2em 0 0;
+}
+body.category .site-content-contain {
+	background-color: unset;
+	background-image: url('assets/images/blog_bg.png') !important;
+}
+body.category .page-title {
+	display: none;
+}
+body.category .entry-title a,
+body.category .entry-title a:hover,
+body.category .entry-title a:visited {
+	font-size: 36px;
+	color: var( --color-dark-burgundy ) !important;
+	font-weight: 600;
+	line-height: 1;
+}
+body.category .entry-content h2 {
+	font-size: 24px;
+	color: var( --color-dark-burgundy ) !important;
+	font-weight: 600;
+	padding-top: 0;
+}
+body.category .entry-date {
+	color: var( --color-dark-bluegreen ) !important;
+}
+body.category .entry-content h3 {
+	font-size: 18px;
+	color: var( --color-dark-bluegreen ) !important;
+	font-weight: 600;
+	padding-top: 0;
+}
+body.category .entry-content {
+	font-size: 18px;
+	color: var( --color-dark-bluegreen ) !important;
+}
+
+body.single-post .site-content {
+	padding: 2em 0 0;
+}
+body.single-post {
+	background-image: url('assets/images/blog_bg.png') !important;
+}
+body.single-post .site-content-contain {
+	background-color: unset;
+}
+body.single-post .entry-title a,
+body.single-post .entry-title a:hover,
+body.single-post .entry-title a:visited {
+	font-size: 36px;
+	color: var( --color-dark-burgundy ) !important;
+	font-weight: 600;
+}
+body.single-post .entry-title {
+	font-size: 36px;
+	color: var( --color-dark-bluegreen ) !important;
+	font-weight: 600;
+	line-height: 1;
+}
+body.single-post .single-featured-image-header {
+	background-color: unset;
+	border-bottom: 0;
+	max-width: 1050px;
+	margin: 0 auto;
+}
+body.single-post .entry-content h2 {
+	font-size: 24px;
+	color: var( --color-dark-burgundy ) !important;
+	font-weight: 600;
+	padding-top: 0;
+}
+body.single-post .entry-content h3 {
+	font-size: 18px;
+	color: var( --color-dark-bluegreen ) !important;
+	font-weight: 600;
+	padding-top: 0;
+}
+body.single-post .entry-content {
+	font-size: 18px;
+	color: var( --color-dark-bluegreen ) !important;
+}
+body.single-post .post-navigation .nav-previous span,
+body.single-post .post-navigation .nav-previous a:visited,
+body.single-post .post-navigation .nav-next span,
+body.single-post .post-navigation .nav-next a:visited,
+body.single-post .tags-links a,
+body.single-post .tags-links a:visited {
+	color: var( --color-dark-bluegreen ) !important;
+}
+body.single-post .post-navigation .nav-previous .nav-title,
+body.single-post .post-navigation .nav-next .nav-title {
+	box-shadow: unset;
 }
 
 /* Forms */
