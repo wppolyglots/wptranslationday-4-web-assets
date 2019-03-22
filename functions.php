@@ -6,6 +6,7 @@ add_action(
 	function() {
 		$parent_style = 'parent-style';
 		wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' ); // phpcs:ignore
+		wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), time() ); // phpcs:ignore
 	},
 	10
 );
