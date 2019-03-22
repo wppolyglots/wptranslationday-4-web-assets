@@ -95,7 +95,7 @@ h2 {
 	font-size: 55px;
 }
 .hide-this {
-	display: none;
+	display: none !important;
 }
 .float-left {
 	float: left;
@@ -500,7 +500,34 @@ body.page-media-kit .entry-title,
 body.page-media-kit .entry-content {
 	color: var( --color-light-rose-text ) !important;
 }
-
+body.category .site-content-contain {
+	background-color: unset;
+	background-image: url('assets/images/blog_bg.png') !important;
+}
+body.category .page-title {
+	display: none;
+}
+body.category .entry-title a,
+body.category .entry-title a:hover,
+body.category .entry-title a:visited {
+	font-size: 36px;
+	color: var( --color-dark-burgundy ) !important;
+	font-weight: 600;
+}
+body.category .entry-content h2 {
+	font-size: 24px;
+	color: var( --color-dark-burgundy ) !important;
+	font-weight: 600;
+}
+body.category .entry-content h3 {
+	font-size: 18px;
+	color: var( --color-dark-bluegreen ) !important;
+	font-weight: 600;
+}
+body.category .entry-content {
+	font-size: 18px;
+	color: var( --color-dark-bluegreen ) !important;
+}
 /* Forms */
 .forminator-input,
 .forminator-input::placeholder,
