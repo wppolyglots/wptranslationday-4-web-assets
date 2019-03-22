@@ -500,6 +500,9 @@ body.page-media-kit .entry-title,
 body.page-media-kit .entry-content {
 	color: var( --color-light-rose-text ) !important;
 }
+body.category .site-content {
+	padding: 2em 0 0;
+}
 body.category .site-content-contain {
 	background-color: unset;
 	background-image: url('assets/images/blog_bg.png') !important;
@@ -518,11 +521,13 @@ body.category .entry-content h2 {
 	font-size: 24px;
 	color: var( --color-dark-burgundy ) !important;
 	font-weight: 600;
+	padding-top: 0;
 }
 body.category .entry-content h3 {
 	font-size: 18px;
 	color: var( --color-dark-bluegreen ) !important;
 	font-weight: 600;
+	padding-top: 0;
 }
 body.category .entry-content {
 	font-size: 18px;
