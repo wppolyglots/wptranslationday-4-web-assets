@@ -516,12 +516,16 @@ body.category .entry-title a:visited {
 	font-size: 36px;
 	color: var( --color-dark-burgundy ) !important;
 	font-weight: 600;
+	line-height: 1;
 }
 body.category .entry-content h2 {
 	font-size: 24px;
 	color: var( --color-dark-burgundy ) !important;
 	font-weight: 600;
 	padding-top: 0;
+}
+body.category .entry-date {
+	color: var( --color-dark-bluegreen ) !important;
 }
 body.category .entry-content h3 {
 	font-size: 18px;
@@ -554,6 +558,7 @@ body.single-post .entry-title {
 	font-size: 36px;
 	color: var( --color-dark-bluegreen ) !important;
 	font-weight: 600;
+	line-height: 1;
 }
 body.single-post .single-featured-image-header {
 	background-color: unset;
@@ -576,6 +581,18 @@ body.single-post .entry-content h3 {
 body.single-post .entry-content {
 	font-size: 18px;
 	color: var( --color-dark-bluegreen ) !important;
+}
+body.single-post .post-navigation .nav-previous span,
+body.single-post .post-navigation .nav-previous a:visited,
+body.single-post .post-navigation .nav-next span,
+body.single-post .post-navigation .nav-next a:visited,
+body.single-post .tags-links a,
+body.single-post .tags-links a:visited {
+	color: var( --color-dark-bluegreen ) !important;
+}
+body.single-post .post-navigation .nav-previous .nav-title,
+body.single-post .post-navigation .nav-next .nav-title {
+	box-shadow: unset;
 }
 
 /* Forms */
