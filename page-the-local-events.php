@@ -19,7 +19,7 @@ get_header(); ?>
 	display: none;
 	position: absolute;
 	z-index: 10;
-	width: 400px;
+	width: 500px;
 	top: 50%;
 	transform: translateY(-50%);
 	left: calc(50% - 200px);
@@ -58,6 +58,13 @@ get_header(); ?>
     z-index: 10;
     position: absolute;
   }
+.map-marker.map-clickable.current .pulse {
+    border: 5px solid red;
+    background-color: red;
+}
+.map-marker.map-clickable.current .dot {
+    border: 10px solid red;
+}
 .map-marker .dot {
     border: 10px solid #fff601;
     background: transparent;

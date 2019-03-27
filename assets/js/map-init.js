@@ -148,11 +148,14 @@ function createCustomMarker( image ) {
 $( window ).load(function() {
 	$('a[href="http://www.amcharts.com/javascript-maps/"]').css('opacity', '0.5');
 	$('.map-marker').click(function(){
+		$('.local-events-infobox').fadeOut();
+		$('.map-marker').removeClass('current');
+		$(this).addClass('current');
 		$( '.infobox-country' ).html( $(this).data('country') );
 		$( '.infobox-city' ).html( $(this).data('city') );
 		$( '.infobox-locale' ).html( $(this).data('locale') );
 		$( '.infobox-time' ).html( $(this).data('utc_start_time') + ' – ' + $(this).data('utc_end_time') + ' UTC' );
-		$( '.infobox-link' ).html( $(this).data('link') );
+		$( '.infobox-link' ).attr( 'href', $(this).data('link') );
 		$( '.infobox-organizer' ).html( $(this).data('organizer') );
 		$('.local-events-infobox').fadeIn();
 	});
@@ -162,7 +165,7 @@ $( window ).load(function() {
 			$( '.infobox-city' ).html( '' );
 			$( '.infobox-locale' ).html( '' );
 			$( '.infobox-time' ).html( '' );
-			$( '.infobox-link' ).html( '' );
+			$( '.infobox-link' ).attr( 'href', '' );
 			$( '.infobox-organizer' ).html( '' );
 		});
 	});
