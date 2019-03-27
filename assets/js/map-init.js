@@ -114,8 +114,8 @@ function updateCustomMarkers( event ) {
 function createCustomMarker( image ) {
   // create holder
   var holder = document.createElement( 'div' );
-  holder.className += ' map-clickable';
   holder.className = 'map-marker';
+  holder.className += ' map-clickable';
   holder.title = image.title;
   holder.dataset.country = image.country;
   holder.dataset.city = image.city;

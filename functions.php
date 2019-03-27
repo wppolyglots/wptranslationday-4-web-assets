@@ -31,7 +31,7 @@ add_action(
 		if ( is_page( 'the-local-events' ) ) {
 			wp_enqueue_script( 'wptd4-map-vendor', get_stylesheet_directory_uri() . '/assets/js/ammap.js', array( 'jquery' ) );
 			wp_enqueue_script( 'wptd4-map-worldhigh', get_stylesheet_directory_uri() . '/assets/js/continentsHigh.js', array( 'jquery' ) );
-			wp_enqueue_script( 'wptd4-map-init', get_stylesheet_directory_uri() . '/assets/js/map-init.js', array( 'jquery' ), '50', true );
+			wp_enqueue_script( 'wptd4-map-init', get_stylesheet_directory_uri() . '/assets/js/map-init.js', array( 'jquery' ), '52', true );
 		}
 	},
 	15
