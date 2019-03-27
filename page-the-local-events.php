@@ -248,7 +248,10 @@ get_header(); ?>
 
 						<?php endwhile; ?>
 					</div><!-- .entry-content -->
-					<script>var markers = <?php echo json_encode( $markers ); ?>;</script>
+					<script>
+					var markers = <?php echo json_encode( $markers ); ?>;
+					var map_pattern = '<?php echo get_stylesheet_directory_uri(); ?>/assets/images/map-pattern.png';
+					</script>
 				<?php endif; ?>
 
 				<?php wp_reset_postdata(); ?>

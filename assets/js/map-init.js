@@ -13,42 +13,42 @@
   				{ 
 	  				'id': 'africa', 
 	  				'pattern': {
-	  				'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
-	  				'width': 4,
-	  				'height': 4,
-	  			}
+	  					'url': map_pattern,
+	  					'width': 4,
+	  					'height': 4,
+	  				}
 	  			}, {
 	  				'id': 'asia',
 	  				'pattern': {
-	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
+	  					'url': map_pattern,
 	  					'width': 4,
 	  					'height': 4
 	  				}
 	  			}, {
 	  				'id': 'australia',
 	  				'pattern': {
-	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
+	  					'url': map_pattern,
 	  					'width': 4,
 	  					'height': 4,
 	  				}
 	  			}, {
 	  				'id': 'europe',
 	  				'pattern': {
-	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
+	  					'url': map_pattern,
 	  					'width': 4,
 	  					'height': 4
 	  				}
 	  			}, {
 	  				'id': 'north_america',
 	  				'pattern': {
-	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
+	  					'url': map_pattern,
 	  					'width': 4,
 	  					'height': 4
 	  				}
 	  			}, {
 	  				'id': 'south_america',
 	  				'pattern': {
-	  					'url': 'https://www.amcharts.com/lib/3/patterns/black/pattern2.png',
+	  					'url': map_pattern,
 	  					'width': 4,
 	  					'height': 4
 	  				}
