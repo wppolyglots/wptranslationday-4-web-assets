@@ -148,9 +148,9 @@ function createCustomMarker( image ) {
 $( window ).load(function() {
 	$('a[href="http://www.amcharts.com/javascript-maps/"]').css('opacity', '0.5');
 	$('.map-marker').click(function(){
-		$('.local-events-infobox').fadeOut();
-		$('.map-marker').removeClass('current');
-		$(this).addClass('current');
+		$( '.map-marker' ).removeClass('current');
+		$( this ).addClass('current');
+		$( '.local-events-infobox' ).fadeOut();
 		$( '.infobox-country' ).html( $(this).data('country') );
 		$( '.infobox-city' ).html( $(this).data('city') );
 		$( '.infobox-locale' ).html( $(this).data('locale') );
