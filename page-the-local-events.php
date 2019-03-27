@@ -3,6 +3,16 @@
 get_header(); ?>
 
 <style>
+.local-event-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.local-event-container > h2 {
+	flex: 1 0 100%;
+}
+.local-event {
+	flex: 1 1 33.33%;
+}
 #local-events-map-wrapper {
 	position: relative;
 }
@@ -192,7 +202,7 @@ get_header(); ?>
 				$previous_continent = 'Empty';
 
 				if ( $query->have_posts() ) : //phpcs:ignore ?>
-					<div class="entry-content">
+					<div class="entry-content local-event-container">
 						<?php
 						while ( $query->have_posts() ) :
 							$query->the_post();
