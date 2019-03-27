@@ -87,12 +87,6 @@
   			'homeButtonEnabled': false,
   		}
 	});
-	$('a[href="http://www.amcharts.com/javascript-maps/"]').hide();
-
-	map.addListener("clickMapObject", function(event) {
-		console.log('test!');
-	});
-
 
 map.addListener( "positionChanged", updateCustomMarkers );
 
@@ -122,15 +116,17 @@ function createCustomMarker( image ) {
   var holder = document.createElement( 'div' );
   holder.className = 'map-marker';
   holder.title = image.title;
+  holder.dataset.country = image.country;
+  holder.dataset.city = image.city;
+  holder.dataset.locale = image.locale;
+  holder.dataset.utc_start_time = image.utc_start_time;
+  holder.dataset.utc_end_time = image.utc_end_time;
+  holder.dataset.link = image.link;
+  holder.dataset.organizer = image.organizer;
   holder.style.position = 'absolute';
 
   // maybe add a link to it?
-  if ( undefined != image.url ) {
-    holder.onclick = function() {
-      window.location.href = image.url;
-    };
-    holder.className += ' map-clickable';
-  }
+  holder.className += ' map-clickable';
 
   // create dot
   var dot = document.createElement( 'div' );
@@ -147,6 +143,31 @@ function createCustomMarker( image ) {
 
   return holder;
 }
+
+
+$( window ).load(function() {
+	$('a[href="http://www.amcharts.com/javascript-maps/"]').css('opacity', '0.5');
+	$('.map-marker').click(function(){
+		$( '.infobox-country' ).html( $(this).data('country') );
+		$( '.infobox-city' ).html( $(this).data('city') );
+		$( '.infobox-locale' ).html( $(this).data('locale') );
+		$( '.infobox-time' ).html( $(this).data('utc_start_time') + ' – ' + $(this).data('utc_end_time') + ' UTC' );
+		$( '.infobox-link' ).html( $(this).data('link') );
+		$( '.infobox-organizer' ).html( $(this).data('organizer') );
+		$('.local-events-infobox').fadeIn();
+	});
+	$('.local-events-infobox-close').click(function(){
+		$('.local-events-infobox').fadeOut( 400, function(){
+			$( '.infobox-country' ).html( '' );
+			$( '.infobox-city' ).html( '' );
+			$( '.infobox-locale' ).html( '' );
+			$( '.infobox-time' ).html( '' );
+			$( '.infobox-link' ).html( '' );
+			$( '.infobox-organizer' ).html( '' );
+		});
+	});
+});
+
 
 	
 })( jQuery );

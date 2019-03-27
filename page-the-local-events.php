@@ -3,6 +3,9 @@
 get_header(); ?>
 
 <style>
+#local-events-map-wrapper {
+	position: relative;
+}
 #local-events-map-wrapper > .local-events-map-header {
 	position: absolute;
 	top: 1.5em;
@@ -13,7 +16,24 @@ get_header(); ?>
   height: 700px;
 }
 .local-events-infobox {
-	display: none;	
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 400px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: calc(50% - 200px);
+	background: rgba(0,0,0,0.5);
+}
+.local-events-infobox-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.5em 1em;
+	font-size: 0.5em;
+}
+.local-events-infobox-inner {
+	padding: 1em;
 }
 @media screen and (min-width: 48em) {
 	.site-content {
@@ -114,17 +134,26 @@ get_header(); ?>
 	</div>
 	<div id="local-events-map"></div>
 	<div class="local-events-infobox">
-		<button class="local-events-infobox-close">Close</button>
-		<div class="area">Country, City, Locale</div>
-		<div class="time"><?php echo esc_html__( 'Event Time:', 'wptd' ); ?> Time</div>
-		<div class="organizer">
-			<?php echo esc_html__( 'Organizer:', 'wptf4' ); ?>
-			<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>
-		</div>
-		<div class="link">
-			<a href="' . esc_attr( $evenlink ) . '" target="_blank" title="Announcement URL">
-				<?php esc_html_e( 'Check it out!', 'wptd' ); ?>
-			</a>
+		<button class="local-events-infobox-close"><?php esc_html_e( 'Close', 'wptd' ); ?></button>
+		<div class="local-events-infobox-inner">
+			<div class="area">
+				<span class="infobox-country">Country</span>, 
+				<span class="infobox-city">City</span>, 
+				<span class="infobox-locale">Locale</span>
+			</div>
+			<div class="time">
+				<?php esc_html_e( 'Event Time:', 'wptd' ); ?> 
+				<span class="infobox-time">17:26 - 10:00 UTC</span>
+			</div>
+			<div class="organizer">
+				<?php esc_html_e( 'Organizer:', 'wptd' ); ?>
+				<span class="infobox-organizer">xkon</span>
+			</div>
+			<div class="link">
+				<a class="infobox-link" href="" target="_blank" title="Announcement URL">
+					<?php esc_html_e( 'Check it out!', 'wptd' ); ?>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
@@ -187,7 +216,8 @@ get_header(); ?>
 									'locale'         => esc_attr( get_field( 'locale' ) ),
 									'utc_start_time' => esc_attr( get_field( 'utc_start_time' ) ),
 									'utc_end_time'   => esc_attr( get_field( 'utc_end_time' ) ),
-									'event_link'     => esc_attr( $evenlink ),
+									'link'     => esc_attr( $evenlink ),
+									'organizer'      => esc_attr( get_field( 'organizer_name' ) ),
 								);
 							}
 							?>
@@ -200,7 +230,7 @@ get_header(); ?>
 									<?php echo esc_html__( 'Event Time:', 'wptd' ) . ' ' . esc_attr( get_field( 'utc_start_time' ) ) . ' - ' . esc_attr( get_field( 'utc_end_time' ) ) . ' ' . esc_html__( 'UTC', 'wptd' ); ?><br>
 								</div>
 								<div class="organizer">
-									<?php echo esc_html__( 'Organizer:', 'wptf4' ) . ' ' . esc_attr( get_field( 'organizer_name' ) ); ?>
+									<?php echo esc_html__( 'Organizer:', 'wptd' ) . ' ' . esc_attr( get_field( 'organizer_name' ) ); ?>
 									<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
 									<?php echo ( ! empty( $slack ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $slack ) . '" target="_blank" title="Slack  Profile"><i class="fab fa-slack"></i></a>' : ''; ?><br>
 								</div>
