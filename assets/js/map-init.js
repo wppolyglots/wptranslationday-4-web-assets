@@ -88,7 +88,7 @@
   		}
 	});
 
-map.addListener( "positionChanged", updateCustomMarkers );
+map.addListener( 'positionChanged', updateCustomMarkers );
 
 function updateCustomMarkers( event ) {
   // get map object
@@ -114,6 +114,7 @@ function updateCustomMarkers( event ) {
 function createCustomMarker( image ) {
   // create holder
   var holder = document.createElement( 'div' );
+  holder.className += ' map-clickable';
   holder.className = 'map-marker';
   holder.title = image.title;
   holder.dataset.country = image.country;
@@ -124,9 +125,6 @@ function createCustomMarker( image ) {
   holder.dataset.link = image.link;
   holder.dataset.organizer = image.organizer;
   holder.style.position = 'absolute';
-
-  // maybe add a link to it?
-  holder.className += ' map-clickable';
 
   // create dot
   var dot = document.createElement( 'div' );
@@ -146,18 +144,20 @@ function createCustomMarker( image ) {
 
 
 $( window ).load(function() {
-	$('a[href="http://www.amcharts.com/javascript-maps/"]').css('opacity', '0.5');
+	$('a[href="http://www.amcharts.com/javascript-maps/"]').css({'opacity': '0.2', 'right': '5px', 'left': 'auto'});
 	$('.map-marker').click(function(){
+		var current = $(this);
 		$( '.map-marker' ).removeClass('current');
-		$( this ).addClass('current');
-		$( '.local-events-infobox' ).fadeOut();
-		$( '.infobox-country' ).html( $(this).data('country') );
-		$( '.infobox-city' ).html( $(this).data('city') );
-		$( '.infobox-locale' ).html( $(this).data('locale') );
-		$( '.infobox-time' ).html( $(this).data('utc_start_time') + ' – ' + $(this).data('utc_end_time') + ' UTC' );
-		$( '.infobox-link' ).attr( 'href', $(this).data('link') );
-		$( '.infobox-organizer' ).html( $(this).data('organizer') );
+		$( current ).addClass('current');
+		$( '.local-events-infobox' ).fadeOut( 400, function(){
+		$( '.infobox-country' ).html( $(current).data('country') );
+		$( '.infobox-city' ).html( $(current).data('city') );
+		$( '.infobox-locale' ).html( $(current).data('locale') );
+		$( '.infobox-time' ).html( $(current).data('utc_start_time') + ' – ' + $(current).data('utc_end_time') + ' UTC' );
+		$( '.infobox-link' ).attr( 'href', $(current).data('link') );
+		$( '.infobox-organizer' ).html( $(current).data('organizer') );
 		$('.local-events-infobox').fadeIn();
+		});
 	});
 	$('.local-events-infobox-close').click(function(){
 		$('.local-events-infobox').fadeOut( 400, function(){
