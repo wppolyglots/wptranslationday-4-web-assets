@@ -624,7 +624,7 @@ body.single-post .post-navigation .nav-next .nav-title {
 	top: 50%;
 	transform: translateY(-50%);
 	left: calc(50% - 200px);
-	background: rgba(0,0,0,0.5);
+	background: rgba(22,80,106,0.9);
 }
 .local-events-infobox-close {
 	position: absolute;
@@ -632,6 +632,8 @@ body.single-post .post-navigation .nav-next .nav-title {
 	right: 0;
 	padding: 0.5em 1em;
 	font-size: 0.5em;
+	background: #471530;
+	color: #E1F8FF;
 }
 .local-events-infobox-inner {
 	padding: 1em;
@@ -651,23 +653,23 @@ body.single-post .post-navigation .nav-next .nav-title {
 .pulse {
 	width: 10px;
 	height: 10px;
-	border: 5px solid #f7f14c;
+	border: 5px solid #E5CED6;
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
-	background-color: #716f42;
+	background-color: #E5CED6;
 	z-index: 10;
 	position: absolute;
 }
 .map-marker.map-clickable.current .pulse {
-	border: 5px solid red;
-	background-color: red;
+	border: 5px solid #E1F8FF;
+	background-color: #E1F8FF;
 }
 .map-marker.map-clickable.current .dot {
-	border: 10px solid red;
+	border: 10px solid #E1F8FF;
 }
 .map-marker .dot {
-	border: 10px solid #fff601;
+	border: 10px solid #E1F8FF;
 	background: transparent;
 	-webkit-border-radius: 60px;
 	-moz-border-radius: 60px;
