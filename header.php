@@ -34,11 +34,23 @@
 		</div><!-- .navigation-top -->
 
 		<div class="wptd-header-image desktop">
-			<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image' ), 'full' ) ); ?>
+			<?php if ( ! twentyseventeen_is_frontpage() ) : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php endif; ?>
+				<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image' ), 'full' ) ); ?>
+			<?php if ( ! twentyseventeen_is_frontpage() ) : ?>
+			</a>
+			<?php endif; ?>
 		</div>
 
 		<div class="wptd-header-image mobile">
-			<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image_mobile' ), 'full' ) ); ?>
+			<?php if ( ! twentyseventeen_is_frontpage() ) : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+			<?php endif; ?>
+				<?php echo wp_kses_post( wp_get_attachment_image( get_field( 'header_image_mobile' ), 'full' ) ); ?>
+			<?php if ( ! twentyseventeen_is_frontpage() ) : ?>
+			</a>
+			<?php endif; ?>
 		</div>
 	</header><!-- #masthead -->
 
