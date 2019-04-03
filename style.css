@@ -641,7 +641,7 @@ body.single-post .post-navigation .nav-next .nav-title {
 @media screen and (min-width: 48em) {
 	.site-content {
 		padding-top: 0;
-	}	
+	}
 }
 .map-marker {
 	margin-left: -8px;
@@ -734,6 +734,7 @@ body.single-post .post-navigation .nav-next .nav-title {
 }
 
 /* Forms */
+.forminator-textarea,
 .forminator-input,
 .forminator-input::placeholder,
 .forminator-label,
