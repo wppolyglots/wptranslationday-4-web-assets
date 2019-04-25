@@ -571,10 +571,12 @@ body.page-media-kit .entry-header h1 {
 body.page-community-media-assets .entry-content h4,
 body.page-media-kit .entry-content h4 {
 	color: var( --color-light-blue-text );
+	font-size: 24px;
 }
 body.page-community-media-assets .entry-content h5,
 body.page-media-kit .entry-content h5 {
 	color: var( --color-medium-rose );
+	font-size: 24px;
 }
 body.category .site-content {
 	padding: 2em 0 0;
