@@ -558,6 +558,10 @@ body.page-media-kit .entry-title,
 body.page-media-kit .entry-content {
 	color: var( --color-light-rose-text ) !important;
 }
+body.page-community-media-assets .entry-content p,
+body.page-media-kit .entry-content p {
+	font-family: 'Open Sans';
+}
 body.category .site-content {
 	padding: 2em 0 0;
 }
