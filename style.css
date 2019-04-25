@@ -475,6 +475,7 @@ body.page:not(.twentyseventeen-front-page) .wptd-header-image {
 	align-items: center;
 	grid-gap: 30px;
 	padding-bottom: 60px;
+	text-align: center;
 }
 .footer-sponsors .inner img {
 	max-width: 350px;
