@@ -139,7 +139,9 @@ a:hover {
 b, strong {
 	font-weight: 600;
 }
-
+.blocks-gallery-item figcaption {
+	display: none !important;
+}
 /* Header */
 .site-header {
 	background-color: var( --color-header-bg );
