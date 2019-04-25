@@ -493,9 +493,12 @@ body.page-the-speakers .entry-content {
 body.page-the-speakers .cards .card {
 	color: var( --color-light-rose-text );
 }
+body.page-community-media-assets .site-content,
 body.page-media-kit .site-content {
 	background-image: url('assets/images/media_bg.png') !important;
 }
+body.page-community-media-assets .entry-title,
+body.page-community-media-assets .entry-content,
 body.page-media-kit .entry-title,
 body.page-media-kit .entry-content {
 	color: var( --color-light-rose-text ) !important;
