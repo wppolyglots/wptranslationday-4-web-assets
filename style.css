@@ -572,11 +572,13 @@ body.page-community-media-assets .entry-content h4,
 body.page-media-kit .entry-content h4 {
 	color: var( --color-light-blue-text );
 	font-size: 24px;
+	letter-spacing: unset;
 }
 body.page-community-media-assets .entry-content h5,
 body.page-media-kit .entry-content h5 {
 	color: var( --color-light-rose-text );
 	font-size: 24px;
+	letter-spacing: unset;
 }
 body.category .site-content {
 	padding: 2em 0 0;
