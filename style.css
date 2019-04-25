@@ -561,6 +561,8 @@ body.page-media-kit .entry-content {
 body.page-community-media-assets .entry-content p,
 body.page-media-kit .entry-content p {
 	font-family: 'Open Sans';
+	font-size: 16px;
+	line-height: 1.5;
 }
 body.category .site-content {
 	padding: 2em 0 0;
