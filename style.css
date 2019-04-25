@@ -471,10 +471,13 @@ body.page:not(.twentyseventeen-front-page) .wptd-header-image {
 }
 .footer-sponsors .inner {
 	display: grid;
-	grid-template-columns: repeat( 3, 1fr );
+	grid-template-columns: repeat( 2, 1fr );
 	align-items: center;
 	grid-gap: 30px;
 	padding-bottom: 60px;
+}
+.footer-sponsors .inner img {
+	max-width: 350px;
 }
 /* General Styles for Pages */
 body.page:not(.twentyseventeen-front-page) .site-content {
