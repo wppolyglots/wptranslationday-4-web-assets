@@ -575,7 +575,7 @@ body.page-media-kit .entry-content h4 {
 }
 body.page-community-media-assets .entry-content h5,
 body.page-media-kit .entry-content h5 {
-	color: var( --color-medium-rose );
+	color: var( --color-light-rose-text );
 	font-size: 24px;
 }
 body.category .site-content {
