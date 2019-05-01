@@ -98,12 +98,13 @@ add_action(
 	'admin_menu',
 	function() {
 		$pages = array(
-			'the-team'         => esc_html__( 'The Team', 'wptd' ),
-			'the-speakers'     => esc_html__( 'The Speakers', 'wptd' ),
-			'the-schedule'     => esc_html__( 'Schedule', 'wptd' ),
-			'the-local-events' => esc_html__( 'Local Events', 'wptd' ),
-			'social-mentions'  => esc_html__( 'Social Mentions', 'wptd' ),
-			'media-kit'        => esc_html__( 'Media Kit', 'wptd' ),
+			'the-team'               => esc_html__( 'The Team', 'wptd' ),
+			'the-speakers'           => esc_html__( 'The Speakers', 'wptd' ),
+			'the-schedule'           => esc_html__( 'Schedule', 'wptd' ),
+			'the-local-events'       => esc_html__( 'Local Events', 'wptd' ),
+			'social-mentions'        => esc_html__( 'Social Mentions', 'wptd' ),
+			'press-media-kit'        => esc_html__( 'Press Media Kit', 'wptd' ),
+			'community-media-assets' => esc_html__( 'Community Media Assets', 'wptd' ),
 		);
 
 		foreach ( $pages as $page_slug => $page_title ) {
