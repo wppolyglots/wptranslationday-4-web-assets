@@ -70,7 +70,7 @@ if ( ! class_exists( 'WPMUDEV_Forminator_Update_CPT_Local_Events' ) ) {
 							'post_title'   => $entry->meta_data['address-1']['value']['city'],
 							'post_content' => '',
 							'post_type'    => 'wptd_local_event',
-							'post_status'  => 'publish',
+							'post_status'  => 'draft',
 						)
 					);
 
