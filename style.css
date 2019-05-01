@@ -206,6 +206,9 @@ b, strong {
 .tggr-item-content a:hover {
 	color: inherit !important;
 }
+.tggr-actions a:hover i {
+	color: inherit !important;
+}
 /* Header */
 .site-header {
 	background-color: var( --color-header-bg );
