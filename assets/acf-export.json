@@ -1017,22 +1017,6 @@
                 "return_format": "H:i"
             },
             {
-                "key": "field_5c805a3bbc243",
-                "label": "UTC End Time",
-                "name": "utc_end_time",
-                "type": "time_picker",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "display_format": "H:i",
-                "return_format": "H:i"
-            },
-            {
                 "key": "field_5c805a44bc244",
                 "label": "Announcement URL",
                 "name": "announcement_url",
