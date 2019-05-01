@@ -195,6 +195,9 @@ b, strong {
 .blocks-gallery-item figcaption {
 	display: none !important;
 }
+.tggr-author-name {
+	font-size: 1em;
+}
 .tggr-item-content {
 	color: var( --color-dark-burgundy );
 	font-family: 'Open Sans';
