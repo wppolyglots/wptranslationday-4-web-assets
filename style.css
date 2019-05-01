@@ -563,23 +563,23 @@ body.page-media-kit .entry-content {
 	color: var( --color-light-rose-text ) !important;
 }
 body.page-community-media-assets .entry-content p,
-body.page-media-kit .entry-content p {
+body.page-press-media-kit .entry-content p {
 	font-family: 'Open Sans';
 	font-size: 16px;
 	line-height: 1.5;
 }
 body.page-community-media-assets .entry-header h1,
-body.page-media-kit .entry-header h1 {
+body.page-press-media-kit .entry-header h1 {
 	color: var( --color-light-rose-text );
 }
 body.page-community-media-assets .entry-content h4,
-body.page-media-kit .entry-content h4 {
+body.page-press-media-kit .entry-content h4 {
 	color: var( --color-light-blue-text );
 	font-size: 24px;
 	letter-spacing: unset;
 }
 body.page-community-media-assets .entry-content h5,
-body.page-media-kit .entry-content h5 {
+body.page-press-media-kit .entry-content h5 {
 	color: var( --color-light-rose-text );
 	font-size: 24px;
 	letter-spacing: unset;
