@@ -243,6 +243,7 @@ add_filter(
 		$columns['utc_end_time']             = esc_html__( 'UTC End Time', 'wptd' );
 		$columns['announcement_url']         = esc_html__( 'Announcement URL', 'wptd' );
 		$columns['interviewer']              = esc_html__( 'Interviewer', 'wptd' );
+		$columns['map']                      = esc_html__( 'Map', 'wptd' );
 
 		return $columns;
 	}
@@ -356,6 +357,10 @@ add_action(
 
 		} elseif ( 'interviewer' === $column ) {
 			echo esc_attr( get_field( 'interviewer', $id ) );
+
+		} elseif ( 'map' === $column ) {
+			$coords = get_field( 'coordinates', $id );
+			echo esc_attr( $coords['address'] );
 
 		} else {
 			echo '';
