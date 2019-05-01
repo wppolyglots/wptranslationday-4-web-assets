@@ -240,7 +240,6 @@ add_filter(
 		$columns['organizer_name']           = esc_html__( 'Organizer Name', 'wptd' );
 		$columns['organizer_username_slack'] = esc_html__( 'Slack Username', 'wptd' );
 		$columns['utc_start_time']           = esc_html__( 'UTC Start Time', 'wptd' );
-		$columns['utc_end_time']             = esc_html__( 'UTC End Time', 'wptd' );
 		$columns['announcement_url']         = esc_html__( 'Announcement URL', 'wptd' );
 		$columns['interviewer']              = esc_html__( 'Interviewer', 'wptd' );
 		$columns['map']                      = esc_html__( 'Map', 'wptd' );
@@ -257,7 +256,6 @@ add_filter(
 		$columns['organizer_name']           = 'organizer_name';
 		$columns['organizer_username_slack'] = 'organizer_username_slack';
 		$columns['utc_start_time']           = 'utc_start_time';
-		$columns['utc_end_time']             = 'utc_end_time';
 		$columns['interviewer']              = 'interviewer';
 
 		return $columns;
@@ -298,11 +296,6 @@ add_action(
 			$query->set( 'orderby', 'meta_value_num' );
 		}
 
-		if ( 'utc_end_time' === $orderby ) {
-			$query->set( 'meta_key', 'utc_end_time' );
-			$query->set( 'orderby', 'meta_value_num' );
-		}
-
 		if ( 'interviewer' === $orderby ) {
 			$query->set( 'meta_key', 'interviewer' );
 			$query->set( 'orderby', 'meta_value' );
@@ -338,9 +331,6 @@ add_action(
 
 		} elseif ( 'utc_start_time' === $column ) {
 			echo esc_attr( get_field( 'utc_start_time', $id ) );
-
-		} elseif ( 'utc_end_time' === $column ) {
-			echo esc_attr( get_field( 'utc_end_time', $id ) );
 
 		} elseif ( 'announcement_url' === $column ) {
 			$url = ( ! empty( get_field( 'announcement_url', $id ) ) ) ? '<a target="_blank" href="' . get_field( 'announcement_url', $id ) . '">' . esc_html__( 'Open', 'wptd' ) . '</a>' : '';
