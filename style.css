@@ -207,7 +207,7 @@ b, strong {
 	color: inherit !important;
 }
 .tggr-actions a:hover i {
-	color: inherit !important;
+	color: rgba(0,0,0,0.5) !important;
 }
 /* Header */
 .site-header {
