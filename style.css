@@ -850,6 +850,11 @@ body.single-post .post-navigation .nav-next .nav-title {
 }
 
 /* Media Queries */
+@media screen and (min-width: 48em) {
+	.main-navigation a {
+		padding: 1em 0.5em;
+	}
+}
 @media ( min-width: 1024px ) {
 	.home #countdown .count {
 		font-size: 120px;
