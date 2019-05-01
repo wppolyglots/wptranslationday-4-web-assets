@@ -203,6 +203,9 @@ b, strong {
 	font-family: 'Open Sans';
 	font-size: 16px;
 }
+.tggr-item-content a:hover {
+	color: inherit !important;
+}
 /* Header */
 .site-header {
 	background-color: var( --color-header-bg );
