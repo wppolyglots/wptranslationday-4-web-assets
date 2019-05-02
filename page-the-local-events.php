@@ -15,12 +15,12 @@ get_header(); ?>
 		<button class="local-events-infobox-close"><?php esc_html_e( 'Close', 'wptd' ); ?></button>
 		<div class="local-events-infobox-inner">
 			<div class="area">
-				<span class="infobox-country">Country</span>, 
-				<span class="infobox-city">City</span>, 
+				<span class="infobox-country">Country</span>,
+				<span class="infobox-city">City</span>,
 				<span class="infobox-locale">Locale</span>
 			</div>
 			<div class="time">
-				<?php esc_html_e( 'Event Time:', 'wptd' ); ?> 
+				<?php esc_html_e( 'Event Time:', 'wptd' ); ?>
 				<span class="infobox-time">17:26 - 10:00 UTC</span>
 			</div>
 			<div class="organizer">
@@ -110,7 +110,7 @@ get_header(); ?>
 								<div class="organizer">
 									<?php echo esc_html__( 'Organizer:', 'wptd' ) . ' ' . esc_attr( get_field( 'organizer_name' ) ); ?>
 									<?php echo ( ! empty( $wporg ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $wporg ) . '" target="_blank" title="WordPress Profile"><i class="fab fa-wordpress"></i></a>' : ''; ?>
-									<?php echo ( ! empty( $slack ) ) ? '<a href="https://profiles.wordpress.org/' . esc_attr( $slack ) . '" target="_blank" title="Slack  Profile"><i class="fab fa-slack"></i></a>' : ''; ?><br>
+									<?php echo ( ! empty( $slack ) ) ? '<a href="https://wordpress.slack.com/team/' . esc_attr( $slack ) . '" target="_blank" title="Slack  Profile"><i class="fab fa-slack"></i></a>' : ''; ?><br>
 								</div>
 								<div class="link">
 									<?php echo ( ! empty( $evenlink ) ) ? '<a href="' . esc_attr( $evenlink ) . '" target="_blank" title="Announcement URL">' . esc_html__( 'Check it out!', 'wptd' ) . '</a>' : ''; ?>
