@@ -148,6 +148,10 @@ $frontpage_id = get_option( 'page_on_front' );
 
 			var currTalk = $( 'div[data-when="now"]' ).parent().parent().clone();
 			$( '.current-talk .holder' ).html( currTalk );
+
+			if ( ! $( '.current-talk .holder .talk' ).length ) {
+				$( '.current-talk' ).css( 'display', 'none' );
+			}
 		}
 
 		$( 'document' ).ready( function() {
