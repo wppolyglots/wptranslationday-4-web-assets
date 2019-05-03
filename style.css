@@ -750,6 +750,9 @@ body.single-post .post-navigation .nav-next .nav-title {
 	display: flex;
 	flex-wrap: wrap;
 }
+.local-event-container > .continentchangehr:first-child {
+	display: none;
+}
 .local-event-container > .continentchangehr,
 .local-event-container > h2 {
 	flex: 1 0 100%;
