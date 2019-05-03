@@ -23,7 +23,14 @@ $frontpage_id = get_option( 'page_on_front' );
 				</div><!-- .entry-content -->
 
 				<div class="current-talk">
+					<hr class="tophr">
+					<h2>Currently Live</h2>
+					<div class="holder">
+					</div>
+
+					<hr class="hrdivider">
 				</div><!-- .current-talk -->
+				<h2 class="scheduletitle">The Full Schedule</h2>
 
 				<?php
 				$args = array(
@@ -57,24 +64,39 @@ $frontpage_id = get_option( 'page_on_front' );
 										data-duration="<?php echo esc_attr( str_replace( ' minutes', '', get_field( 'duration' ) ) ); ?>"
 										data-when="now"
 										data-time="<?php echo esc_attr( get_field( 'event_date', $frontpage_id ) ) . ' ' . esc_attr( get_field( 'utc_start_time' ) ) . ':00'; ?>">
-										<?php echo esc_attr( get_field( 'utc_start_time' ) ); ?> <br>
+										<?php echo esc_attr( get_field( 'utc_start_time' ) ); ?>
 									</div>
+									<div class="lctimeholder">IN YOUR LOCAL TIME</div>
 									<div class="local-time">
-										<?php echo esc_attr( get_field( 'utc_start_time' ) ); ?> <br>
+										<?php echo esc_attr( get_field( 'utc_start_time' ) ); ?>
 									</div>
 								</div>
 								<div class="right">
 									<div class="title">
-										<?php the_title(); ?>
+									<?php echo '<a href="' . esc_url( site_url( '/the-speakers/', 'https' ) ) . '">' . esc_attr( implode( ', ', $speaker_names ) ) . '</a>'; ?> - <?php the_title(); ?>
 									</div>
-									<div class="speaker">
-										<?php echo '<a href="' . esc_url( site_url( '/the-speakers/', 'https' ) ) . '">' . esc_attr( implode( ', ', $speaker_names ) ) . '</a>'; ?>
-									</div>
-									<div class="description">
-										<?php echo wp_kses_post( get_field( 'description' ) ); ?>
-									</div>
-									<div class="info">
-										<?php echo esc_attr( get_field( 'live_or_prerecorded' ) ) . ' | ' . esc_attr( get_field( 'duration' ) ) . ' | ' . esc_attr( get_field( 'target_language' ) ) .  ' | ' . esc_attr( get_field( 'target_audience' ) ); ?>
+									<div class="holder">
+										<div class="pic">
+											<?php
+											if ( 1 === count( $speakers ) ) {
+												$image = wp_get_attachment_image( get_field( 'image', $speaker ), 'full' );
+
+												if ( $image ) {
+													echo wp_kses_post( $image );
+												} else {
+													echo get_avatar( get_field( 'e_mail', $speaker ), 150 );
+												}
+											}
+											?>
+										</div>
+										<div class="desc">
+											<div class="description">
+												<?php echo wp_kses_post( get_field( 'description' ) ); ?>
+											</div>
+											<div class="info">
+												<?php echo esc_attr( get_field( 'live_or_prerecorded' ) ) . ' | ' . esc_attr( get_field( 'target_language' ) ) .  ' | ' . esc_attr( get_field( 'target_audience' ) ); ?>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -104,7 +126,7 @@ $frontpage_id = get_option( 'page_on_front' );
 					durTime = moment( talkTimeUTC ).add( durTimeUTC, 'm' ),
 					endTime = durTime.format( 'YYYY-MM-DD HH:mm:ss' );
 
-				$( '.current-talk' ).html('');
+				$( '.current-talk .holder' ).html('');
 
 				if ( currTimeUTC > talkTimeUTC ) {
 					$( this ).attr( 'data-when', 'past' );
@@ -113,7 +135,7 @@ $frontpage_id = get_option( 'page_on_front' );
 				}
 
 				if ( currTimeUTC < endTime && currTimeUTC > talkTimeUTC ) {
-					$( this ).data( 'when', 'now' );
+					$( this ).attr( 'data-when', 'now' );
 				}
 
 				timeLocal = moment( timeLocal ).format( 'HH:mm' );
@@ -121,11 +143,11 @@ $frontpage_id = get_option( 'page_on_front' );
 			} );
 
 			$( 'div[data-when="past"]' ).each( function () {
-				$( this ).css( 'opacity', '.4' );
+				$( this ).parent().parent().css( 'opacity', '.4' );
 			} );
 
-			var currTalk = $( 'div[data-when="now"]' ).clone();
-			$( '.current-talk .talk-holder' ).html( currTalk );
+			var currTalk = $( 'div[data-when="now"]' ).parent().parent().clone();
+			$( '.current-talk .holder' ).html( currTalk );
 		}
 
 		$( 'document' ).ready( function() {

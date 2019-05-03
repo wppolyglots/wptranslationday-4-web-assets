@@ -495,6 +495,60 @@ body.page:not(.twentyseventeen-front-page) .wptd-header-image {
 	max-width: 350px;
 }
 /* General Styles for Pages */
+body.page-the-schedule .talk {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-gap: 20px;
+	margin-bottom: 100px;
+}
+body.page-the-schedule .tophr {
+	margin-top: 50px;
+	marginb-bottom: 50px;
+}
+body.page-the-schedule .hrdivider {
+	margin-bottom: 100px;
+	margin-top: 0;
+}
+body.page-the-schedule .current-talk h2 {
+	padding-top: 0;
+}
+body.page-the-schedule h2 {
+	color: var( --color-light-blue-text );
+	font-weight: 700;
+}
+body.page-the-schedule .scheduletitle {
+	margin-top: 0;
+	padding-top: 0;
+}
+body.page-the-schedule .talk .left {
+	text-align: center;
+	font-size: 35px;
+	font-weight: 600;
+}
+body.page-the-schedule .talk .left .time,
+body.page-the-schedule .talk .left .local-time {
+	clear: both;
+}
+body.page-the-schedule .talk .left .local-time,
+body.page-the-schedule .talk .left .lctimeholder {
+	color: var( --color-light-blue-text );
+}
+body.page-the-schedule .talk .left .lctimeholder {
+	font-size: 10px;
+}
+body.page-the-schedule .talk .right .description {
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 18px;
+}
+body.page-the-schedule .talk .right .title {
+	margin-bottom: 10px;
+}
+body.page-the-schedule .talk .right .holder {
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-gap: 20px;
+}
 body.page:not(.twentyseventeen-front-page) .site-content {
 	background-image: url('assets/images/internal-pages-background.png');
 	background-size: 100%;
@@ -566,7 +620,7 @@ body.page-the-speakers .entry-content {
 body.page-the-speakers .cards .card {
 	color: var( --color-light-rose-text );
 }
-body.page-community-media-assets .site-content,
+body.page-the-schedule .site-content,
 body.page-media-kit .site-content {
 	background-image: url('assets/images/media_bg.png') !important;
 }
