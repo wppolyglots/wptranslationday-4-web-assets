@@ -71,7 +71,7 @@ get_header(); ?>
 							$continent = get_field( 'continent' );
 							if ( $previous_continent !== $continent ) {
 								$previous_continent = $continent;
-								echo '<h2>' . esc_attr( $continent ) . '</h2>';
+								echo '<hr class="continentchangehr"><h2>' . esc_attr( $continent ) . '</h2>';
 							}
 
 							$wporg    = get_field( 'organizer_username_wporg' );
