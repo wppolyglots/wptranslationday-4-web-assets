@@ -525,6 +525,10 @@ body.page-the-schedule .talk .left {
 	font-size: 35px;
 	font-weight: 600;
 }
+body.page-the-schedule h1.entry-title,
+body.page-the-schedule .talk .left .time {
+	color: #dbaeba;
+}
 body.page-the-schedule .talk .left .time,
 body.page-the-schedule .talk .left .local-time {
 	clear: both;
