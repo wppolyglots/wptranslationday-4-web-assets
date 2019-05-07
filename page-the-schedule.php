@@ -86,6 +86,10 @@ $frontpage_id = get_option( 'page_on_front' );
 												} else {
 													echo get_avatar( get_field( 'e_mail', $speaker ), 150 );
 												}
+											} else {
+												?>
+												<img src="https://wptranslationday.org/wp-content/themes/wptd4/assets/images/panel.jpg" >
+												<?php
 											}
 											?>
 										</div>
