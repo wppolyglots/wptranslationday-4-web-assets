@@ -527,7 +527,7 @@ body.page-the-schedule .talk .left {
 }
 body.page-the-schedule h1.entry-title,
 body.page-the-schedule .talk .left .time {
-	color: #dbaeba;
+	color: #dbaeba !important;
 }
 body.page-the-schedule .talk .left .time,
 body.page-the-schedule .talk .left .local-time {
