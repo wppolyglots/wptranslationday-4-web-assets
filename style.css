@@ -554,6 +554,9 @@ body.page:not(.twentyseventeen-front-page) .site-content {
 	background-size: 100%;
 	background-repeat: repeat-y;
 }
+.page:not(.home) #content {
+	padding-top: 2em;
+}
 body.page-the-local-events h2,
 body.page-call-for-speakers h2,
 body.page-call-for-local-events h2 {
