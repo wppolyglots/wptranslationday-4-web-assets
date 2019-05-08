@@ -76,24 +76,24 @@ $frontpage_id = get_option( 'page_on_front' );
 									<?php echo '<a href="' . esc_url( site_url( '/the-speakers/', 'https' ) ) . '">' . esc_attr( implode( ', ', $speaker_names ) ) . '</a>'; ?> - <?php the_title(); ?>
 									</div>
 									<div class="holder">
-									<?php
-											if ( 1 === count( $speakers ) ) {
-												$image = wp_get_attachment_image( get_field( 'image', $speaker ), 'full' );
+										<?php
+										if ( 1 === count( $speakers ) ) {
+											$image = wp_get_attachment_image( get_field( 'image', $speaker ), 'full' );
 
-												if ( $image ) {
-													echo wp_kses_post( $image );
-												} else {
-													echo get_avatar( get_field( 'e_mail', $speaker ), 150 );
-												}
+											if ( $image ) {
+												echo wp_kses_post( $image );
 											} else {
-												?>
-												<img src="https://wptranslationday.org/wp-content/themes/wptd4/assets/images/panel.jpg" >
-												<?php
+												echo get_avatar( get_field( 'e_mail', $speaker ), 150 );
 											}
+										} else {
 											?>
-												<?php echo wp_kses_post( get_field( 'description' ) ); ?>
-												<br>
-												<?php echo esc_attr( get_field( 'live_or_prerecorded' ) ) . ' | ' . esc_attr( get_field( 'target_language' ) ) .  ' | ' . esc_attr( get_field( 'target_audience' ) ); ?>
+											<img src="https://wptranslationday.org/wp-content/themes/wptd4/assets/images/panel.jpg" >
+											<?php
+										}
+										?>
+										<?php echo wp_kses_post( get_field( 'description' ) ); ?>
+										<br>
+										<?php echo esc_attr( get_field( 'live_or_prerecorded' ) ) . ' | ' . esc_attr( get_field( 'target_language' ) ) .  ' | ' . esc_attr( get_field( 'target_audience' ) ); ?>
 									</div>
 								</div>
 							</div>

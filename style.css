@@ -548,13 +548,10 @@ body.page-the-schedule .talk .right .description {
 body.page-the-schedule .talk .right .title {
 	margin-bottom: 10px;
 }
-/* body.page-the-schedule .talk .right .holder {
-	display: grid;
-	grid-template-columns: 100px 1fr;
-	grid-gap: 20px;
-} */
 body.page-the-schedule .talk .right .holder img {
 	max-width: 150px;
+	float: left;
+	margin-right: 15px;
 }
 body.page:not(.twentyseventeen-front-page) .site-content {
 	background-image: url('assets/images/internal-pages-background.png');
