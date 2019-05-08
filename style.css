@@ -998,4 +998,11 @@ body.single-post .post-navigation .nav-next .nav-title {
 	.local-event {
 		flex: 1 1 100%;
 	}
+	body.page-the-schedule .talk {
+		grid-template-columns: 1fr;
+	}
+	body.page-the-schedule .talk .left {
+		text-align: left;
+	}
+	}
 }
