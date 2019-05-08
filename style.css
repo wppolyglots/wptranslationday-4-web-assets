@@ -1005,5 +1005,8 @@ body.single-post .post-navigation .nav-next .nav-title {
 	body.page-the-schedule .talk .left {
 		text-align: left;
 	}
+	body.page-the-schedule .talk .right .holder img {
+		clear: both;
+		float: unset;
 	}
 }
