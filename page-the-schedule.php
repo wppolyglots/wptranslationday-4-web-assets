@@ -92,7 +92,6 @@ $frontpage_id = get_option( 'page_on_front' );
 										}
 										?>
 										<?php echo wp_kses_post( get_field( 'description' ) ); ?>
-										<br>
 										<?php echo esc_attr( get_field( 'live_or_prerecorded' ) ) . ' | ' . esc_attr( get_field( 'target_language' ) ) .  ' | ' . esc_attr( get_field( 'target_audience' ) ); ?>
 									</div>
 								</div>
