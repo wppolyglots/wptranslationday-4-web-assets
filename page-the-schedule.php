@@ -76,7 +76,7 @@ $frontpage_id = get_option( 'page_on_front' );
 									<?php echo '<a href="' . esc_url( site_url( '/the-speakers/', 'https' ) ) . '">' . esc_attr( implode( ', ', $speaker_names ) ) . '</a>'; ?> - <?php the_title(); ?>
 									</div>
 									<div class="holder">
-										<div class="pic">
+										<!-- <div class="pic"> -->
 											<?php
 											if ( 1 === count( $speakers ) ) {
 												$image = wp_get_attachment_image( get_field( 'image', $speaker ), 'full' );
@@ -92,7 +92,7 @@ $frontpage_id = get_option( 'page_on_front' );
 												<?php
 											}
 											?>
-										</div>
+										<!-- </div> -->
 										<div class="desc">
 											<div class="description">
 												<?php echo wp_kses_post( get_field( 'description' ) ); ?>

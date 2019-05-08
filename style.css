@@ -553,6 +553,9 @@ body.page-the-schedule .talk .right .holder {
 	grid-template-columns: 100px 1fr;
 	grid-gap: 20px;
 }
+body.page-the-schedule .talk .right .holder img {
+	max-width: 150px;
+}
 body.page:not(.twentyseventeen-front-page) .site-content {
 	background-image: url('assets/images/internal-pages-background.png');
 	background-size: 100%;
