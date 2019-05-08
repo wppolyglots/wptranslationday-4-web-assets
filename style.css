@@ -493,6 +493,7 @@ body.page:not(.twentyseventeen-front-page) .wptd-header-image {
 }
 .footer-sponsors .inner img {
 	max-width: 350px;
+	width: 100%;
 }
 /* General Styles for Pages */
 body.page-the-schedule .talk {
