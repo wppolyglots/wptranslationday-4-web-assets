@@ -218,6 +218,28 @@ $pid = get_the_ID();
 				border-left: 2px solid #21759b;
 				padding-top: 30px;
 			}
+			@media ( max-width: 768px ) {
+				.finalnumbersfont {
+					grid-template-columns: 200px 1fr !important;
+					font-size: 28px !important;
+				}
+				.finalnumbersfont .num {
+					font-size: 50px !important;
+				}
+			.finalnumbersfont div:nth-child(even) {
+				padding-top: 20px;
+			}
+			@media (max-width: 425px ) {
+				.finalnumbersfont {
+					grid-template-columns: 1fr !important;
+				}
+				.finalnumbersfont div:nth-child(odd) {
+					text-align: left;
+				}
+				.finalnumbersfont div:nth-child(even) {
+					border-left: unset;
+				}
+			}
 		</style>
 	<?php else: ?>
 		<?php
