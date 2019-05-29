@@ -1161,6 +1161,44 @@
                 "ui_off_text": ""
             },
             {
+                "key": "field_5cd5699116c9a",
+                "label": "GO LIVE!",
+                "name": "go_live_wptd",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5ceeb3a4ead90",
+                "label": "FINAL NUMBERS!",
+                "name": "final_numbers_wptd",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
                 "key": "field_5c82e7abdafbb",
                 "label": "Event Date",
                 "name": "event_date",
@@ -1176,6 +1214,61 @@
                 "display_format": "F j, Y",
                 "return_format": "Y-m-d",
                 "first_day": 1
+            },
+            {
+                "key": "field_5ceeb6801e267",
+                "label": "Final Panel",
+                "name": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 0,
+                "multi_expand": 0,
+                "endpoint": 0
+            },
+            {
+                "key": "field_5ceeb69c1e268",
+                "label": "Final Panel Heading",
+                "name": "final_panel_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5ceeb6ae1e269",
+                "label": "Final Panel Text",
+                "name": "final_panel_text",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_5c82eeb198966",
